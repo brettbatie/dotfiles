@@ -1,10 +1,9 @@
 # Add dotfile binaries to path
-export PATH=~/.dotfiles/bin:$PATH
+export PATH=$HOME/dotfiles/bin:$PATH
 
 
 
 # source all files in dotfiles or only the given file
-
 function src() {
   local file
   if [[ "$1" ]]; then
