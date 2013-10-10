@@ -20,6 +20,8 @@
 #
 # Can be added to a cron job to automatically pull changes and symlink files. :-)
 #
+# Git is only required if a remote repository will be used to store/pull dot file changes.
+#
 # Inspired by:
 # https://github.com/cowboy/dotfiles
 # http://vcs-home.branchable.com/
@@ -31,7 +33,9 @@
 # 1. checkout files
 # 2. Ask user: link everything? or link minimal? or link one by one?
 # 3. Check if ~/bin is in the path and if not add it
-#FIXME: build simple command to pull this script from github and run it.
+#
+#simple command to pull this script from github and run it.
+# wget -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm | bash
 
 ##########################################
 # SETTINGS
@@ -116,10 +120,11 @@ function checkParameters {
 }
 
 function updateRepo {
-    # if there is repo here update it, otherwise create the repo
-    
-    #FIXME: check if git is installed, give option to install it.
+    # Check if git is installed before doing git operations
+    type git >/dev/null 2>&1 || { echo >&2 "Git is required to clone/pull dot files from a remote repository. "\
+        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used."; break;}
 
+    # if there is repo here update it, otherwise create the repo
     if [ ! -d "$dotDir/.git" ]; then
         displayTitle "DOWNLOADING MASTER REPOSITORY ($masterRepository)"
         git clone $masterRepository $dotDir
