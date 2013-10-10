@@ -76,8 +76,6 @@ USAGE: dotm [-options] [-d /path/to/dotFileDirectory] [-r masterRepository]
 Additionally, the following settings can be changed at the top of the dotm bash script
 
 ```bash
-# SETTINGS
-
 dotDir=$HOME/dotfiles
 masterRepository=git://github.com/brettbatie/dotfiles
 
@@ -85,11 +83,10 @@ masterRepository=git://github.com/brettbatie/dotfiles
 minimalSymlinkFiles=".vimrc,.gitconfig"
 
 # special directories
-backupDir=$HOME/dotfiles/backup
-customDir=$HOME/custom
-binDir=$HOME/bin
-sourceDir=$HOME/source
-
+backupDir=$dotDir/dotfiles-backup
+customDir=$dotDir/custom
+binDir=$dotDir/bin
+sourceDir=$dotDir/source
 ```
 
 ###Special Directories
