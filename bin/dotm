@@ -85,6 +85,24 @@ function checkParameters {
         $dotDir=${dotDir%?}
     fi
 
+}
+
+function updateRepo {
+    # Check if git is installed before doing git operations
+    type git >/dev/null 2>&1 || { echo >&2 "Git is required to clone/pull dot files from a remote repository. "\
+        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used."; return;}
+
+    # if there is repo here update it, otherwise create the repo
+    if [ ! -d "$dotDir/.git" ]; then
+        displayTitle "DOWNLOADING MASTER REPOSITORY ($masterRepository)"
+        git clone $masterRepository $dotDir
+    else
+        displayTitle "Updating Master Repository"
+        (cd $dotDir && git pull $masterRepository)
+    fi
+}
+
+function createDirectories {
     # Verify that the backup directory exists
     if [ ! -d "$backupDir" ]; then
         echo "The backup directory ($backupDir) does not exist. Creating it"
@@ -106,23 +124,6 @@ function checkParameters {
         mkdir -v -p "$customDir"
     fi
 }
-
-function updateRepo {
-    # Check if git is installed before doing git operations
-    type git >/dev/null 2>&1 || { echo >&2 "Git is required to clone/pull dot files from a remote repository. "\
-        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used."; return;}
-
-    # if there is repo here update it, otherwise create the repo
-    if [ ! -d "$dotDir/.git" ]; then
-        displayTitle "DOWNLOADING MASTER REPOSITORY ($masterRepository)"
-        git clone $masterRepository $dotDir
-    else
-        displayTitle "Updating Master Repository"
-        (cd $dotDir && git pull $masterRepository)
-    fi
-}
-
-
 
 function symlinkOption {
     # no need to ask questions if the user specified the setting with a startup 
@@ -250,5 +251,6 @@ function createSymLinks {
 
 checkParameters $@
 updateRepo
+createDirectories
 symlinkOption
 createSymLinks
