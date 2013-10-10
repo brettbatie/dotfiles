@@ -92,8 +92,9 @@ function updateRepo {
     type git >/dev/null 2>&1 || { 
         echo "************************************"
         echo >&2 "Git is required to clone/pull dot files from a remote repository. "\
-        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used."; return;
+        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used.";
         echo "************************************"
+        return;
     }
 
     # if there is repo here update it, otherwise create the repo
