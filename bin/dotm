@@ -122,7 +122,7 @@ function checkParameters {
 function updateRepo {
     # Check if git is installed before doing git operations
     type git >/dev/null 2>&1 || { echo >&2 "Git is required to clone/pull dot files from a remote repository. "\
-        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used."; break;}
+        "Symlinks can still be auto created to files in $dotDir but a remote repository will not be used."; return;}
 
     # if there is repo here update it, otherwise create the repo
     if [ ! -d "$dotDir/.git" ]; then
