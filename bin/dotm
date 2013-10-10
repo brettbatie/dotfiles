@@ -51,8 +51,9 @@ minimalSymlinkFiles=".vimrc,.gitconfig"
 
 function help {
 cat << EOF
-USAGE: $0 [-options] [-d /path/to/dotFileDirectory] [-r masterRepository]
-    -d dotFileDirectory : the directory that contains the static files that will
+USAGE: $(basename $0) [-options] [-d /path/to/dotFileDirectory] [-r masterRepository]
+
+    -d dotFileDirectory : The directory that contains the static files that will
                          be linked to from the ~ directory. If the 
                          dotFileDirectory is not specified then ~/dotfiles is
                          used by default.
@@ -84,19 +85,15 @@ function checkParameters {
     while getopts ":d:r:amh" opt; do
       case $opt in
         d)
-            echo "-d was triggered, Parameter: $OPTARG" >&2
-            dotDir= $OPTARG;
+            dotDir=$OPTARG;
             ;;
         r)
-            echo "-r was triggered, Parameter: $OPTARG" >&2
             masterRepository=$OPTARG;
             ;;
         a)
-            echo "-a was triggered, Parameter: $OPTARG" >&2
             symlinkOption="all"
             ;;
         m)
-            echo "-m was triggered, Parameter: $OPTARG" >&2
             symlinkOption="minimal"
             ;;
         h|\?)
@@ -120,8 +117,11 @@ function checkParameters {
 
 function updateRepo {
     # if there is repo here update it, otherwise create the repo
+    
+    #FIXME: check if git is installed, give option to install it.
+
     if [ ! -d "$dotDir/.git" ]; then
-        displayTitle "DOWNLOADING MASTER REPOSITORY"
+        displayTitle "DOWNLOADING MASTER REPOSITORY ($masterRepository)"
         git clone $masterRepository $dotDir
     else
         displayTitle "Updating Master Repository"
@@ -138,10 +138,20 @@ function symlinkOption {
         return;
     fi
 
+    # Check for files before asking questions
+    # FIXME: this find should be using the same find arguments as in the function createSymLink. Should create that as a
+    #        variable earlier in the code. This will detect the basic case of empty directories.
+    fileCount=$(find $dotDir -type f -not -path "$dotDir/.git/*" | wc -l);
+    if [ "$fileCount" == "0" ]; then
+        echo "There are zero files in the $dotDir to create symlinks for. Add some files to this directory and then "\
+             "run it again."
+        exit 0;
+    fi
+
     PS3="Select how to create create the symlinks?"
-    options=("Create all symlinks                         " #hack to get the columns on new lines. got to be a better way.
+    options=("Create all symlinks                         " #hack to get the columns on new lines. Is there a better way?
     "Ask before creating each"
-     "Use minimal list"
+     "Use minimal list ($minimalSymlinkFiles)"
      )
     select opt in "${options[@]}"
     do
@@ -154,7 +164,7 @@ function symlinkOption {
                 symlinkOption="ask"
                 break;
                 ;;
-            "Use minimal list")
+            "Use minimal list ($minimalSymlinkFiles)")
                 symlinkOption="minimal"
                 break;
                 ;;
