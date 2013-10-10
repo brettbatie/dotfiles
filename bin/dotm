@@ -1,56 +1,23 @@
 #!/bin/bash
-#####
-# Creates symlinks in the home directory pointing to all files in the given 
-# dotfiles directory. It will symlink files in sub directories as well.
-#
-# It does not create symlinks for files in the following special directories:
-# .hg, .git, bin, $backupDir, source, apps.list
-#
-# Bin directory: added to the path via the bashrc file
-# source directory: all files in source directory are executed via a command in bashrc
-# Backup Directory: before creating the symlinks to the dot files. We check if the file already exists in the ~ 
-# directory or sub directory. If it does exist then the file is copied to the backup directory with a timestamp 
-# appended to the filename. The files in the backup directory maintain the directory structure.
-# minimal list
-# apps.list: Stores a line delimited list of application which the user might want to install
-# 
-# more than one repo. I am currently using a dotfiles and dotfiles_private. With the command line arguments I can use 
-# dotm for both cases. I setup my default paths for my dotfiles in dotm. Then for my private files I setup and alias
-# for dotmp which passes the private dot file directory and different repository.
-#
-# Can be added to a cron job to automatically pull changes and symlink files. :-)
-#
-# Git is only required if a remote repository will be used to store/pull dot file changes.
-#
-# Inspired by:
-# https://github.com/cowboy/dotfiles
-# http://vcs-home.branchable.com/
-# http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
-#
-######
-
-#NOTE: 
-# 1. checkout files
-# 2. Ask user: link everything? or link minimal? or link one by one?
-# 3. Check if ~/bin is in the path and if not add it
-#
-#simple command to pull this script from github and run it.
-# wget -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm | bash
-
 ##########################################
+# @author Brett Batie
+# source code & documentation @ https://github.com/brettbatie/dotfiles/
+##########################################
+
 # SETTINGS
 
-# Set the dot directory and check for arguments
 dotDir=$HOME/dotfiles
-backupDir=$HOME/dotfiles/backup
 masterRepository=git://github.com/brettbatie/dotfiles
 
 # comma delimited list for only creating a minimal set of symlinks
 minimalSymlinkFiles=".vimrc,.gitconfig"
 
+# special directories
+backupDir=$HOME/dotfiles/backup
+customDir=$HOME/custom
+binDir=$HOME/bin
+sourceDir=$HOME/source
 
-
-#
 #########################################
 
 function help {
@@ -107,15 +74,36 @@ function checkParameters {
       esac
     done
 
-    # Verify that the dot directory exists
+    # Make sure the dotfile directory structure exists
     if [ ! -d "$dotDir" ]; then
         echo "The dotfile directory ($dotDir) does not exist. Creating it"
-        mkdir -v -p $dotDir;
+        mkdir -v -p "$dotDir";
     fi
 
     # Trim the trailing slash from the dot directory (if there is one)
     if [[ $dotDir == */ ]]; then
         $dotDir=${dotDir%?}
+    fi
+
+    # Verify that the backup directory exists
+    if [ ! -d "$backupDir" ]; then
+        echo "The backup directory ($backupDir) does not exist. Creating it"
+        mkdir -v -p "$backupDir"
+    fi
+
+    if [ ! -d "$sourceDir" ]; then
+        echo "The source directory ($sourceDir) does not exist. Creating it"
+        mkdir -v -p "$sourceDir"
+    fi
+
+    if [ ! -d "$binDir" ]; then
+        echo "The bin directory ($binDir) does not exist. Creating it"
+        mkdir -v -p "$binDir"
+    fi
+
+    if [ ! -d "$customDir" ]; then
+        echo "The custom directory ($customDir) does not exist. Creating it"
+        mkdir -v -p "$customDir"
     fi
 }
 
@@ -204,9 +192,9 @@ function createSymLinks {
         -not -path "$dotDir/.hg/*" \
         -not -path "$dotDir/.git/*" \
         -not -path "$backupDir" \
-        -not -path "$dotDir/apps.list" \
-        -not -path "$dotDir/bin/*" \
-        -not -path "$dotDir/source/*"); do
+        -not -path "$binDir/*" \
+        -not -path "$customDir/*" \
+        -not -path "$sourceDir/*"); do
         
         # get the file with a path relative to the dotDir
         local relativeFile=${file#$dotDir} #remove $dotDir from $file
@@ -234,12 +222,6 @@ function createSymLinks {
 
         # Create a backup if there is a file that will be overwritten
         if [ -f "$HOME/$relativeFile" ]; then
-            # create the backup directory, if necessary
-            if [ ! -d "$backupDir" ]; then
-                echo "Creating $backupDir for backup of any existing dotfiles in ~"
-                mkdir -p "$backupDir"
-            fi
-
             echo "Making backup of $relativeFile in $backupDir"
             mv -v $HOME/$relativeFile $backupDir/$relativeFile.$(date +"%Y%m%d%H%M")
         fi
