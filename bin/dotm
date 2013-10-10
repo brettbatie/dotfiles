@@ -108,8 +108,8 @@ function checkParameters {
 
     # Verify that the dot directory exists
     if [ ! -d "$dotDir" ]; then
-        echo "The dotfile directory ($dotDir) does not exist. Nothing to do."
-        exit;
+        echo "The dotfile directory ($dotDir) does not exist. Creating it"
+        mkdir -v -p $dotDir;
     fi
 
     # Trim the trailing slash from the dot directory (if there is one)
