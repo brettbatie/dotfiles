@@ -4,6 +4,7 @@ This dot file manager is a tool to keep track of all or some of the dot files st
 This repository consists of two parts.
 
 **Dot File Manager** - This is a bash script named **dotm** that automates many of the tasks that revolve around managing the dot files.
+
 **My Configs** - This consists of custom aliases, shell prompts, path modifications, .bashrc, .vimrc, etc. Basically all the settings/commands/etc that I would want on a server/desktop that I work on.
 
 ##DOTM (Dot File Manager - Bash Script)
