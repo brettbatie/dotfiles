@@ -192,6 +192,7 @@ function createSymLinks {
     for file in $(find "$dotDir" -type f $minimalSymlinkFiles \
         -not -path "$dotDir/.hg/*" \
         -not -path "$dotDir/.git/*" \
+        -not -path "$dotDir/.README.md*" \
         -not -path "$backupDir" \
         -not -path "$binDir/*" \
         -not -path "$customDir/*" \
