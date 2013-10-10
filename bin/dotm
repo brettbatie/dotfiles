@@ -13,7 +13,7 @@ masterRepository=git://github.com/brettbatie/dotfiles
 minimalSymlinkFiles=".vimrc,.gitconfig"
 
 # special directories
-backupDir=$dotDir/backup
+backupDir=$dotDir/dotfiles-backup
 customDir=$dotDir/custom
 binDir=$dotDir/bin
 sourceDir=$dotDir/source
@@ -142,7 +142,7 @@ function symlinkOption {
         exit 0;
     fi
 
-    PS3="Select how to create create the symlinks?"
+    PS3="Select above option regarding how to create the symlinks:"
     options=("Create all symlinks                         " #hack to get the columns on new lines. Is there a better way?
     "Ask before creating each"
      "Use minimal list ($minimalSymlinkFiles)"
@@ -241,12 +241,14 @@ function createSymLinks {
         # If this is a bashrc file it will need to be sourced
         if [ "$relativeFile" == ".bashrc" ]; then
             # wish I could automate this for the parent shell.
+            echo "**************************"
             echo 'To update your current shell run the command, source ~/.bashrc';
+            echo "**************************"
         fi
 
         symlinksCreated=$(($symlinksCreated+1))
     done;
-    echo "Created $symlinksCreated new symlinks in ~"
+    echo "$symlinksCreated new symlinks created in ~"
 }
 
 checkParameters $@
