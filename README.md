@@ -48,7 +48,7 @@ mkdir -p ~/dotfiles/bin && wget -O ~/dotfiles/bin/dotm https://raw.github.com/br
 ~/dotfiles/bin/./dotm -r git://github.com/username/dotfiles/
 ```
 
-Now anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/dotm** or just **dotm** if you add it to the path.
+Now anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm** or just **dotm** if you add it to the path.
 
 ###Settings & Command line Arguments
 Dotm has default settings that can be modified at the top of the bash script as well as command line arguments that can be used. dotm --help will output the following information
