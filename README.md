@@ -114,4 +114,5 @@ Inspired by:
 * https://github.com/cowboy/dotfiles
 * http://vcs-home.branchable.com/
 * http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
+* https://github.com/mathiasbynens/dotfiles
 * Many others who have kindly shared their custom commands/function/settings
