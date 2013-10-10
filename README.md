@@ -4,6 +4,7 @@ This dot file manager is a tool to keep track of all or some of the dot files st
 This repository consists of two parts.
 
 **Dot File Manager** - This is a bash script named **dotm** that automates many of the tasks that revolve around managing the dot files.
+
 **My Configs** - This consists of custom aliases, shell prompts, path modifications, .bashrc, .vimrc, etc. Basically all the settings/commands/etc that I would want on a server/desktop that I work on.
 
 ##DOTM (Dot File Manager - Bash Script)
@@ -76,8 +77,6 @@ USAGE: dotm [-options] [-d /path/to/dotFileDirectory] [-r masterRepository]
 Additionally, the following settings can be changed at the top of the dotm bash script
 
 ```bash
-# SETTINGS
-
 dotDir=$HOME/dotfiles
 masterRepository=git://github.com/brettbatie/dotfiles
 
@@ -85,18 +84,17 @@ masterRepository=git://github.com/brettbatie/dotfiles
 minimalSymlinkFiles=".vimrc,.gitconfig"
 
 # special directories
-backupDir=$HOME/dotfiles/backup
-customDir=$HOME/custom
-binDir=$HOME/bin
-sourceDir=$HOME/source
-
+backupDir=$dotDir/dotfiles-backup
+customDir=$dotDir/custom
+binDir=$dotDir/bin
+sourceDir=$dotDir/source
 ```
 
 ###Special Directories
 
 Dotm will create symlinks in the users home directory pointing to all files in the dot files directory (default ~/dotfiles) except for the following directories. These directories have special rules which are defined below.
 
-* **.hg, .git, README.md ** - are ignored.
+* **.hg, .git, README.md** - are ignored.
 * **backup** - Stores files that are overwritten when symlinks are created. When creating a symlink dotm will first check if there is a file that wil be overwritten in the users home directory. If a file will be overwritten it copies the files to the backup directory and then adds a timestamp to the filename.
 * **custom** - This directory is not processed by dotm. It is a good directory to store custom files that should not have symlinks. For example, I store a list of apps that I like to have installed in this folder. ~~FIXME: Checkout the blah & blah functions in blah~~
 * **bin** - Used to store scripts that will be added to the path. This is added to the path via my [.bashrc](https://github.com/brettbatie/dotfiles/blob/master/.bashrc) file.
