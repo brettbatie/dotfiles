@@ -4,6 +4,7 @@
 # source code & documentation @ https://github.com/brettbatie/dotfiles/
 ##########################################
 
+
 # SETTINGS
 
 dotDir=$HOME/dotfiles
@@ -19,6 +20,9 @@ binDir=$dotDir/bin
 sourceDir=$dotDir/source
 
 #########################################
+#
+#command1=$(echo ls -l)   # Variable where some command is defined
+#eval "$command1"              # Execute command
 
 function help {
 cat << EOF
@@ -110,22 +114,18 @@ function updateRepo {
 function createDirectories {
     # Verify that the backup directory exists
     if [ ! -d "$backupDir" ]; then
-        echo "The backup directory ($backupDir) does not exist. Creating it"
         mkdir -v -p "$backupDir"
     fi
 
     if [ ! -d "$sourceDir" ]; then
-        echo "The source directory ($sourceDir) does not exist. Creating it"
         mkdir -v -p "$sourceDir"
     fi
 
     if [ ! -d "$binDir" ]; then
-        echo "The bin directory ($binDir) does not exist. Creating it"
         mkdir -v -p "$binDir"
     fi
 
     if [ ! -d "$customDir" ]; then
-        echo "The custom directory ($customDir) does not exist. Creating it"
         mkdir -v -p "$customDir"
     fi
 }
@@ -137,16 +137,7 @@ function symlinkOption {
         return;
     fi
 
-    # Check for files before asking questions
-    # FIXME: this find should be using the same find arguments as in the function createSymLink. Should create that as a
-    #        variable earlier in the code. This will detect the basic case of empty directories.
-    fileCount=$(find $dotDir -type f -not -path "$dotDir/.git/*" | wc -l);
-    if [ "$fileCount" == "0" ]; then
-        echo "There are zero files in the $dotDir to create symlinks for. Add some files to this directory and then "\
-             "run it again."
-        exit 0;
-    fi
-
+    echo -e "\n\n"
     PS3="Select above option regarding how to create the symlinks:"
     options=("Create all symlinks                         " #hack to get the columns on new lines. Is there a better way?
     "Ask before creating each"
@@ -170,15 +161,6 @@ function symlinkOption {
             *) echo invalid option;;
         esac
     done
-}
-
-function displayTitle {
-    echo -e "\e[4m\033[1m$1\033[0m"
-}
-
-function createSymLinks {
-
-    local symlinksCreated=0;
 
     # Determine if we are going to use a minimal list of files to symlink
     if [ "$symlinkOption" == "minimal" ]; then
@@ -186,22 +168,51 @@ function createSymLinks {
             echo "No minimal files to symlink, exiting."
             exit 1;
         fi
-        minimalSymlinkFiles="-name ${minimalSymlinkFiles/,/ -name }"
+        minimalSymlinkFiles="-name ${minimalSymlinkFiles/,/ -o -name }"
     else
         minimalSymlinkFiles=""
     fi
 
-    displayTitle "Creating Symlinks in ~ for all files in $dotDir"
+    
+    # FIXME: this find command should be using the same find arguments as in the 
+    #        function createSymLink. Should create that as a variable earlier 
+    #        in the code. I believe this can be accomplished by using eval but
+    #        it might be evil http://mywiki.wooledge.org/BashFAQ/048
+
+    # Check for files before going any further
+    fileCount=$(find "$dotDir" -type f $minimalSymlinkFiles\
+            -not -path "$dotDir/.hg/*" \
+            -not -path "$dotDir/.git/*" \
+            -not -path "$dotDir/.README.md*" \
+            -not -path "$backupDir" \
+            -not -path "$binDir/*" \
+            -not -path "$customDir/*" \
+            -not -path "$sourceDir/*" | wc -l);
+    if [ "$fileCount" == "0" ]; then
+        echo -e "\nThere are no files in the $dotDir. No symlinks will be created."
+        exit 0;
+    fi
+}
+
+function displayTitle {
+    echo -e "\n\e[4m\033[1m$1\033[0m"
+}
+
+function createSymLinks {
+
+    local symlinksCreated=0;
+
+    displayTitle "Creating Symlinks in ~ for files in $dotDir"
 
     # create the symlinks for every file in the given dotfile directory.
     for file in $(find "$dotDir" -type f $minimalSymlinkFiles \
-        -not -path "$dotDir/.hg/*" \
-        -not -path "$dotDir/.git/*" \
-        -not -path "$dotDir/.README.md*" \
-        -not -path "$backupDir" \
-        -not -path "$binDir/*" \
-        -not -path "$customDir/*" \
-        -not -path "$sourceDir/*"); do
+                -not -path "$dotDir/.hg/*" \
+                -not -path "$dotDir/.git/*" \
+                -not -path "$dotDir/.README.md*" \
+                -not -path "$backupDir" \
+                -not -path "$binDir/*" \
+                -not -path "$customDir/*" \
+                -not -path "$sourceDir/*"); do
         
         # get the file with a path relative to the dotDir
         local relativeFile=${file#$dotDir} #remove $dotDir from $file
