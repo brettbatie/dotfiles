@@ -32,23 +32,19 @@ Dotm can be installed using my configs or as a bare structure for your own confi
 This command will download the dotm bash script and run it in bash.
 
 ```bash
-bash <(wget -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm)
+bash <(wget -nv -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm)
 ```
 
-Now anytime you want to pull changes and automatically create the symlinks just run the command **./dotm**
+Anytime you want to pull changes and automatically create the symlinks just run the command **./dotm**
 
 **DOTM with Bare Structure**
+The below command is very similar to the one used for downloading my dotm configs. The main difference is the last parameter (in bold) where we specify a specific repository other than the default (mine). This can be a brand new repository or even an invalid one.
 
-The below command will create the ~/dotfiles/bin directory, download the dotm bash script, make it executable and then run it using the specified repository.
+If an invalid repository is given dotm won't checkout any files but it will still create the basic structure and save itself to the bin directory.
 
-The URL in bold at the end of the below command will set the repository to use when pulling/updating dot files. It is recommended to change this line to a valid repository. The repository can be pointed to an existing dotfile repository or a new empty one. If an invalid repository is given dotm will still successfully create the dot file directory structure. So, a valid repository is not required.
+> bash <(wget -nv -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm) -r **git://github.com/username/dotfiles/**
 
-
-
-> wget -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm | bash /dev/stdin -r **git://github.com/username/dotfiles/**
-
-
-Now anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm** or just **dotm** if you add it to the path.
+Anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm -r git://github.com/your/repo** or just **dotm** if you add it to the path. You can also change the default repo in the top of the dotm bash file if you would rather not specify the repository each time.
 
 ###Settings & Command Line Arguments
 Dotm has default settings that can be modified at the top of the bash script as well as command line arguments that can be used. dotm --help will output the following information
