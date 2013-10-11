@@ -39,7 +39,7 @@ Now anytime you want to pull changes and automatically create the symlinks just 
 
 **DOTM with Bare Structure**
 
-The below command will create the ~/dotfiles/bin directory, download the dotm bash script, make it executable and then run it.
+The below command will create the ~/dotfiles/bin directory, download the dotm bash script, make it executable and then run it using the specified repository.
 
 The URL in bold at the end of the below command will set the repository to use when pulling/updating dot files. It is recommended to change this line to a valid repository. The repository can be pointed to an existing dotfile repository or a new empty one. If an invalid repository is given dotm will still successfully create the dot file directory structure. So, a valid repository is not required.
 
