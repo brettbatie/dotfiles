@@ -39,14 +39,14 @@ Now anytime you want to pull changes and automatically create the symlinks just 
 
 **DOTM with Bare Structure**
 
-The last line in the below commands will set the repository to use when pulling/updating dot files. It is recommended to change this line to a valid repository. However, an invalid repository will still successfully create the dot file directory structure.
+The below command will create the ~/dotfiles/bin directory, download the dotm bash script, make it executable and then run it.
 
-The below commands will create the ~/dotfiles/bin directory, download the dotm bash script and then run it.
+The URL in bold at the end of the below command will set the repository to use when pulling/updating dot files. It is recommended to change this line to a valid repository. The repository can be pointed to an existing dotfile repository or a new empty one. If an invalid repository is given dotm will still successfully create the dot file directory structure. So, a valid repository is not required.
 
-```bash
-mkdir -p ~/dotfiles/bin && wget -O ~/dotfiles/bin/dotm https://raw.github.com/brettbatie/dotfiles/master/bin/dotm && chmod +x ~/dotfiles/bin/dotm
-~/dotfiles/bin/./dotm -r git://github.com/username/dotfiles/
-```
+
+
+> mkdir -p ~/dotfiles/bin && wget -O ~/dotfiles/bin/dotm     https://raw.github.com/brettbatie/dotfiles/master/bin/dotm && chmod +x ~/dotfiles/bin/dotm && ~/dotfiles/bin/./dotm -r **git://github.com/username/dotfiles/**
+
 
 Now anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm** or just **dotm** if you add it to the path.
 
