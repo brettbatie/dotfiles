@@ -50,7 +50,7 @@ mkdir -p ~/dotfiles/bin && wget -O ~/dotfiles/bin/dotm https://raw.github.com/br
 
 Now anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm** or just **dotm** if you add it to the path.
 
-###Settings & Command line Arguments
+###Settings & Command Line Arguments
 Dotm has default settings that can be modified at the top of the bash script as well as command line arguments that can be used. dotm --help will output the following information
 
 $ dotm --help
@@ -101,11 +101,26 @@ Dotm will create symlinks in the users home directory pointing to all files in t
 * **source** - Used to store files that will be sourced. The source files are processed in alphabetical order via my [.bashrc](https://github.com/brettbatie/dotfiles/blob/master/.bashrc) file.
 
 ###Multiple dotFile Directories (private files)
-...More to come
+
+dotm can also be used with multiple unique dotfile directories. For example, I like to keep a ~/dotfiles directory and a ~/dotfiles-private directory. This way I can put files that do not belong on github in another repository.
+
+This can be accomplished by simply specifying the dotfile directory and repository as arguments to dotm with a command like the following
+
+```bash
+dotm -d ~/dotfiles-private  -r git://privateDomain.com/dotfiles-private
+```
 
 ###Automate via cron
-...More to come
 
+I personally like to run dotm manually to keep my repository up to date. However, dotm could also be added to a cron job to keep everything up to date. 
+
+```bash
+# Pull new changes from the default dot files repository and create symlinks. Then 
+# push changes back to the default repository.
+*/15 * * * * ~/dotfiles/./dotm -a && git add . && git commit -m "Auto commit of dot files" && git push
+```
+
+Note that the -a flag was used to keep dotm from asking questions. This could also be further enhanced to detect merge conflicts and send out an email.
 
 Inspired by:
 
