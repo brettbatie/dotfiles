@@ -13,12 +13,6 @@ masterRepository=git://github.com/brettbatie/dotfiles
 # comma delimited list for only creating a minimal set of symlinks
 minimalSymlinkFiles=".vimrc,.gitconfig"
 
-# special directories
-backupDir=$dotDir/dotfiles-backup
-customDir=$dotDir/custom
-binDir=$dotDir/bin
-sourceDir=$dotDir/source
-
 #########################################
 
 function help {
@@ -77,7 +71,6 @@ function checkParameters {
 
     # Make sure the dotfile directory structure exists
     if [ ! -d "$dotDir" ]; then
-        echo "The dotfile directory ($dotDir) does not exist. Creating it"
         mkdir -v -p "$dotDir";
     fi
 
@@ -86,10 +79,11 @@ function checkParameters {
         $dotDir=${dotDir%?}
     fi
 
-    # Check if the directory is empty
-    if find /some/dir/ -maxdepth 0 -empty | read v; 
-        emptyDotDir=true;
-    fi
+    # Set directories based on defined dotDir.
+    backupDir=$dotDir/dotfiles-backup
+    customDir=$dotDir/custom
+    binDir=$dotDir/bin
+    sourceDir=$dotDir/source
 
 }
 
@@ -133,9 +127,9 @@ function createDirectories {
 
     # Download and save dotm to the bin directory if this script is running from
     # a remote location and the dotfiles directory was empty.
-    if [ $emptyDotDir == true ]; then
+    if [ ! -f "$binDir/dotm" ]; then
         # FIXME: could add check here to see if wget exists and fall back to fetch or curl
-        wget -O $dotDir/bin/dotm https://raw.github.com/brettbatie/dotfiles/master/bin/dotm
+        wget -nv -O $dotDir/bin/dotm https://raw.github.com/brettbatie/dotfiles/master/bin/dotm
         chmod +x $dotDir/bin/dotm
     fi
 }

@@ -82,12 +82,6 @@ masterRepository=git://github.com/brettbatie/dotfiles
 
 # comma delimited list for only creating a minimal set of symlinks
 minimalSymlinkFiles=".vimrc,.gitconfig"
-
-# special directories
-backupDir=$dotDir/dotfiles-backup
-customDir=$dotDir/custom
-binDir=$dotDir/bin
-sourceDir=$dotDir/source
 ```
 
 ###Special Directories
