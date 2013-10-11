@@ -45,7 +45,7 @@ The URL in bold at the end of the below command will set the repository to use w
 
 
 
-> mkdir -p ~/dotfiles/bin && wget -O ~/dotfiles/bin/dotm     https://raw.github.com/brettbatie/dotfiles/master/bin/dotm && chmod +x ~/dotfiles/bin/dotm && ~/dotfiles/bin/./dotm -r **git://github.com/username/dotfiles/**
+> wget -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm | bash /dev/stdin -r **git://github.com/username/dotfiles/**
 
 
 Now anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm** or just **dotm** if you add it to the path.

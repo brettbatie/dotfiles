@@ -86,6 +86,11 @@ function checkParameters {
         $dotDir=${dotDir%?}
     fi
 
+    # Check if the directory is empty
+    if find /some/dir/ -maxdepth 0 -empty | read v; 
+        emptyDotDir=true;
+    fi
+
 }
 
 function updateRepo {
@@ -124,6 +129,14 @@ function createDirectories {
 
     if [ ! -d "$customDir" ]; then
         mkdir -v -p "$customDir"
+    fi
+
+    # Download and save dotm to the bin directory if this script is running from
+    # a remote location and the dotfiles directory was empty.
+    if [ $emptyDotDir == true ]; then
+        # FIXME: could add check here to see if wget exists and fall back to fetch or curl
+        wget -O $dotDir/bin/dotm https://raw.github.com/brettbatie/dotfiles/master/bin/dotm
+        chmod +x $dotDir/bin/dotm
     fi
 }
 
