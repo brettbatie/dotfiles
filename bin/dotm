@@ -20,9 +20,6 @@ binDir=$dotDir/bin
 sourceDir=$dotDir/source
 
 #########################################
-#
-#command1=$(echo ls -l)   # Variable where some command is defined
-#eval "$command1"              # Execute command
 
 function help {
 cat << EOF
