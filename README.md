@@ -38,6 +38,7 @@ bash <(wget -nv -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm)
 Anytime you want to pull changes and automatically create the symlinks just run the command **./dotm**
 
 **DOTM with Bare Structure**
+
 The below command is very similar to the one used for downloading my dotm configs. The main difference is the last parameter (in bold) where we specify a specific repository other than the default (mine). This can be a brand new repository or even an invalid one.
 
 If an invalid repository is given dotm won't checkout any files but it will still create the basic structure and save itself to the bin directory.
