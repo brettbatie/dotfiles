@@ -379,6 +379,7 @@ i   x2goclient                      - X2Go Client application (Qt4)
 i   x2goserver                      - X2Go server daemon scripts                
 i   xarchiver                       - GTK+ frontend for most used compression fo
 i   xchat                           - IRC client for X similar to AmIRC         
+i   xclip                           - command line interface to X selections    
 i   xdotool                         - simulate X11 keyboard/mouse input         
 i   xtightvncviewer                 - virtual network computing client software 
 i   xz-utils                        - XZ-format compression utilities           
