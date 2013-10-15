@@ -1,2 +1,4 @@
 # sublime project files
 *.sublime-*
+
+/dotfiles-backup/
