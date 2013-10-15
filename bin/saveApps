@@ -1,0 +1,36 @@
+# Gets a list of all of the applications installed on this computer and saves it to a file
+
+saveApps() {
+    if [ $# -eq 0 ]; then
+        echo "usage: setApps appName.list"
+        echo "appName.list will create the specified file in the \$DOT_FILES/custom/ directory."
+        
+        echo -e "\nSpecify the name for this application list."
+
+        echo -e "\nApplication lists in $DOT_FILES/custom/ are:\n"
+        ls $DOT_FILES/custom/*.list |xargs basename
+        return;
+    fi
+
+    # assume that this is in the ~/dotfiles/bin directory
+    DOT_FILES="`dirname $0`/.."
+
+    # support for both appName and appName.list
+    appList="$DOT_FILES/custom/$1"
+    if [[ ! $appList =~ ^.*\.list$ ]]; then
+        appList="$appList.list"
+    fi
+
+    # ask before overwriting, unless --quite flag was passed
+    REPLY=""
+    if [ -f $appList ] && [[ $* != *--quite* ]]; then
+        read -p "Overwrite the apps list ($appList) [y/n]?" -n 1 -r
+    fi
+    
+    if [[ $REPLY =~ ^[Yy]$ ]] || [ "$REPLY" == "" ]; then
+        aptitude search '~i!~M' > $appList
+        echo -e "\n\nFinished creating list of installed application at $appList."
+    fi
+}
+
+saveApps "$@"
