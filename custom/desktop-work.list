@@ -1,4 +1,3 @@
-i   galakd
 i   acpi                            - displays information on ACPI devices      
 i   acpi-support-base               - scripts for handling base ACPI events such
 i   acpid                           - Advanced Configuration and Power Interface
@@ -306,6 +305,7 @@ i   python-apt                      - Python interface to libapt-pkg
 i   python-dev                      - header files and a static library for Pyth
 i   python-minimal                  - minimal subset of the Python language (def
 i   python-pip                      - alternative Python package installer      
+i   python-qt4                      - Python bindings for Qt4                   
 i   python-reportbug                - Python modules for interacting with bug tr
 i   python-support                  - automated rebuilding support for Python mo
 i   python-xlib                     - Interface for Python to the X11 Protocol  
@@ -353,6 +353,7 @@ i   tzdata                          - time zone and daylight-saving time data
 i   ucf                             - Update Configuration File: preserve user c
 i   udev                            - /dev/ and hotplug management daemon       
 i   unar                            - Unarchiver for a variety of file formats  
+i   update-notifier                 - Daemon which notifies about package update
 i   usbutils                        - Linux USB utilities                       
 i   util-linux                      - Miscellaneous system utilities            
 i   vim                             - Vi IMproved - enhanced vi editor          
