@@ -80,8 +80,8 @@ installApps() {
     fi
 
     echo -e "Apps Not Installed On This System\n================================="
-    apps=$(diff -y --left-column --suppress-common-lines <(cat $appList | sed -r 's/i\s+([^ ]+).*/\1/g') <(aptitude search '~i!~M' | sed -r 's/i\s+([^ ]+).*/\1/g') | grep -vE '^\s+>.*$' | sed -r 's/<//g')
-    echo $apps
+    apps=$(diff -y --left-column --suppress-common-lines <(cat $appList | sed -r 's/i[A-Za-z]*\s+([^ ]+).*/\1/g') <(aptitude search '~i!~M' | sed -r 's/i[A-Za-z]*\s+([^ ]+).*/\1/g') | grep -vE '^\s+>.*$' | sed -r 's/<//g' | sed -r 's/\|.*//g')
+    echo $apps | sed -r 's/ /\n/g' 
 
     echo -e "\n"
     read -p "Install the above applications [y/n]?" -n 1 -r
@@ -111,7 +111,9 @@ setApps() {
         appList="$appList.list"
     fi
 
-    if [ -f $appList ]; then
+    # ask before overwriting, unless --quite flag was passed
+    REPLY=""
+    if [ -f $appList ] && [[ $* != *--quite* ]]; then
         read -p "Overwrite the apps list ($appList) [y/n]?" -n 1 -r
     fi
     
