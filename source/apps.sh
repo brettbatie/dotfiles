@@ -1,22 +1,4 @@
-# function myapt {
-#     # List applications that are not installed when comparing to $dotfiles/apps.list
-#     diff $dotfiles/apps.list (aptitude search '~i!~M' | sed -r 's/i\s+([^ ]+).*/\1/g')
-
-#     read -p "Preparing to install the above applications (from $dotfiles/apps.list). Continue?" -n 1 -r
-#     # if not yes, then skip it
-#     if [[! $REPLY = ~ ^[Yy]$]]; then
-#         aptitude install --prompt --visual-preview $(diff $dotfiles/apps.list (aptitude search '~i!~M' | sed -r 's/i\s+([^ ]+).*/\1/g'))
-#     fi
-# }
-
-# function createmyapt {
-#     read -p "Recreate the apps list?" -n 1 -r
-#     # if not yes, then skip it
-#     if [[! $REPLY = ~ ^[Yy]$]]; then
-#         aptitude search '~i!~M' > $dotfiles/apps.list
-#     fi
-# }
-
+export DOT_FILES=$HOME/dotfiles
 export EDITOR='subl -w'
 export VISUAL=$EDITOR
 
@@ -73,3 +55,68 @@ done
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
+
+# Offers to install applications (not already installed) from a given list
+installApps() {
+    if [ $# -eq 0 ]; then
+        echo "usage: installApps appName.list"
+        echo "appName.list the list to use in the \$DOT_FILES/custom/ directory."
+        
+        echo -e "\nSpecify the name for this application list."
+
+        echo -e "\nApplication lists in $DOT_FILES/custom/ are:\n"
+        ls $DOT_FILES/custom/*.list |xargs basename
+        return;
+    fi
+
+    appList=$DOT_FILES/custom/$1
+    if [[ ! $appList =~ ^.*\.list$ ]]; then
+        appList="$appList.list"
+    fi
+
+    if [ ! -f $appList ]; then
+        echo "$appList does not exist please run the setApps $1 command to create it."
+        return
+    fi
+
+    echo -e "Apps Not Installed On This System\n================================="
+    apps=$(diff -y --left-column --suppress-common-lines <(cat $appList | sed -r 's/i\s+([^ ]+).*/\1/g') <(aptitude search '~i!~M' | sed -r 's/i\s+([^ ]+).*/\1/g') | grep -vE '^\s+>.*$' | sed -r 's/<//g')
+    echo $apps
+
+    echo -e "\n"
+    read -p "Install the above applications [y/n]?" -n 1 -r
+    # if not yes, then skip it
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        sudo aptitude install $apps
+    fi
+}
+
+
+# Gets a list of all of the applications installed on this computer and saves it to a file
+setApps() {
+    if [ $# -eq 0 ]; then
+        echo "usage: setApps appName.list"
+        echo "appName.list will create the specified file in the \$DOT_FILES/custom/ directory."
+        
+        echo -e "\nSpecify the name for this application list."
+
+        echo -e "\nApplication lists in $DOT_FILES/custom/ are:\n"
+        ls $DOT_FILES/custom/*.list |xargs basename
+        return;
+    fi
+
+    # support for both appName and appName.list
+    appList="$DOT_FILES/custom/$1"
+    if [[ ! $appList =~ ^.*\.list$ ]]; then
+        appList="$appList.list"
+    fi
+
+    if [ -f $appList ]; then
+        read -p "Overwrite the apps list ($appList) [y/n]?" -n 1 -r
+    fi
+    
+    if [[ $REPLY =~ ^[Yy]$ ]] || [ "$REPLY" == "" ]; then
+        aptitude search '~i!~M' > $appList
+        echo -e "\n\nFinished creating list of installed application at $appList."
+    fi
+}
