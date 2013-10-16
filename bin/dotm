@@ -187,8 +187,8 @@ function symlinkOption {
     fileCount=$(find "$dotDir" -type f $minimalSymlinkFiles\
             -not -path "$dotDir/.hg/*" \
             -not -path "$dotDir/.git/*" \
-            -not -path "$dotDir/README.md*" \
-            -not -path "$backupDir" \
+            -not -path "$dotDir/README.md" \
+            -not -path "$backupDir/*" \
             -not -path "$binDir/*" \
             -not -path "$customDir/*" \
             -not -path "$sourceDir/*" | wc -l);
@@ -213,7 +213,7 @@ function createSymLinks {
                 -not -path "$dotDir/.hg/*" \
                 -not -path "$dotDir/.git/*" \
                 -not -path "$dotDir/README.md*" \
-                -not -path "$backupDir" \
+                -not -path "$backupDir/*" \
                 -not -path "$binDir/*" \
                 -not -path "$customDir/*" \
                 -not -path "$sourceDir/*"); do
