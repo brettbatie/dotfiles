@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#Taken from: http://askubuntu.com/questions/79318/how-can-i-switch-users-from-within-xfce
+# I had to install aptitude install zenity
+# and find a gdmflexiserver binary from the tar file https://launchpad.net/lightdm/+download
+
+zenity --question --text "Switch user?" --title "New login" &&
+gdmflexiserver --new
