@@ -245,15 +245,24 @@ function createSymLinks {
         # Create a backup if there is a file that will be overwritten
         if [ -f "$HOME/$relativeFile" ]; then
             echo "Making backup of $relativeFile in $backupDir"
+            # Strip the filename from the full path
+            fullBackupPath=$backupDir/$(dirname ${relativeFile})
+
+            # Make sure that the backup directory and sub directories exist
+            if [ ! -d $fullBackupPath ]; then
+                mkdir -p $fullBackupPath
+            fi
+
+            # backup the file
             mv -v $HOME/$relativeFile $backupDir/$relativeFile.$(date +"%Y%m%d%H%M")
         fi
 
         # Strip the filename from the relative Path
-        local destionationDir=$(dirname ${relativeFile})
+        local destinationDir=$HOME/$(dirname ${relativeFile})
 
         # Make sure that the destination directory exists
-        if [ -d $destinationDir ]; then
-            mkdir -p $destionationDir
+        if [ ! -d $destinationDir ]; then
+            mkdir -p $destinationDir
         fi
 
         echo "Creating symlink ~/$relativeFile -> $file"
