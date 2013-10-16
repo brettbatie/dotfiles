@@ -1,0 +1,29 @@
+#!/bin/bash
+# Edward Comer
+# Enables Shotwell to SendToEmail in XFCE system. Shotwell depends on
+# nautilus-sendto (in an executable path) to function, which is missing
+# in a pure XFCE installation. This script is named nautilus-sendto
+# and placed in /usr/local/bin and marked executable
+
+LOGFILE=/tmp/nautilus-sendtolog.txt
+
+echo Inside nautilus-sendto >$LOGFILE
+echo Number of arguments passed: $# >>$LOGFILE
+echo Passed arguments are: >>$LOGFILE
+echo $@ >>$LOGFILE
+SENDTOCMD=`grep Exec /usr/share/Thunar/sendto/thunar-sendto-email.desktop`
+echo "SENDTOCMD="$SENDTOCMD >>$LOGFILE
+SENDTOEXEC=`echo ${SENDTOCMD:5}`
+SENDTOEXEC=`echo ${SENDTOEXEC// %F/}`
+if [ -z "$SENDTOEXEC" ]
+then
+  echo "\$SENDTOEXEC is null." >>$LOGFILE
+else
+    echo "Environment is:" >>$LOGFILE
+    env >>$LOGFILE
+   echo "SENDTOEXEC="$SENDTOEXEC >>$LOGFILE
+   echo Executing $SENDTOEXEC $@ >>$LOGFILE
+   $SENDTOEXEC $@
+fi
+echo Exiting nautilus-sendto >>$LOGFILE
+exit
