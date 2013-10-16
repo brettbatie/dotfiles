@@ -108,7 +108,7 @@ I personally like to run dotm manually to keep my repository up to date. However
 ```bash
 # Pull new changes from the default dot files repository and create symlinks. Then 
 # push changes back to the default repository.
-*/15 * * * * ~/dotfiles/./dotm -a && git add . && git commit -m "Auto commit of dot files" && git push
+*/15 * * * * ~/dotfiles/bin/./dotm -a && git add . && git commit -m "Auto commit dot files" && git push
 ```
 
 Note that the -a flag was used to keep dotm from asking questions. This could also be further enhanced to detect merge conflicts and send out an email.
