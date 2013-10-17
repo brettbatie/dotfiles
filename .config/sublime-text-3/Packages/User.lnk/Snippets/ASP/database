@@ -1,0 +1,17 @@
+<snippet>
+<content><![CDATA[
+Set MyConnection = Server.CreateObject("ADODB.Connection")
+MyConnection.Open("PROVIDER=SQLOLEDB;SERVER=DOC;UID=fetisql;PWD=5+heze7e;DATABASE=Junonia Development")
+Set cmdTemp = Server.CreateObject("ADODB.Command")
+cmdTemp.CommandType = 1
+Set cmdTemp.ActiveConnection = MyConnection
+
+MyConnection.Close
+Set MyConnection = Nothing
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.asp</scope>
+</snippet>

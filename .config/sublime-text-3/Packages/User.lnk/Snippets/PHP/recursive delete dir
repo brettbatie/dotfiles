@@ -1,0 +1,22 @@
+<snippet>
+<content><![CDATA[
+/**
+ * recursively removes all the files and directories in the specified
+ * dir
+ * @param dir - the path to a directory that will be deleted.
+ */
+function removeDir($dir) {
+   if(!$dh = @opendir($dir)) return;
+   while (($obj = readdir($dh))) {
+     if($obj=='.' || $obj=='..') continue;
+     if (!@unlink($dir.'/'.$obj)) {removeDir($dir.'/'.$obj);}
+   }
+   @rmdir($dir);
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

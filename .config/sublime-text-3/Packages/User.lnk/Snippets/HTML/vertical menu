@@ -1,0 +1,27 @@
+<snippet>
+<content><![CDATA[
+<style type="text/css">
+	#navcontainer{width: 12em; border-right: 1px solid #000; padding: 0 0 1em 0; margin-bottom: 1em; font-family: Verdana, Lucida, Geneva, Helvetica, Arial, sans-serif; background-color: #90bade; color: #333;}
+	#navcontainer ul{list-style: none; margin: 0; padding: 0; border: none;}
+	#navcontainer li{border-bottom: 1px solid #90bade;margin: 0;}
+	#navcontainer li a{display: block; padding: 5px 5px 5px 0.5em; border-left: 10px solid #1958b7; border-right: 10px solid #508fc4; background-color: #2175bc; color: #fff; text-decoration: none; width: 100%;}
+	html>body #navcontainer li a { width: auto; }
+	#navcontainer li a:hover{border-left: 10px solid #1c64d1; border-right: 10px solid #5ba3e0; background-color: #2586d7; color: #fff;}
+</style>
+<!--html for body-->
+<div id="navcontainer">
+<ul id="navlist">
+	<li><a href="/" title="Home Page">Home</a></li>
+	<li><a href="one.html" title="Page One">page1</a></li>
+	<li><a href="two.html" title="Page Two">page2</a></li>
+	<li><a href="" title=""></a></li>
+	<li><a href="" title=""></a></li>
+</ul>
+</div>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+margin: 0 auto;
+
+<!-- read http://dorward.me.uk/www/centre/-->
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css</scope>
+</snippet>

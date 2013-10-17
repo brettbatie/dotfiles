@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+ xargs kill -9 < /var/run/cassandra.pid; sleep 2; /home/admin/htdocs/services/cassandra/launch_cassandra.sh; tail -f /usr/tmp/cassandra
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

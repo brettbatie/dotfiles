@@ -1,0 +1,15 @@
+<snippet>
+<content><![CDATA[
+<link rel=stylesheet href="http://example.com/nn4.css"> 
+
+<STYLE TYPE="text/css"> 
+@import "main.css"
+</STYLE> 
+<!--make sure this stays in order. The firs style sheet is for Netscape 4...every broswer can read it but then every browser except netscape 4 can read the next @import statement.-->
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css</scope>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+<content><![CDATA[
+<!--this checks for new version of flash-->
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="1" height="1">
+	<param name="CheckForFlash" value="flash/CheckForFlash.swf"> 
+</object>
+<!--this displays flash or picture and conforms to html standards-->
+<object type="application/x-shockwave-flash" data="flash/c.swf?path=flash/inspiration4u_movie1.swf" width="400" height="300">
+  	<param name="movie" value="flash/c.swf?path=flash/inspiration4u_movie1.swf">
+		<IMG SRC="flash/NoFlash.jpg" WIDTH="246" HEIGHT="121" BORDER=0 ALT="">
+</object>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

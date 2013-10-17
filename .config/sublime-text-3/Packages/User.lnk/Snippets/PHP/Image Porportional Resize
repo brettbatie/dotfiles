@@ -1,0 +1,15 @@
+<snippet>
+<content><![CDATA[
+function scaleSize($maxWidth, $maxHeight, $width, $height){
+	$ratio = MIN($maxWidth/$width, $maxHeight/$height );
+	$width = $ratio * $width;
+	$height = $ratio * $height;
+	return array('width'=>(int)$width,'height'=>(int)$height);
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

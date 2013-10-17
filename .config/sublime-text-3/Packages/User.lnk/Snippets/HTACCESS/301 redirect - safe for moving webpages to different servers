@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+redirect 301 / http://www.wheredoyouwantogotoday.com/ 
+//place the above in htaccess
+//this is good if you need to move from one domain to another without losing your search engine traffic
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.ini</scope>
+</snippet>

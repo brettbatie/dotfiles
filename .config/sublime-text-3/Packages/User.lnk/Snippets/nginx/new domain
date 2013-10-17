@@ -1,0 +1,29 @@
+<snippet>
+<content><![CDATA[
+1. Add server directive to nginx.conf
+2. Create new directory for the new domain
+3. Get an ip address from /etc/rc.conf - need to search the nginx.conf AND THE INCLUDE FILES to see if the ip is in use
+4. Configure DNS Server - cd /etc/alwaysupdns
+cp instantremove.dns newdomain.dns
+5. edit newdomain.dns to replacing the domain name and ip address
+6. edit /var/named/etc/namedb/named.conf
+7. Add
+zone "domain.com"
+
+{
+
+    type master;
+
+    file "/etc/alwaysupdns/domain.dns";
+}
+8. restart named
+killall named
+named
+9. ping the new domain
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

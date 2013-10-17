@@ -1,0 +1,56 @@
+<snippet>
+<content><![CDATA[
+/**
+ * Helper Class that will setup a mysql connection and will automatically retrieve a new mysql 
+ * connection when the old one is lost. (A new connection is created with each instantiation of the object).
+ * Each call to getLink() will return the existing connection or reconnect if the connection is lost.
+ */
+class MySQL {
+    private $link = null;
+    private $host, $user, $pass;
+
+    /**
+     * Will initialize a connection to the database and select the database
+     */
+    function __construct($host, $user, $pass, $db){
+        $this->host = $host;
+        $this->user = $user;
+        $this->pass = $pass;
+        $this->db = $db;
+
+        $this->getLink();
+    }
+
+    /**
+     * Will try to retrieve an active link. It first checks the existing connection and if the 
+     * the connection is lost it will try to reconnect. It will return false if it cannot reconnect.
+     */
+    public function getLink(){
+        if(@!mysql_ping($this->link)){
+            $this->link = mysql_connect($this->host,$this->user,$this->pass,true);
+            $this->select_db($this->db);
+        }
+        return $this->link;
+    }
+
+    /**
+     * In case we need to switch the database.
+     */
+    public function select_db($db){
+       return mysql_select_db($db,$this->link);
+    }
+
+    /**
+     * Will try to retrieve or create an active connection and then run the query.
+     */
+    public function query($sql){
+        return mysql_query($sql,$this->getLink());
+    }
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

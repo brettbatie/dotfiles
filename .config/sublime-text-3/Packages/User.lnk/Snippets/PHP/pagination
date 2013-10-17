@@ -1,0 +1,54 @@
+<snippet>
+<content><![CDATA[
+/**
+ * Creates a string containing links to all the pages.
+ * @param page - the current page to display
+ * @param numItems - the total amount of items to be listed for all 
+ * pages
+ * @param limit - the amount of items to list per page
+ * @param query - any extra query string (starting with &)
+ * @return a string containing links to all the pages (ex. next 1,2 prev)
+ */
+function pagination($page, $numItems, $limit, $query=''){
+    $page_string = "";
+    $from = ($page * $limit) - $limit;
+    $numofpages = $numItems / $limit;
+    if ($numofpages > 1){
+        if($page != 1){
+            $pageprev = $page-1;
+            $page_string .= "<a href=\"".$_SERVER['PHP_SELF']."?page=".$pageprev.$query."\">Previous</a>&nbsp;";
+        }else{
+            $page_string .= "Previous ";
+        }
+        for($i = 1; $i <= $numofpages; $i++){
+            if($i == $page){
+                $page_string .= $i."&nbsp;";
+            }else{
+                $page_string .= "<a href=\"".$_SERVER['PHP_SELF']."?page=".$i.$query."\">".$i."</a>&nbsp;";
+            }
+        }
+
+        if(($numItems % $limit) != 0){
+            if($i == $page){
+                $page_string .= $i."&nbsp;";
+            }else{
+                $page_string .= "<a href=\"".$_SERVER['PHP_SELF']."?page=".$i.$query."\">".$i."</a>&nbsp;";
+            }
+        }
+
+        if(($numItems - ($limit * $page)) > 0){
+            $pagenext = $page+1;
+            $page_string .= "<a href=\"".$_SERVER['PHP_SELF']."?page=".$pagenext.$query."\">Next</a>";
+        }else{
+            $page_string .= "Next ";
+        }
+    }
+    return $page_string;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
