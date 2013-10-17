@@ -184,14 +184,16 @@ function symlinkOption {
     #        it might be evil http://mywiki.wooledge.org/BashFAQ/048
 
     # Check for files before going any further
-    fileCount=$(find "$dotDir" -type f $minimalSymlinkFiles\
-            -not -path "$dotDir/.hg/*" \
-            -not -path "$dotDir/.git/*" \
-            -not -path "$dotDir/README.md" \
-            -not -path "$backupDir/*" \
-            -not -path "$binDir/*" \
-            -not -path "$customDir/*" \
-            -not -path "$sourceDir/*" | wc -l);
+    fileCount=$(find "$dotDir" \( -type f $minimalSymlinkFiles \
+                -not -path "*/*\.lnk/*" \
+                -not -path "$dotDir/.hg/*" \
+                -not -path "$dotDir/.git/*" \
+                -not -path "$dotDir/README.md*" \
+                -not -path "$backupDir/*" \
+                -not -path "$binDir/*" \
+                -not -path "$customDir/*" \
+                -not -path "$sourceDir/*" \) \
+                -o -type d -path "*\.lnk" | wc -l);
     if [ "$fileCount" == "0" ]; then
         echo -e "\nThere are no files in the $dotDir. No symlinks will be created."
         exit 0;
@@ -209,21 +211,28 @@ function createSymLinks {
     displayTitle "Creating Symlinks in ~ for files in $dotDir"
 
     # create the symlinks for every file in the given dotfile directory.
-    for file in $(find "$dotDir" -type f $minimalSymlinkFiles \
+    for file in $(find "$dotDir" \( -type f $minimalSymlinkFiles \
+                -not -path "*/*\.lnk/*" \
                 -not -path "$dotDir/.hg/*" \
                 -not -path "$dotDir/.git/*" \
                 -not -path "$dotDir/README.md*" \
                 -not -path "$backupDir/*" \
                 -not -path "$binDir/*" \
                 -not -path "$customDir/*" \
-                -not -path "$sourceDir/*"); do
-        
+                -not -path "$sourceDir/*" \) \
+                -o -type d -path "*\.lnk" ); do
+
         # get the file with a path relative to the dotDir
         local relativeFile=${file#$dotDir} #remove $dotDir from $file
 
         # Remove the leading slash if there is one
         if [[ $relativeFile == /* ]]; then
             relativeFile=${relativeFile:1}
+        fi
+
+                # remove .lnk from the dirctory name
+        if [ -d "$file" ]; then
+            relativeFile=${relativeFile%.lnk}
         fi
 
         # If the symlink is already in place, move to the next file, nothing to do
@@ -242,8 +251,8 @@ function createSymLinks {
             fi
         fi
 
-        # Create a backup if there is a file that will be overwritten
-        if [ -f "$HOME/$relativeFile" ]; then
+        # Create a backup if there is a file or directory that will be overwritten
+        if [ -f "$HOME/$relativeFile" -o -d "$HOME/$relativeFile" ]; then
             echo "Making backup of $relativeFile in $backupDir"
             # Strip the filename from the full path
             fullBackupPath=$backupDir/$(dirname ${relativeFile})
@@ -254,7 +263,7 @@ function createSymLinks {
             fi
 
             # backup the file
-            mv -v $HOME/$relativeFile $backupDir/$relativeFile.$(date +"%Y%m%d%H%M")
+            mv $HOME/$relativeFile $backupDir/$relativeFile.$(date +"%Y%m%d%H%M")
         fi
 
         # Strip the filename from the relative Path
@@ -278,6 +287,7 @@ function createSymLinks {
 
         symlinksCreated=$(($symlinksCreated+1))
     done;
+
     echo "$symlinksCreated new symlinks created in ~"
 }
 

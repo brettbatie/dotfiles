@@ -10,11 +10,12 @@ This repository consists of two parts.
 ##DOTM (Dot File Manager - Bash Script)
 
 ###Features
-* **Handles symlinks for sub directories** in the dot files directory. This will match the directory structure in the users home directory. So ~/dotfiles/somedir/.somefile will have a link created in ~/somedir/.somefile.
+* Handles **symlinks to files in sub directories** of the dot file directory. This will match the directory structure in the users home directory. So ~/dotfiles/somedir/.somefile will have a link created in ~/somedir/.somefile.
+* **Symlinks to directories** in the dot files directory. Any directory name that ends in .lnk will have a corresponding symlink pointing to it from the home directory. So ~/dotfiles/somddir.lnk/ will have a symlink in ~/somdir.
 * Creates **backups** of files that exist in the users home directory. Places backup in a user defined directory (~/dotfiles/backup by default) and appends a timestamp to the filename
-* **Automatically creates symlink** for all files in the dot files directory (~/dotfiles by default) except for [special directories](#Special-Directories).
+* **Automatically creates symlink** for all files in the dot files directory (~/dotfiles by default) and sub directories except for [special directories](#Special-Directories).
 * **Custom directory** (default ~/dotfiles/custom) to put files that won't be symlinked.
-* **Bin directory** (default ~/dotfiles/bin) to put scripts that won't be symlinked. Will be added to path via .bashrc.
+* **Bin directory** (default ~/dotfiles/bin) to put scripts that won't be symlinked. Will be added to the path via .bashrc.
 * **Source directory** (default ~/dotfiles/source) to put source files that won't be symlinked. Will be sourced via .bashrc.
 * Option to **ask before creating each symlink**.
 * Option to create **symlinks from a minimal list**. Allowing for only some symlinks to be created on specific servers.
