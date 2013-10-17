@@ -88,7 +88,7 @@ Dotm will create symlinks in the users home directory pointing to all files in t
 
 * **.hg, .git, README.md** - are ignored.
 * **backup** - Stores files that are overwritten when symlinks are created. When creating a symlink dotm will first check if there is a file that wil be overwritten in the users home directory. If a file will be overwritten it copies the files to the backup directory and then adds a timestamp to the filename.
-* **custom** - This directory is not processed by dotm. It is a good directory to store custom files that should not have symlinks. For example, I store a list of apps that I like to have installed in this folder. ~~FIXME: Checkout the blah & blah functions in blah~~
+* **custom** - This directory is not processed by dotm. It is a good directory to store custom files that should not have symlinks.
 * **bin** - Used to store scripts that will be added to the path. This is added to the path via my [.bashrc](https://github.com/brettbatie/dotfiles/blob/master/.bashrc) file.
 * **source** - Used to store files that will be sourced. The source files are processed in alphabetical order via my [.bashrc](https://github.com/brettbatie/dotfiles/blob/master/.bashrc) file.
 
