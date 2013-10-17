@@ -1,0 +1,21 @@
+{
+	"installed_packages":
+	[
+		"ApacheConf.tmLanguage",
+		"FileDiffs",
+		"INI",
+		"Local History",
+		"Markdown Extended",
+		"Monokai Extended",
+		"My Snippets",
+		"PlainTasks",
+		"Run",
+		"Simple Print Function",
+		"sublimelint",
+		"Sublimerge Pro",
+		"Superlime",
+		"Terminal",
+		"toggle-readonly",
+		"VCS Gutter"
+	]
+}

@@ -1,0 +1,26 @@
+{
+    "user": {
+        "debug": false,
+        "plugins": {
+            "AppleScript": {},
+            "CSS": {},
+            "Coffee": {},
+            "EmbeddedJS": {},
+            "Golang": {},
+            "HAML": {},
+            "HTML": {},
+            "Java": {
+                "disable": true
+            },
+            "JavaScript": {},
+            "Lua": {},
+            "Nasm": {},
+            "PHP": {},
+            "Perl": {},
+            "Puppet": {},
+            "Ruby": {},
+            "TODO": {},
+            "XML": {}
+        }
+    }
+}

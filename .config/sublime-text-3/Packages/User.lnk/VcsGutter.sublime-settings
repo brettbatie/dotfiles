@@ -1,0 +1,22 @@
+{
+    // Live mode evaluates changes every time file is modified,
+    // Set to false to disable evaluation after each input.
+    // Restart Sublime Text to activate this change.
+    "live_mode": true,
+  
+    // When set to true VcsGutter runs asynchronously in a seperate thread
+    // This may cause a small delay between a modification and the icon change
+    // but can increase performance greatly if needed. Sublime Text 3 only.
+    "non_blocking": true,
+
+    // Paths to VCS commands. Modify if the executable is not in your path.
+    //
+    // Format is key: path_to_executable
+    // e.g. "git": "/usr/bin/git" or "git": "C:\bin\git.exe"
+    "vcs_paths": {
+        "diff": "diff",
+        "git": "git",
+        "hg": "hg",
+        "svn": "svn"
+    }
+}

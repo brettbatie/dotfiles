@@ -1,0 +1,36 @@
+{
+	// Setup other folders that contain code snippets you want to include in your library
+	// Each folder setting must have a "display" and "path" name|value pair
+	// If path is empty, or if path is not an accessible directory, then that setting will be skipped
+	// Leaving display empty will place directory contents in root menu
+	"folders":[
+		{
+			"display": "",
+			"path": "/home/brett/.config/sublime-text-3/Packages/User/Snippets"
+		}
+	],
+	// Title of the 1st context menu - set blank to place your folders directly on the main context menu
+	"main":"My Snippets",
+	// No associated with "main", set this true to display the My Snippets menu in the top menu
+	"showmain": true,
+	// When true shows the file extension of each snippet in context menu as (ext) - Otherwise extension is not displayed
+	"showext": true,
+	// When true status messages are output to the python console after various processes
+	"debug": false,
+	// Only use when debug is set to false, display status messages in status bar
+	"status": true,
+	// When true folders will be periodically checked to see if any files have been added or updated since menu was built.
+	// If a new or updated file is found the menu will be rebuilt.
+	// Note that deleting a file will not initiate a rebuild.
+	"livesync": true,
+	// Used when livesync is enabled, how long to wait between updates - Time is in MILLISECONDS
+	"syncewait": 60000,
+	// File patterns to ignore
+	"ignore":["*.gitignore","*.project","settings.xml"],
+	// Exclude any subfolders with these names
+	"folder_exclude":[".svn",".git",".hg","CVS"],
+	// set what key binding will initiate a my snippets snippet
+	// This feature requires file names include a tag set inside square brackets [tag].
+	// To call the snippet type the tag and then press the key binding (defaults as shift+enter)
+	"keybind": "shift+enter"
+}

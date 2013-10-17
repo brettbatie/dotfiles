@@ -1,0 +1,41 @@
+{
+	"atomic_save": false,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields": false,
+	"cache_printer_names": false,
+	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+	"command": "enscript",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"draw_white_space": "all",
+	"font_size": 9,
+	"highlight_modified_tabs": false,
+	"ignored_packages":
+	[
+		"Sublimerge Pro",
+		"Vintage",
+		"Run"
+	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"options":
+	{
+		"fancy-header": "",
+		"font": "Courier@8",
+		"highlight": "",
+		"line-numbers": 1,
+		"media": "A4",
+		"tabsize": 4
+	},
+	"print_line_numbers": true,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"spell_check": true,
+	"title_option": "title",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "true"
+}
