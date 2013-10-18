@@ -104,6 +104,8 @@ This can be accomplished by simply specifying the dotfile directory and reposito
 dotm -d ~/dotfiles-private  -r git://privateDomain.com/dotfiles-private
 ```
 
+To make the above command easier I like to setup an alias named dotmp in the source directory of the private repository.
+
 ###Automate via cron
 
 I personally like to run dotm manually to keep my repository up to date. However, dotm could also be added to a cron job to keep everything up to date. 
