@@ -66,6 +66,7 @@ i   file                            - Determines file type using "magic" numbers
 i   filezilla                       - Full-featured graphical FTP/FTPS/SFTP clie
 i   findutils                       - utilities for finding files--find, xargs  
 i   firmware-linux-free             - Binary firmware for various drivers in the
+i   firmware-realtek                - Binary firmware for Realtek wired and wire
 i   flashplugin-nonfree             - Adobe Flash Player - browser plugin       
 i   font-manager                    - font management application for the GNOME 
 i   fonts-liberation                - Fonts with the same metrics as Times, Aria
@@ -417,6 +418,7 @@ i   simple-scan                     - Simple Scanning Utility
 i   solaar                          - Logitech Unifying Receiver peripherals man
 i   sshfs                           - filesystem client based on SSH File Transf
 i   stopwatch                       - Virtual stopwatch and timer               
+i   sublime-text                    - Sublime Text is a sophisticated text edito
 i   subversion                      - Advanced version control system           
 i   sudo                            - Provide limited super user privileges to s
 i   synapse                         - semantic file launcher                    
