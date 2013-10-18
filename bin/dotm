@@ -73,12 +73,15 @@ function checkParameters {
     if [ ! -d "$dotDir" ]; then
         mkdir -v -p "$dotDir";
     fi
-
+echo 'here::'
     # Trim the trailing slash from the dot directory (if there is one)
     if [[ $dotDir == */ ]]; then
-        $dotDir=${dotDir%?}
+        dotDir="${dotDir%?}"
+        echo 'here'
+        echo $dotDir
+        return;
     fi
-
+return;
     # Set directories based on defined dotDir.
     backupDir=$dotDir/dotfiles-backup
     customDir=$dotDir/custom
@@ -210,6 +213,16 @@ function createSymLinks {
 
     displayTitle "Creating Symlinks in ~ for files in $dotDir"
 
+echo find "$dotDir" \( -type f $minimalSymlinkFiles \
+                -not -path "*/*\.lnk/*" \
+                -not -path "*/.hg/*" \
+                -not -path "*/.git/*" \
+                -not -path "$dotDir/README.md*" \
+                -not -path "$backupDir/*" \
+                -not -path "$binDir/*" \
+                -not -path "$customDir/*" \
+                -not -path "$sourceDir/*" \) \
+                -o -type d -path "*\.lnk";
     # create the symlinks for every file in the given dotfile directory.
     for file in $(find "$dotDir" \( -type f $minimalSymlinkFiles \
                 -not -path "*/*\.lnk/*" \
