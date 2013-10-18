@@ -73,15 +73,12 @@ function checkParameters {
     if [ ! -d "$dotDir" ]; then
         mkdir -v -p "$dotDir";
     fi
-echo 'here::'
+
     # Trim the trailing slash from the dot directory (if there is one)
     if [[ $dotDir == */ ]]; then
         dotDir="${dotDir%?}"
-        echo 'here'
-        echo $dotDir
-        return;
     fi
-return;
+
     # Set directories based on defined dotDir.
     backupDir=$dotDir/dotfiles-backup
     customDir=$dotDir/custom
@@ -130,7 +127,7 @@ function createDirectories {
 
     # Download and save dotm to the bin directory if this script is running from
     # a remote location and the dotfiles directory was empty.
-    if [ ! -f "$binDir/dotm" ]; then
+    if [ ! -f "$binDir/dotm" ] && [ ! hash dotm >/dev/null 2>&1 ]; then
         # FIXME: could add check here to see if wget exists and fall back to fetch or curl
         wget -nv -O $dotDir/bin/dotm https://raw.github.com/brettbatie/dotfiles/master/bin/dotm
         chmod +x $dotDir/bin/dotm
