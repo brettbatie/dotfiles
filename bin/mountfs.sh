@@ -5,3 +5,6 @@ sshfs -o sftp_server="/usr/bin/sudo /usr/libexec/openssh/sftp-server" idev01:/ /
 sshfs -o sftp_server="/usr/bin/sudo /usr/libexec/openssh/sftp-server" batie:/ /home/brett/mount/batie
 sshfs -o sftp_server="/usr/bin/sudo /usr/libexec/openssh/sftp-server" abatches:/ /home/brett/mount/abatches
 sshfs -o sftp_server="/usr/bin/sudo /usr/libexec/openssh/sftp-server" adb01:/ /home/brett/mount/adb01
+if [ "Brett-PC" == "`hostname`" ]; then
+    sshfs work:/home/brett/ /home/brett/mount/work
+fi
