@@ -1,6 +1,5 @@
 # Add dotfile binaries to path
-export PATH=$HOME/dotfiles/bin:$PATH
-
+export PATH=$HOME/dotfiles/bin:$HOME/dotfiles-private/bin:$PATH
 
 
 # source all files in dotfiles or only the given file
@@ -9,7 +8,7 @@ function src() {
   if [[ "$1" ]]; then
     source "$HOME/dotfiles/source/$1.sh"
   else
-    for file in ~/dotfiles/source/*; do
+    for file in ~/dotfiles*/source/*; do
       source "$file"
     done
   fi
