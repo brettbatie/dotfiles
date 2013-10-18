@@ -48,6 +48,8 @@ If an invalid repository is given dotm won't checkout any files but it will stil
 
 Anytime you want to pull changes and automatically create the symlinks just run the command **~/dotfiles/bin/./dotm -r git://github.com/your/repo** or just **dotm** if you add it to the path. You can also change the default repo in the top of the dotm bash file if you would rather not specify the repository each time.
 
+Note: Another option that allows using your own config files is to fork my repository. Then just add/modify remove whatever you please.
+
 ###Settings & Command Line Arguments
 Dotm has default settings that can be modified at the top of the bash script as well as command line arguments that can be used. dotm --help will output the following information
 
