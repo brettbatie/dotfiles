@@ -3,7 +3,7 @@
 *.sublime-workspace
 
 # Backup directory
-/dotfiles-backup/
+dotfiles-backup/
 
 # Sublime Package control files in the User directory
 Package Control.last-run
