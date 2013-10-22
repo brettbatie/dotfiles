@@ -41,3 +41,8 @@ sudo update-rc.d crashplan defaults
 # but ignore the directories in /home: .cache, .icedove, .PlayOnLinux, .steam, .VirtualBox, bin, Desktop, Templates, Public, .shotwell, .steampath, .steampid, Documents, Music, Pictures, Videos
 
 # NOTE: if restoreing to a temp folder, make sure to cp -af .* to get the hidden directories to merge with the existing ones
+
+
+# Crashplan watches a lot of inodes
+echo "fs.inotify.max_user_watch=1048576" >>/etc/sysctl.conf
+sudo sysctl -w fs.inotify.max_user_watches=1048576
