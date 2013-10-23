@@ -46,3 +46,14 @@ sudo update-rc.d crashplan defaults
 # Crashplan watches a lot of inodes
 echo "fs.inotify.max_user_watch=1048576" >>/etc/sysctl.conf
 sudo sysctl -w fs.inotify.max_user_watches=1048576
+
+# Turn off crashplan during business hours to reduce IO
+sudo crontab -e
+0 22 * * * sudo service crashplan start
+0 7  * * * sudo service crashplan stop
+
+# Install yuuguu for screensharing
+dpkg -i yuuguu_latest_i386.deb
+# if errors about java, make sure java is in the path and then do a 
+dpkg -i --force-depends yuuguu_latest_i386.deb
+
