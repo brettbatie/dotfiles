@@ -18,3 +18,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[core]
+	excludesfile = /home/brett/.gitignore_global
