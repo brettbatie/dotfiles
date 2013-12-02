@@ -70,3 +70,13 @@ java -jar squirrel-sql-3.5.0-install.jar
 # Cam Desk
 Download @ http://sourceforge.net/projects/camdesk/
 
+# Turn off crashplan during business hours to reduce IO
+sudo crontab -e
+0 22 * * * sudo service crashplan start
+0 7  * * * sudo service crashplan stop
+
+# Install yuuguu for screensharing
+dpkg -i yuuguu_latest_i386.deb
+# if errors about java, make sure java is in the path and then do a 
+dpkg -i --force-depends yuuguu_latest_i386.deb
+

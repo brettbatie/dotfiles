@@ -8,7 +8,7 @@
 # SETTINGS
 
 dotDir=$HOME/dotfiles
-masterRepository=git://github.com/brettbatie/dotfiles
+masterRepository=https://github.com/brettbatie/dotfiles.git
 
 # comma delimited list for only creating a minimal set of symlinks
 minimalSymlinkFiles=".vimrc,.gitconfig"
