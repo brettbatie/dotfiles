@@ -1,14 +1,15 @@
 # Gets a list of all of the applications installed on this computer and saves it to a file
 
 saveApps() {
+    DOT_FILES="$HOME/dotfiles"
     if [ $# -eq 0 ]; then
-        echo "usage: setApps appName.list"
+        echo "usage: saveApps appName.list"
         echo "appName.list will create the specified file in the \$DOT_FILES/custom/ directory."
         
         echo -e "\nSpecify the name for this application list."
 
         echo -e "\nApplication lists in $DOT_FILES/custom/ are:\n"
-        ls $DOT_FILES/custom/*.list |xargs basename
+        ls -1 $DOT_FILES/custom/*.list |xargs -d '\n' -n1 basename
         return;
     fi
 

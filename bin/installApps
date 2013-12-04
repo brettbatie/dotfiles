@@ -1,5 +1,6 @@
 # Offers to install applications (not already installed) from a given list
 installApps() {
+    DOT_FILES="$HOME/dotfiles";
     if [ $# -eq 0 ]; then
         echo "usage: installApps appName.list"
         echo "appName.list the list to use in the \$DOT_FILES/custom/ directory."
