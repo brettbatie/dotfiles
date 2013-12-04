@@ -3,7 +3,7 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_with_fields": false,
 	"cache_printer_names": false,
-	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+	"color_scheme": "Packages/User/Color Scheme/Bespin.tmTheme",
 	"command": "enscript",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
@@ -11,9 +11,9 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
+		"Sublimerge Pro",
 		"Vintage",
-		"Run",
-		"Sublimerge Pro"
+		"Run"
 	],
 	"indent_guide_options":
 	[
