@@ -1,0 +1,32 @@
+<snippet>
+<content><![CDATA[
+vBSEO 3.2.0 is not compatible with vBulletin 3.8:
+
+http://www.vbulletin.com/forum/showp...78&postcount=2
+
+You can run this query to clear the existing login strikes:
+
+DELETE FROM strikes
+
+You can run this query to set a new password for userid X:
+
+UPDATE user
+SET password = MD5(CONCAT(MD5('new-password'), salt))
+WHERE userid = X
+
+Your login form has been modified by one of your addons to post to a full URL. This can cause login problems if you don't use "www" in the URL. Sometimes you can fix this by editing the cookie domain:
+
+Admin CP -> vBulletin Options -> Cookies and HTTP Header Options
+
+Use a cookie domain like this (which uses your domain name, including the beginning dot):
+
+.domain.com
+
+That will make it so your forum cookies work from any subdomain of your domain, with or without "www".
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

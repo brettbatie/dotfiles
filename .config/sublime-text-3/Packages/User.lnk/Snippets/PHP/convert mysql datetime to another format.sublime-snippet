@@ -1,0 +1,21 @@
+<snippet>
+<content><![CDATA[
+// converts a datetime to another format
+// http://us4.php.net/date <-- for the format
+function convert_datetime($datestamp, $format) {
+    if ($datestamp!=0) {
+        list($date, $time)=split(" ", $datestamp);
+        list($year, $month, $day)=split("-", $date);
+        list($hour, $minute, $second)=split(":", $time);
+        $stampeddate=mktime($hour,$minute,$second,$month,$day,$year);
+        $datestamp=date($format,$stampeddate);
+        return $datestamp;
+    }
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+$mysqldate = date( 'Y-m-d H:i:s', $phpdate );
+$phpdate = strtotime( $mysqldate );
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

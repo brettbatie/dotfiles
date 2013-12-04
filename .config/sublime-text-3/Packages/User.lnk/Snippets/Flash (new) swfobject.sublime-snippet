@@ -1,0 +1,36 @@
+<snippet>
+<content><![CDATA[
+<html>
+<head>
+	<script type="text/javascript" src="swfobject.js"></script>
+</head>
+<body>
+
+<div id="flashcontent">
+	<strong>You need to upgrade your Flash Player</strong>
+	This is replaced by the Flash content. 
+	Place your alternate content here and users without the Flash plugin or with 
+	Javascript turned off will see this. Content here allows you to leave out <code>noscript</code> 
+	tags. Include a link to <a href="swfobject.html?detectflash=false">bypass the detection</a> if you wish.
+</div>
+
+<script type="text/javascript">
+	
+	
+	var so = new SWFObject("so_tester.swf", "sotester", "300", "300", "8", "#FF6600");
+	so.addVariable("flashVarText", "this is passed in via FlashVars for example only"); // this line is optional, but this example uses the variable and displays this text inside the flash movie
+	so.write("flashcontent");
+	
+	
+</script>
+
+</body>
+</html>
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

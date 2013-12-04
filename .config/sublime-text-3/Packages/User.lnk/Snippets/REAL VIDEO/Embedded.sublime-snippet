@@ -1,0 +1,20 @@
+<snippet>
+<content><![CDATA[
+<object width="320" height="255" background="white" classid="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" CODEBASE="http://www.real.com/player/">
+<param name="controls" value="ImageWindow,ControlPanel,StatusBar">
+<param name="autostart" value="true">
+<param name="CONSOLE" VALUE="one">
+<PARAM NAME="BACKGROUNDCOLOR" VALUE="#000000">
+<PARAM NAME="NOLOGO" VALUE="TRUE">
+<PARAM NAME="CENTER" VALUE="TRUE">
+<param name="src" value="media/New-Heart-Video.rpm">
+<embed src="media/New-Heart-Video.rpm" type="audio/x-pn-realaudio-plugin" width="320" height="240" autostart="true" nojava="true" controls="ImageWindow,ControlPanel,StatusBar" CONSOLE="one" border="0" CONTROLLER="false" PLUGINSPAGE="http://www.real.com/player/">
+</object>
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

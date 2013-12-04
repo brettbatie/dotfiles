@@ -1,0 +1,23 @@
+<snippet>
+<content><![CDATA[
+/*
+ * Mouseover replace image
+ * Description: will replace the image with another one when the mouse is over an image.
+ * This can also be used to create a pop up window effect when the mouse goes over an 
+ * image or any other item, just change the position of the .hover large.
+ * This does not have to be strictly used with images, it can also be used to show/hide a block of text
+ * when the mouse is over text/image.
+ * <a href="" class="pic"><img src="" class="small"><img src="" class="hover"></a>
+ * 
+ */
+a .hover {display: none; height: 0; width: 0; border-width: 0;}
+a.pic:hover {background-color: ^#FFF;}
+a.pic:hover .small {height: 0; width: 0; border-width: 0;}
+a.pic:hover .hover {display: inline; width: 113px; height: 84px;}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css</scope>
+</snippet>

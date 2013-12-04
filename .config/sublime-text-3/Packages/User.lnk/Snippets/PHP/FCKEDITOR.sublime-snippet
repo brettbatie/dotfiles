@@ -1,0 +1,19 @@
+<snippet>
+<content><![CDATA[
+<?php
+include('include/fckeditor.php');
+$oFCKeditor = new FCKeditor('FCKeditor1');//the name of the textarea
+$oFCKeditor->BasePath = '/include/' ;
+$oFCKeditor->Width = '60%';
+$oFCKeditor->Height = '200';
+$oFCKeditor->ToolbarSet = 'Custom'; //Default, Basic, or Custom
+$oFCKeditor->Value = ''; //initial text
+echo $oFCKeditor->Create();
+?>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

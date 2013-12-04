@@ -1,0 +1,26 @@
+<snippet>
+<content><![CDATA[
+' Save the code below as "myname.vbs" and when you run it, it will 
+' launch a browser window with no menu-bars or scrollbars etc.
+' It is also possible that the following will need to be installed
+' if it is not already. 
+' Windows Script 5.6 for Windows 2000 and XP
+' http://www.microsoft.com/downloads/details.aspx?FamilyId=C717D943-7E4B-4622-86EB-95A22B832CAA&displaylang=en
+' found info about this @ http://www.notestips.com/80256B3A007F2692/1/NAMO5MRMCD
+'
+Set objExplorer = CreateObject("InternetExplorer.Application")
+objExplorer.Navigate "http://www.notestips.com" 
+objExplorer.ToolBar = 0
+objExplorer.StatusBar = 0
+objExplorer.Width = 800
+objExplorer.Height = 600
+objExplorer.Left = 0
+objExplorer.Top = 0
+objExplorer.Visible = 1
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

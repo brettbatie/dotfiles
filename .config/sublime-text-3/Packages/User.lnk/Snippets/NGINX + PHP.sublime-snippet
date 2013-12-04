@@ -1,0 +1,59 @@
+<snippet>
+<content><![CDATA[
+http://www.softwareprojects.com/files/auto/php-4.4.9.tar.gz
+echo "- Extracting" 
+
+tar xvfz php-4.4.9.tar.gz >>$mwLog 2>&1                                                   
+
+echo "- Patching" 
+
+gzip -cd php-4.4.9-fpm-0.5.10.diff.gz | patch -d php-4.4.9 -p1 >>$mwLog 2>&1              
+
+cd php-4.4.9 
+
+echo "- Configure" 
+
+./configure --enable-fastcgi \ 
+
+            --enable-fpm \ 
+
+            --enable-ftp \ 
+
+            --enable-mbstring \ 
+
+            --enable-mysql \ 
+
+            --with-curl \ 
+
+            --with-dom \ 
+
+            --with-gd \ 
+
+            --with-iconv \ 
+
+            --with-jpeg-dir=/usr/lib \ 
+
+            --with-mysql=/usr/local/mysql \ 
+
+            --with-openssl \ 
+
+            --with-soap \ 
+
+            --with-sockets \ 
+
+            --with-zlib \ 
+
+            >>$mwLog 2>&1 
+
+echo "- Make/install" 
+
+make all install >>$mwLog 2>&1 
+
+cp -f /usr/local/bin/php-cgi /usr/local/bin/php
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

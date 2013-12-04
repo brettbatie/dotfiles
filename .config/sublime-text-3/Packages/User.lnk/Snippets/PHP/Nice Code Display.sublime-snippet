@@ -1,0 +1,16 @@
+<snippet>
+<content><![CDATA[
+<? 
+$str = "<!--add the below code between your <head> and </head> tags -->";
+$code = highlight_string("<?$str?>",true);
+$code = str_replace("&lt;?","", $code);
+$code = str_replace("?&gt;","", $code);
+echo "<div class=\"small\">".$code."</div>";
+?>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

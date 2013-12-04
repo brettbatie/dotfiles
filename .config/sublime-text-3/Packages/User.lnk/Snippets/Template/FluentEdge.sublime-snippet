@@ -1,0 +1,16 @@
+<snippet>
+<content><![CDATA[
+<?php include('include/headtags.inc'); ?>
+    <title></title>
+</head>
+<body>
+<?php include('include/top.inc'); ?>
+
+<?php include('include/bottom.inc'); ?>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

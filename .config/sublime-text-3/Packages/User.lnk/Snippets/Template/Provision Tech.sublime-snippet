@@ -1,0 +1,23 @@
+<snippet>
+<content><![CDATA[
+<?php include($_SERVER['DOCUMENT_ROOT'].'/include/headtags.php'); ?>
+	<title>401 Error | Web Page Hosting & Design | Provision Tech</title>
+	<meta name="robots" content="index,follow">
+</head>
+<body>
+<div id="Content">
+	<div id="Intro"><img src="<?php echo $dir; ?>images/spacer.gif" width="170" height="148" border="0" alt="" align="right">
+	<div class="Column">&nbsp;</div>
+	</div>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.inc');
+include($_SERVER['DOCUMENT_ROOT'].'/include/layout.inc'); ?>
+</body>
+</html>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

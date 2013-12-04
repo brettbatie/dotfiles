@@ -1,0 +1,24 @@
+<snippet>
+<content><![CDATA[
+
+/* I would like to try this using display: table and see what happens
+<table width="100%" border="1" cellpadding="0" cellspacing="0" summary="" class="content">
+	<tr valign="top">
+		<td valign="top" class="content"></td>
+	</tr>
+  <tr><td>footer</td></tr>
+</table>*/
+html, body, .content {min-height: 100%;width: 100%;height: 100%;}
+/* The "height" above is a hack for IE5+/Win.  Below we adjust
+ * it using the child selector to hide from IE5+/Win */
+html>body, html>body #content {height: auto;}
+
+body {margin: 0; padding: 0; background-color: #606568; text-align: center;}
+.content{position: relative; height: 100%; width: 780px; background-color: green; margin: 0 auto;}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.css</scope>
+</snippet>

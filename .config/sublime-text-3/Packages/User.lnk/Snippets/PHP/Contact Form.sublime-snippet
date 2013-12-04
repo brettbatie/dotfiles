@@ -1,0 +1,71 @@
+<snippet>
+<content><![CDATA[
+<?php
+function clean($var) {
+	return str_replace(array("\r", "\n"), "", trim($var));
+}
+
+$to = "sales@classicwebdevelopment.com";
+
+$name = $email = $subject = $message = $submit = '';
+//validate required items and send
+if(isset($_POST['submit']) && $_POST['submit'] == 'Submit'){
+
+	if(isset($_POST['name']) && $_POST['name'] != ''){$name = clean($_POST['name']);}
+	if(isset($_POST['email']) && $_POST['email'] != ''){$email = clean($_POST['email']);}
+	if(isset($_POST['subject']) && $_POST['subject'] != ''){$subject = clean($_POST['subject']);}
+	if(isset($_POST['message']) && $_POST['message'] != ''){$message = clean($_POST['message']);}
+	if(isset($_POST['submit']) && $_POST['submit'] != ''){$submit = clean($_POST['submit']);}
+
+	if(empty($name)){
+		$err = 'Please enter your name below.';
+	}else if(empty($email)){
+		$err = 'Please enter your email address below.';
+	}else if(empty($subject)){
+		$err = 'Please enter a subject below.';
+	}else if(empty($message)){
+		$err = 'Please enter a valid message below.';
+	}else if(!preg_match('/^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA
+	-Z]{2,6}$/', $_POST['email'])) {
+		$err = 'Please enter a valid email address below.';
+	}else {//send
+		$extra = "From: $name <$email>\r\nReply-To: $email\r\n";
+		if(mail($to, $subject, $message, $extra)){
+			$err = 'Your message was successfully sent.';
+		}
+	}
+}
+
+echo '
+<h1 style="width: 109px;">Contact Us</h1>
+Feel free to contact us if you have any questions or comments. You may fill out the form below or call the following number: 1.800.9600.CWD.<br />
+<br />';
+if(!empty($err)){
+	echo '<span class="alert">'.$err.'</span><br /><br />';
+}
+
+echo '<div style="float: right; width: 250px; padding-top: 30px; padding-right: 30px; font-family: Verdana, Verdana, Geneva, sans-serif; font-size: 11pt;"><div style="border: 1px solid ^#0B1417; background-color: ^#660000; padding: 10px; color: white;"><strong>Current Clients:</strong> <br />If you already have a web hosting account please login into your control panel ("Member Login" above) and submit a "trouble ticket".</div></div>';
+
+echo '<form action="'.$_SERVER['PHP_SELF'].'" method="post" id="contactForm">
+	<table border="0" cellpadding="0" cellspacing="0" summary="">
+		<tr>
+			<td>Name:</td><td><input type="text" name="name" value="'.htmlspecialchars($name).'" id="name" /></td>
+		</tr><tr>
+			<td>Email Address:</td><td><input type="text" name="email" value="'.htmlspecialchars($email).'" /></td>
+		</tr><tr>
+			<td>Subject:</td><td><input type="text" name="subject" value="'.htmlspecialchars($subject).'" /></td>
+		</tr><tr>
+			<td style="vertical-align: top; padding-top: 2px;">Message:</td><td><textarea name="message" rows="5">'.htmlspecialchars($message).'</textarea></td>
+		</tr><tr>
+			<td colspan="2"><input type="submit" name="submit" value="Submit" style="width: auto; padding: 1px; margin-top: 2px;" /></td>
+		</tr>
+	</table>
+</form>';
+?>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

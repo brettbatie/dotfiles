@@ -1,0 +1,20 @@
+<snippet>
+<content><![CDATA[
+<?php
+// We'll be outputting a PDF
+header("Content-type: application/pdf");
+
+// It will be called downloaded.pdf
+header("Content-Disposition: attachment; filename=downloaded.pdf");
+
+// The PDF source is in original.pdf
+readfile('original.pdf');
+?>
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
