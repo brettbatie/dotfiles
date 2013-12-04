@@ -6,6 +6,11 @@ elif hash vim >/dev/null 2>&1; then
 elif hash vi >/dev/null 2>&1; then
     export EDITOR='vi'
 fi
+
+if [ -z "$DISPLAY" ]; then
+    export EDITOR='vim'
+fi
+
 export VISUAL=$EDITOR
 
 

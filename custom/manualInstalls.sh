@@ -1,14 +1,30 @@
+# Add sudo to user (if needed)
+su root
+usermod -a -G sudo userName
+
+# Home computer needs the realtek driver for it's wifi
+sudo aptitude install firmware-realteK
+
+# Add additional sources (like non free for fglrx driver)
+sed -i 's/ main/ main contrib non-free/g' /etc/apt/sources.list
+sudo aptitude update
+
+# Install fglrx for ati/amd video cards
+aptitude -r install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') fglrx-driver fglrx-control
+sudo aticonfig --initial
+shutdown -r now
+
 #Install IE Virtual Machines
 curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | bash
 #Install Glances Monitoring tool
-pip install Glances
+sudo pip install Glances
 
 #Install quicktile
 # dependencies
 sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck
 mkdir -p /opt/local/quicktile
-cd /opt/quicktile
-git https://github.com/ssokolow/quicktile.git .
+cd /opt/local/quicktile
+git clone https://github.com/ssokolow/quicktile.git .
 chmod +x setup.py
 sudo ./setup.py install
 
@@ -22,10 +38,6 @@ http://www.squirrelsql.org/#installation
 # Creates a list of applications installed on this computer and adds it to source control
 * */2 * * * cd $HOME/dotfiles && bin/saveApps desktop-work --quite && git add custom/desktop-work.list && git commit -m "Auto Commit of Application List for Desktop Work" && git push
 
-
-# Setup Display driver: 
-sudo aptitude install fglrx fglrx-control
-aticonfig --initial --adapter=all
 
 # Install crashplan:
 Download/Unzip
@@ -44,8 +56,19 @@ sudo update-rc.d crashplan defaults
 
 
 # Crashplan watches a lot of inodes
-echo "fs.inotify.max_user_watch=1048576" >>/etc/sysctl.conf
+echo "fs.inotify.max_user_watch=1048576" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -w fs.inotify.max_user_watches=1048576
+
+# Sublime Text
+Download @ http://www.sublimetext.com/3
+sudo dpkg -i sublime-text_build-3047_amd64.deb
+
+# Squirrel SQL
+Download @ http://squirrel-sql.sourceforge.net/#installation
+java -jar squirrel-sql-3.5.0-install.jar
+
+# Cam Desk
+Download @ http://sourceforge.net/projects/camdesk/
 
 # Turn off crashplan during business hours to reduce IO
 sudo crontab -e

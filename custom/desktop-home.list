@@ -26,7 +26,6 @@ i   bzip2                           - high-quality block-sorting file compressor
 i   chromium                        - Google's open source chromium web browser 
 i   clusterssh                      - administer multiple ssh or rsh shells simu
 i   console-setup                   - console font and keymap setup program     
-i   console-tools                   - Linux console and font utilities          
 i   coreutils                       - GNU core utilities                        
 i   cpio                            - GNU cpio -- a program to manage archives o
 i   cron                            - process scheduling daemon                 
@@ -358,7 +357,6 @@ i   netbeans                        - Extensible Java IDE
 i   netcat-traditional              - TCP/IP swiss army knife                   
 i   nfs-common                      - NFS support files common to client and ser
 i   ntp                             - Network Time Protocol daemon and utility p
-i   nxclient                        - NX Client                                 
 i   open-vm-dkms                    - Source for VMware guest systems driver (DK
 i   open-vm-toolbox                 - tools and components for VMware guest syst
 i   open-vm-tools                   - tools and components for VMware guest syst
@@ -467,10 +465,7 @@ i   whiptail                        - Displays user-friendly dialog boxes from s
 i   whois                           - intelligent WHOIS client                  
 i   winff                           - graphical video and audio batch converter 
 i   winff-doc                       - winff documentation                       
-i   wireless-tools                  - Tools for manipulating Linux Wireless Exte
 i   wmctrl                          - control an EWMH/NetWM compatible X Window 
-i   wpasupplicant                   - client support for WPA and WPA2 (IEEE 802.
-i   x11vnc                          - VNC server to allow remote access to an ex
 i   x2go-keyring                    - GnuPG keys of all X2Go developers and the 
 i   x2goclient                      - X2Go Client application (Qt4)             
 i   x2godesktopsharing              - share X2go desktops with other users (via 
