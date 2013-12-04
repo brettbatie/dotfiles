@@ -52,8 +52,8 @@ sudo crontab -e
 0 22 * * * sudo service crashplan start
 0 7  * * * sudo service crashplan stop
 
-# Install yuuguu for screensharing
-dpkg -i yuuguu_latest_i386.deb
+# Install yuuguu for screensharing (make sure to download the correct architecture 32/64 bit)
+dpkg -i yuuguu_latest*.deb
 # if errors about java, make sure java is in the path and then do a 
 dpkg -i --force-depends yuuguu_latest_i386.deb
 
