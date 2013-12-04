@@ -36,6 +36,14 @@
             "path_suffix": "/.htaccess",
             "url_prefix": "http://localhost/",
             "url_suffix": "/"
+        },
+        {
+            "path_prefix": "/home/brett/Imagenet/aws_code/caremore",
+            "url": "https://caremore.locali.net"
+        },
+        {
+            "path_prefix": "/home/brett/Imagenet/aws_code/elderserve",
+            "url": "https://elderserve.locali.net"
         }
     ]
 }

@@ -11,9 +11,9 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Sublimerge Pro",
 		"Vintage",
-		"Run"
+		"Run",
+		"Sublimerge Pro"
 	],
 	"indent_guide_options":
 	[
