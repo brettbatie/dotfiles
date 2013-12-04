@@ -38,7 +38,6 @@ i   debconf-i18n                    - full internationalization support for debc
 i   debian-archive-keyring          - GnuPG archive keys of the Debian archive  
 i   debian-faq                      - Debian FAQ                                
 i   debianutils                     - Miscellaneous utilities specific to Debian
-i   default-jdk-doc                 - Standard Java or Java compatible Developme
 i   diffuse                         - graphical tool for merging and comparing t
 i   diffutils                       - File comparison utilities                 
 i   dmidecode                       - SMBIOS/DMI table decoder                  
@@ -47,7 +46,6 @@ i   doc-debian                      - Debian Project documentation and other doc
 i   dpkg                            - Debian package management system          
 i   e2fslibs                        - ext2/ext3/ext4 file system libraries      
 i   e2fsprogs                       - ext2/ext3/ext4 file system utilities      
-i   eclipse                         - Extensible Tool Platform and Java IDE     
 i   eject                           - ejects CDs and operates CD-Changers under 
 i   enscript                        - converts text to Postscript, HTML or RTF w
 i   etckeeper                       - store /etc in git, mercurial, bzr or darcs
@@ -67,9 +65,12 @@ i   firmware-linux-free             - Binary firmware for various drivers in the
 i   flashplugin-nonfree             - Adobe Flash Player - browser plugin       
 i   font-manager                    - font management application for the GNOME 
 i   fonts-liberation                - Fonts with the same metrics as Times, Aria
+i   freeglut3:i386                  - OpenGL Utility Toolkit                    
+i   freerdp-x11                     - RDP client for Windows Terminal Services  
 i   ftp                             - classical file transfer client            
 i   gcalctool                       - GNOME desktop calculator                  
 i   gcc-4.7-base                    - GCC, the GNU Compiler Collection (base pac
+i   gcolor2                         - Simple GTK2 color selector and picker     
 i   gettext-base                    - GNU Internationalization utilities for the
 i   gftp-gtk                        - X/GTK+ FTP client                         
 i   gigolo                          - frontend to manage connections to remote f
@@ -78,6 +79,8 @@ i   gksu                            - graphical frontend to su
 i   gnome-mime-data                 - base MIME and Application database for GNO
 i   gnome-search-tool               - GNOME tool to search files                
 i   gnupg                           - GNU privacy guard - a free PGP replacement
+i   google-talkplugin               - Google Talk Plugin                        
+i   gparted                         - GNOME partition editor                    
 i   gpgv                            - GNU privacy guard - signature verification
 i   gpick                           - advanced GTK+ color picker                
 i   grep                            - GNU grep, egrep and fgrep                 
@@ -94,6 +97,8 @@ i   host                            - Transitional package
 i   hostname                        - utility to set/show the host name or domai
 i   htop                            - interactive processes viewer              
 i   i965-va-driver                  - VAAPI driver for Intel G45 & HD Graphics f
+i   ia32-libs                       - Transitional package to migrate ia32-libs 
+i   ia32-libs-i386:i386             - Transitional package to migrate ia32-libs 
 i   icedove                         - mail/news client with RSS and integrated s
 i   icedtea-7-plugin                - web browser plugin based on OpenJDK and Ic
 i   iceowl-extension                - Calendar Extension for Thunderbird/Icedove
@@ -115,44 +120,69 @@ i   krb5-locales                    - Internationalization support for MIT Kerbe
 i   kupfer                          - fast and lightweight desktop summoner/laun
 i   leafpad                         - GTK+ based simple text editor             
 i   less                            - pager program similar to more             
+i   lesstif2:i386                   - OSF/Motif 2.1 implementation released unde
+i   lib32asound2                    - shared library for ALSA applications (32 b
+i   lib32ncurses5                   - shared libraries for terminal handling (32
+i   lib32stdc++6                    - GNU Standard C++ Library v3 (32 bit Versio
+i   lib32z1                         - compression library - 32 bit runtime      
 i   libacl1                         - Access control list shared library        
+i   libacl1:i386                    - Access control list shared library        
+i   libaio1:i386                    - Linux kernel AIO access library - shared l
 i   libapt-inst1.5                  - deb package format runtime library        
 i   libapt-pkg4.12                  - package managment runtime library         
 i   libasprintf0c2                  - GNU library to use fprintf and friends in 
+i   libasyncns0:i386                - Asynchronous name service query library   
 i   libattr1                        - Extended attribute shared library         
+i   libaudio2:i386                  - Network Audio System - shared libraries   
+i   libaudiofile1:i386              - Open-source version of SGI's audiofile lib
 i   libav-tools                     - Multimedia player, server, encoder and tra
+i   libavahi-client3:i386           - Avahi client library                      
 i   libavahi-glib1                  - Avahi GLib integration library            
 i   libbind9-80                     - BIND9 Shared Library used by BIND         
 i   libblkid1                       - block device id library                   
 i   libboost-iostreams1.49.0        - Boost.Iostreams Library                   
+i   libbsd0:i386                    - utility functions from BSD systems - share
 i   libbz2-1.0                      - high-quality block-sorting file compressor
 i   libc-bin                        - Embedded GNU C Library: Binaries          
 i   libc6                           - Embedded GNU C Library: Shared libraries  
 i   libcap2                         - support for getting/setting POSIX.1e capab
+i   libcap2:i386                    - support for getting/setting POSIX.1e capab
 i   libclass-isa-perl               - report the search path for a class's ISA t
 i   libcomerr2                      - common error description library          
+i   libcomerr2:i386                 - common error description library          
 i   libcrypt-blowfish-perl          - Blowfish cryptography for Perl            
 i   libcrypt-cbc-perl               - Implementation of cipher block chaining (C
 i   libcrypt-rijndael-perl          - Perl module implementing the Rijndael algo
+i   libcups2:i386                   - Common UNIX Printing System(tm) - Core lib
+i   libcurl3:i386                   - easy-to-use client-side URL transfer libra
 i   libcwidget3                     - high-level terminal interface library for 
 i   libdb5.1                        - Berkeley v5.1 Database Libraries [runtime]
+i   libdirectfb-1.2-9:i386          - direct frame buffer graphics - shared libr
 i   libdns88                        - DNS Shared Library used by BIND           
 i   libedit2                        - BSD editline and history libraries        
+i   libedit2:i386                   - BSD editline and history libraries        
 i   libept1.4.12                    - High-level library for managing Debian pac
+i   libesd0:i386                    - Enlightened Sound Daemon - Shared librarie
 i   libevdocument3-4                - Document (PostScript, PDF) rendering libra
 i   libevent-2.0-5                  - Asynchronous event notification library   
 i   libevview3-3                    - Document (PostScript, PDF) rendering libra
+i   libexif12:i386                  - library to parse EXIF files               
 i   libexpect-perl                  - Expect.pm - Perl Expect interface         
+i   libflac8:i386                   - Free Lossless Audio Codec - runtime C libr
+i   libfltk1.1:i386                 - Fast Light Toolkit - shared libraries     
 i   libgc1c2                        - conservative garbage collector for C and C
 i   libgcc1                         - GCC support library                       
 i   libgcrypt11                     - LGPL Crypto library - runtime library     
 i   libgdbm3                        - GNU dbm database routines (runtime version
+i   libgdbm3:i386                   - GNU dbm database routines (runtime version
+i   libglu1-mesa:i386               - Mesa OpenGL utility library (GLU)         
 i   libgnome2-gconf-perl            - Perl interface to the GNOME GConf library 
 i   libgnomevfs2-common             - GNOME Virtual File System (common files)  
 i   libgnomevfs2-extra              - GNOME Virtual File System (extra modules) 
 i   libgnutls-openssl27             - GNU TLS library - OpenSSL wrapper         
 i   libgnutls26                     - GNU TLS library - runtime library         
 i   libgpg-error0                   - library for common error values and messag
+i   libgphoto2-2:i386               - gphoto2 digital camera library            
 i   libgpm2                         - General Purpose Mouse - shared library    
 i   libgssapi-krb5-2                - MIT Kerberos runtime libraries - krb5 GSS-
 i   libgssglue1                     - mechanism-switch gssapi library           
@@ -162,8 +192,12 @@ i   libgtk2-gladexml-perl           - Perl interface to use user interfaces crea
 i   libgtk2-sourceview2-perl        - enhanced source code editor widget        
 i   libgxps2                        - handling and rendering XPS documents (libr
 i   libidn11                        - GNU Libidn library, implementation of IETF
+i   libieee1284-3:i386              - cross-platform library for parallel port a
 i   libisc84                        - ISC Shared Library used by BIND           
+i   libjack-jackd2-0:i386           - JACK Audio Connection Kit (libraries)     
 i   libjbig0                        - JBIGkit libraries                         
+i   libjbig0:i386                   - JBIGkit libraries                         
+i   libjpeg62:i386                  - Independent JPEG Group's JPEG runtime libr
 i   libk5crypto3                    - MIT Kerberos runtime libraries - Crypto Li
 i   libkadm5clnt-mit8               - MIT Kerberos runtime libraries - Administr
 i   libkadm5srv-mit8                - MIT Kerberos runtime libraries - KDC and A
@@ -173,14 +207,17 @@ i   libkmod2                        - libkmod shared library
 i   libkpathsea6                    - TeX Live: path search library for TeX (run
 i   libkrb5-3                       - MIT Kerberos runtime libraries            
 i   libkrb5support0                 - MIT Kerberos runtime libraries - Support l
+i   liblcms1:i386                   - Little CMS color management library       
 i   libldap-2.4-2                   - OpenLDAP libraries                        
 i   liblocale-gettext-perl          - module using libc functions for internatio
 i   liblockfile-bin                 - support binaries for and cli utilities bas
 i   liblockfile1                    - NFS-safe locking library                  
 i   liblwres80                      - Lightweight Resolver Library used by BIND 
 i   liblzma5                        - XZ-format compression library             
+i   liblzo2-2:i386                  - data compression library                  
 i   libmagic1                       - File type determination library using "mag
 i   libmount1                       - block device id library                   
+i   libmpg123-0:i386                - MPEG layer 1/2/3 audio decoder (shared lib
 i   libncurses5                     - shared libraries for terminal handling    
 i   libncursesw5                    - shared libraries for terminal handling (wi
 i   libnet-arp-perl                 - module to create ARP packets and lookup fo
@@ -188,16 +225,24 @@ i   libnet-proxy-perl               - Framework for proxying network connections
 i   libnewt0.52                     - Not Erik's Windowing Toolkit - text mode w
 i   libnfnetlink0                   - Netfilter netlink library                 
 i   libnfsidmap2                    - NFS idmapping library                     
+i   libnspr4:i386                   - NetScape Portable Runtime Library         
+i   libnspr4-0d:i386                - NetScape Portable Runtime Library - transi
+i   libnss3:i386                    - Network Security Service libraries        
+i   libnss3-1d:i386                 - Network Security Service libraries - trans
+i   libodbc1:i386                   - ODBC library for Unix                     
+i   libopenal1:i386                 - Software implementation of the OpenAL API 
 i   libossp-uuid-perl               - perl OSSP::UUID - OSSP uuid Perl Binding  
 i   libp11-kit0                     - Library for loading and coordinating acces
 i   libpam-modules                  - Pluggable Authentication Modules for PAM  
 i   libpam-modules-bin              - Pluggable Authentication Modules for PAM -
 i   libpam-runtime                  - Runtime support for the PAM library       
 i   libpam0g                        - Pluggable Authentication Modules library  
+i   libpam0g:i386                   - Pluggable Authentication Modules library  
 i   libpci3                         - Linux PCI Utilities (shared library)      
 i   libpcre3                        - Perl 5 Compatible Regular Expression Libra
 i   libpipeline1                    - pipeline manipulation library             
 i   libpopt0                        - lib for parsing cmdline parameters        
+i   libpopt0:i386                   - lib for parsing cmdline parameters        
 i   libprocps0                      - library for accessing process information 
 i   libqt4-dbus                     - Qt 4 D-Bus module                         
 i   libqt4-designer                 - Qt 4 designer module                      
@@ -206,25 +251,34 @@ i   libqt4-xml                      - Qt 4 XML module
 i   libqtdbus4                      - Qt 4 D-Bus module library                 
 i   libreadline6                    - GNU readline and history libraries, run-ti
 i   librpcsecgss3                   - allows secure rpc communication using the 
+i   libsane:i386                    - API library for scanners                  
 i   libsasl2-2                      - Cyrus SASL - authentication abstraction li
+i   libsdl1.2debian:i386            - Simple DirectMedia Layer                  
 i   libselinux1                     - SELinux runtime shared libraries          
+i   libselinux1:i386                - SELinux runtime shared libraries          
 i   libsemanage-common              - Common files for SELinux policy management
 i   libsemanage1                    - SELinux policy management library         
 i   libsepol1                       - SELinux library for manipulating binary se
 i   libsigc++-2.0-0c2a              - type-safe Signal Framework for C++ - runti
+i   libsigc++-2.0-0c2a:i386         - type-safe Signal Framework for C++ - runti
 i   libslang2                       - S-Lang programming library - runtime versi
 i   libsocket6-perl                 - Perl extensions for IPv6                  
 i   libspectre1                     - Library for rendering PostScript documents
 i   libsqlite3-0                    - SQLite 3 shared library                   
 i   libss2                          - command-line interface parsing library    
 i   libssl1.0.0                     - SSL shared libraries                      
+i   libstdc++5:i386                 - The GNU Standard C++ Library v3           
 i   libstdc++6                      - GNU Standard C++ Library v3               
+i   libsvga1:i386                   - console SVGA display libraries            
 i   libswitch-perl                  - switch statement for Perl                 
+i   libsysfs2:i386                  - interface library to sysfs                
 i   libt1-5                         - Type 1 font rasterizer library - runtime  
 i   libtasn1-3                      - Manage ASN.1 structures (runtime)         
+i   libtdb1:i386                    - Trivial Database - shared library         
 i   libtext-charwidth-perl          - get display widths of characters on the te
 i   libtext-iconv-perl              - converts between character sets in Perl   
 i   libtext-wrapi18n-perl           - internationalized substitute of Text::Wrap
+i   libtiff-tools                   - TIFF manipulation and conversion tools    
 i   libtinfo5                       - shared low-level terminfo library for term
 i   libtirpc1                       - transport-independent RPC library         
 i   libtokyocabinet9                - Tokyo Cabinet Database Libraries [runtime]
@@ -232,10 +286,21 @@ i   libudev0                        - libudev shared library
 i   libusb-0.1-4                    - userspace USB programming library         
 i   libustr-1.0-1                   - Micro string library: shared library      
 i   libuuid1                        - Universally Unique ID library             
+i   libvorbisfile3:i386             - The Vorbis General Audio Compression Codec
 i   libwrap0                        - Wietse Venema's TCP wrappers library      
 i   libxapian22                     - Search engine library                     
+i   libxaw7:i386                    - X11 Athena Widget library                 
+i   libxcb-render-util0:i386        - utility libraries for X C Binding -- rende
+i   libxcomposite1:i386             - X11 Composite extension library           
+i   libxcursor1:i386                - X cursor management library               
 i   libxdo2                         - library for simulating X11 keyboard/mouse 
 i   libxml2                         - GNOME XML library                         
+i   libxml2:i386                    - GNOME XML library                         
+i   libxmuu1:i386                   - X11 miscellaneous micro-utility library   
+i   libxrandr2:i386                 - X11 RandR extension library               
+i   libxslt1.1:i386                 - XSLT 1.0 processing library - runtime libr
+i   libxss1:i386                    - X11 Screen Saver extension library        
+i   libxv1:i386                     - X11 Video extension library               
 i   libyaml-perl                    - YAML Ain't Markup Language                
 i   linux-headers-amd64             - Header files for Linux amd64 configuration
 i   linux-image-amd64               - Linux for 64-bit PCs (meta-package)       
@@ -250,6 +315,7 @@ i   locales                         - Embedded GNU C Library: National Language
 i   login                           - system login tools                        
 i   logrotate                       - Log rotation utility                      
 i   lsb-base                        - Linux Standard Base 4.1 init script functi
+i   lshw                            - information about hardware configuration  
 i   lsof                            - Utility to list open files                
 i   lvm2                            - Linux Logical Volume Manager              
 i   m4                              - a macro processing language               
@@ -263,6 +329,7 @@ i   mime-support                    - MIME files 'mime.types' & 'mailcap', and s
 i   mlocate                         - quickly find files on the filesystem based
 i   mono-winforms-a11y              - Accessibility support for WinForms applica
 i   mount                           - Tools for mounting and manipulating filesy
+i   mountpy                         - script for quick mounting of removable dev
 i   mtr                             - Full screen ncurses and X11 traceroute too
 i   multiarch-support               - Transitional package to ensure multiarch c
 i   mutt                            - text-based mailreader supporting MIME, GPG
@@ -276,11 +343,10 @@ i   netbeans                        - Extensible Java IDE
 i   netcat-traditional              - TCP/IP swiss army knife                   
 i   nfs-common                      - NFS support files common to client and ser
 i   ntp                             - Network Time Protocol daemon and utility p
+i   odbcinst1debian2:i386           - Support library for accessing odbc ini fil
 i   open-vm-dkms                    - Source for VMware guest systems driver (DK
 i   open-vm-toolbox                 - tools and components for VMware guest syst
 i   open-vm-tools                   - tools and components for VMware guest syst
-i   openjdk-6-doc                   - OpenJDK Development Kit (JDK) documentatio
-i   openjdk-7-doc                   - OpenJDK Development Kit (JDK) documentatio
 i   openjdk-7-jdk                   - OpenJDK Development Kit (JDK)             
 i   openssh-client                  - secure shell (SSH) client, for secure acce
 i   openswan                        - Internet Key Exchange daemon              
@@ -300,6 +366,7 @@ i   playonlinux                     - front-end for Wine
 i   procmail                        - Versatile e-mail processor                
 i   procps                          - /proc file system utilities               
 i   pv                              - Shell pipeline element to meter data passi
+i   pwgen                           - Automatic Password generation             
 i   python                          - interactive high-level object-oriented lan
 i   python-apt                      - Python interface to libapt-pkg            
 i   python-dev                      - header files and a static library for Pyth
@@ -326,12 +393,14 @@ i   screenruler                     - measure objects on screen with a variety o
 i   sed                             - The GNU sed stream editor                 
 i   sensible-utils                  - Utilities for sensible alternative selecti
 i   shotwell                        - digital photo organizer                   
+i   skype:i386                      - Wherever you are, wherever they are       
 i   sshfs                           - filesystem client based on SSH File Transf
 i   stopwatch                       - Virtual stopwatch and timer               
 i   sublime-text                    - Sublime Text is a sophisticated text edito
 i   subversion                      - Advanced version control system           
 i   sudo                            - Provide limited super user privileges to s
 i   synapse                         - semantic file launcher                    
+i   system-config-lvm               - utility for graphically configuring Logica
 i   sysv-rc                         - System-V-like runlevel change mechanism   
 i   sysvinit                        - System-V-like init utilities              
 i   sysvinit-utils                  - System-V-like utilities                   
@@ -354,6 +423,7 @@ i   ucf                             - Update Configuration File: preserve user c
 i   udev                            - /dev/ and hotplug management daemon       
 i   unar                            - Unarchiver for a variety of file formats  
 i   update-notifier                 - Daemon which notifies about package update
+i   usbmount                        - automatically mount and unmount USB mass s
 i   usbutils                        - Linux USB utilities                       
 i   util-linux                      - Miscellaneous system utilities            
 i   vim                             - Vi IMproved - enhanced vi editor          
@@ -370,6 +440,7 @@ i   wamerican                       - American English dictionary words for /usr
 i   wget                            - retrieves files from the web              
 i   whiptail                        - Displays user-friendly dialog boxes from s
 i   whois                           - intelligent WHOIS client                  
+i   wine-bin:i386                   - Windows API implementation - binary loader
 i   winff                           - graphical video and audio batch converter 
 i   winff-doc                       - winff documentation                       
 i   wmctrl                          - control an EWMH/NetWM compatible X Window 
@@ -378,11 +449,13 @@ i   x2go-keyring                    - GnuPG keys of all X2Go developers and the
 i   x2goclient                      - X2Go Client application (Qt4)             
 i   x2goserver                      - X2Go server daemon scripts                
 i   xarchiver                       - GTK+ frontend for most used compression fo
+i   xaw3dg:i386                     - Xaw3d widget set                          
 i   xchat                           - IRC client for X similar to AmIRC         
 i   xclip                           - command line interface to X selections    
 i   xdotool                         - simulate X11 keyboard/mouse input         
 i   xtightvncviewer                 - virtual network computing client software 
 i   xz-utils                        - XZ-format compression utilities           
+i   yuuguu                          - Use yuuguu to meet online and travel less 
 i   zenity                          - Display graphical dialog boxes from shell 
 i   zip                             - Archiver for .zip files                   
 i   zlib1g                          - compression library - runtime             
