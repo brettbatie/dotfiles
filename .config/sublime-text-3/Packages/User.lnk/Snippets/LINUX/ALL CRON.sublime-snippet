@@ -1,6 +1,6 @@
 <snippet>
 <content><![CDATA[
-for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
+for user in \$(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
@@ -8,3 +8,5 @@ for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.shell</scope>
 </snippet>
+
+<!-- fixme: why are snippets not working correctly? I can't do ctrl+shift+p snippet:, When selecting from the menu I get all content not just the snippet part -->
