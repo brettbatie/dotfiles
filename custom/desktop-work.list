@@ -75,6 +75,7 @@ i   gettext-base                    - GNU Internationalization utilities for the
 i   gftp-gtk                        - X/GTK+ FTP client                         
 i   gigolo                          - frontend to manage connections to remote f
 i   git                             - fast, scalable, distributed revision contr
+i   gitk                            - fast, scalable, distributed revision contr
 i   gksu                            - graphical frontend to su                  
 i   gnome-mime-data                 - base MIME and Application database for GNO
 i   gnome-search-tool               - GNOME tool to search files                
@@ -114,6 +115,7 @@ i   iptables                        - administration tools for packet filtering
 i   iputils-ping                    - Tools to test the reachability of network 
 i   isc-dhcp-client                 - ISC DHCP client                           
 i   isc-dhcp-common                 - common files used by all the isc-dhcp* pac
+i   jigdo-file                      - Download Debian CD images from any Debian 
 i   keyboard-configuration          - system-wide keyboard preferences          
 i   kmod                            - tools for managing Linux kernel modules   
 i   krb5-locales                    - Internationalization support for MIT Kerbe
@@ -355,6 +357,8 @@ i   passwd                          - change and administer password and group d
 i   patch                           - Apply a diff file to an original          
 i   pciutils                        - Linux PCI Utilities                       
 i   pcregrep                        - grep utility that uses perl 5 compatible r
+i   pdfsam                          - PDF Split and Merge                       
+i   pdftk                           - tool for manipulating PDF documents       
 i   perl                            - Larry Wall's Practical Extraction and Repo
 i   perl-base                       - minimal Perl system                       
 i   perl-modules                    - Core Perl modules                         
