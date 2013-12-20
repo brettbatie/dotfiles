@@ -8,7 +8,7 @@ installApps() {
         echo -e "\nSpecify the name for this application list."
 
         echo -e "\nApplication lists in $DOT_FILES/custom/ are:\n"
-        ls $DOT_FILES/custom/*.list |xargs basename
+	ls -1 $DOT_FILES/custom/*.list |xargs -d '\n' -n1 basename
         return;
     fi
 
