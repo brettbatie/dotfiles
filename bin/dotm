@@ -101,6 +101,7 @@ function updateRepo {
     if [ ! -d "$dotDir/.git" ]; then
         displayTitle "DOWNLOADING MASTER REPOSITORY ($masterRepository)"
         git clone $masterRepository $dotDir
+	git remote add origin $masterRepository
     else
         displayTitle "Updating Master Repository"
         (cd $dotDir && git pull $masterRepository)
