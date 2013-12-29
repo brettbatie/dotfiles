@@ -1,15 +1,26 @@
 #!/bin/bash
-echo 'Removing CD-Rom from sources list'
-echo 'Enter root password'
-su -c 'perl -p -i -e "s/^deb cdrom/#deb cdrom/" /etc/apt/sources.list' root
-
-echo "Updating aptitude sources"
-echo "Enter root password"
-su -c "aptitude update" root
 
 echo "Installing GIT & sudo"
 echo "Enter root password"
-su -c "aptitude install git sudo" root
+su -c 'aptitude install git sudo' root
+
+groups=`groups`
+if [[ "$groups" != *sudo* ]]; then
+    echo 'Adding user to sudo group'
+    echo 'Enter root passsword'
+    user=$(whoami)
+    su -c "usermod -a -G sudo $user" root
+    echo "Now logoff and login again. Then restart this script"
+    exit
+fi
+
+echo 'Removing CD-Rom from sources list'
+echo 'Enter root password'
+sudo perl -p -i -e "s/^deb cdrom/#deb cdrom/" /etc/apt/sources.list
+
+echo "Updating aptitude sources"
+echo "Enter root password"
+sudo aptitude update
 
 echo "Setup dotfiles"
 bash <(wget -nv -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm)
@@ -20,11 +31,6 @@ USER_HOME=$(eval echo ~${SUDO_USER})
 dotm -d $USER_HOME/dotfiles-private/ -r ssh://brett@brettip.mooo.com:2000/home/brett/.git/dotfiles-private.git
 source ~/dotfiles-private/source/50_aliases.sh
 chmod 600 ~/dotfiles-private/.ssh/id_rsa
-
-echo 'Adding user to sudo group'
-echo 'Enter root passsword'
-user=$(whoami)
-sudo usermod -a -G sudo $user
 
 echo 'Adding contrib & non-free to sources.list'
 sudo perl -p -i -e 's/^(deb((?!contrib).)*)$/\1 contrib/g' /etc/apt/sources.list
