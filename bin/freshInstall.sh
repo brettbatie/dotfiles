@@ -78,14 +78,13 @@ sudo tar -xvzf camdesk.tar.gz
 sudo rm camdesk.tar.gz
 cd ~
 
-
-
-echo "Still need to install Crashplan"
  # Crashplan watches a lot of inodes
+ # NOTE: could use a perl search replace so that this only happens one time (instead of appending every time the script runs)
 echo "fs.inotify.max_user_watches=1048576" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -w fs.inotify.max_user_watches=1048576
 
-
+echo "+ install Crashplan"
+echo "+ install sublime text Package Control @ https://sublime.wbond.net/installation"
 
 
 
