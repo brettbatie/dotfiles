@@ -74,7 +74,7 @@ sudo mkdir -p /opt/local/CamDesk
 cd /opt/local/CamDesk
 sudo wget -O camdesk.tar.gz http://downloads.sourceforge.net/project/camdesk/camdesk-1.0-for-linux2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fcamdesk%2F&ts=1388377614&use_mirror=softl    ayer-dal
 wait
-sudo tar -xvzf camdesk-1.0-for-linux2.tar.gz
+sudo tar -xvzf camdesk.tar.gz
 sudo rm camdesk.tar.gz
 cd ~
 
