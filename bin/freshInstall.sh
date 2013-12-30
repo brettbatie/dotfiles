@@ -66,7 +66,7 @@ cd ~
 echo "Installing SquirrelSQL"
 wget -O squirrelsql.jar http://downloads.sourceforge.net/project/squirrel-sql/1-stable/3.5.0/squirrel-sql-3.5.0-install.jar?r=http%3A%2F%2Fwww.squirrelsql.org%2F&ts=1388377513&use_mirror=    softlayer-ams
 wait
-java -jar squirrelsql.jar
+sudo java -jar squirrelsql.jar
 rm squirrelsql.jar
 
 echo "Installing Camdesk"
