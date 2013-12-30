@@ -1,8 +1,16 @@
 #!/bin/bash
 
+echo 'Removing CD-Rom from sources list'
+echo 'Enter root password'
+su -c 'perl -p -i -e "s/^deb cdrom/#deb cdrom/" /etc/apt/sources.list' root
+
 echo "Installing GIT & sudo"
 echo "Enter root password"
 su -c 'aptitude install git sudo' root
+
+echo "Updating aptitude sources"
+echo "Enter root password"
+su -c 'aptitude update'
 
 groups=`groups`
 if [[ "$groups" != *sudo* ]]; then
@@ -13,14 +21,6 @@ if [[ "$groups" != *sudo* ]]; then
     echo "Now logoff and login again. Then restart this script"
     exit
 fi
-
-echo 'Removing CD-Rom from sources list'
-echo 'Enter root password'
-sudo perl -p -i -e "s/^deb cdrom/#deb cdrom/" /etc/apt/sources.list
-
-echo "Updating aptitude sources"
-echo "Enter root password"
-sudo aptitude update
 
 echo "Setup dotfiles"
 bash <(wget -nv -O - https://raw.github.com/brettbatie/dotfiles/master/bin/dotm)
