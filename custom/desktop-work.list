@@ -351,7 +351,6 @@ i   open-vm-toolbox                 - tools and components for VMware guest syst
 i   open-vm-tools                   - tools and components for VMware guest syst
 i   openjdk-7-jdk                   - OpenJDK Development Kit (JDK)             
 i   openssh-client                  - secure shell (SSH) client, for secure acce
-i   openswan                        - Internet Key Exchange daemon              
 i   p7zip-full                      - 7z and 7za file archivers with high compre
 i   passwd                          - change and administer password and group d
 i   patch                           - Apply a diff file to an original          
