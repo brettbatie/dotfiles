@@ -55,7 +55,7 @@ installApps desktop-work.list
 echo "Installing QuickTile"
 # sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck
 sudo mkdir -p /opt/local/quicktile
-sudo cd /opt/local/quicktile
+cd /opt/local/quicktile
 sudo git clone git@github.com:brettbatie/quicktile.git .
 sudo chmod +x setup.py
 sudo ./setup.py install
@@ -69,7 +69,7 @@ rm squirrelsql.jar
 
 echo "Installing Camdesk"
 sudo mkdir -p /opt/local/CamDesk
-sudo cd /opt/local/CamDesk
+cd /opt/local/CamDesk
 sudo wget -O camdesk.tar.gz http://downloads.sourceforge.net/project/camdesk/camdesk-1.0-for-linux2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fcamdesk%2F&ts=1388377614&use_mirror=softl    ayer-dal
 sudo tar -xvzf camdesk-1.0-for-linux2.tar.gz
 sudo rm camdesk.tar.gz
