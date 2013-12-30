@@ -52,3 +52,35 @@ sudo aptitude update
 
 installApps desktop-work.list
 
+echo "Installing QuickTile"
+# sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck
+sudo mkdir -p /opt/local/quicktile
+sudo cd /opt/local/quicktile
+sudo git clone git@github.com:brettbatie/quicktile.git .
+sudo chmod +x setup.py
+sudo ./setup.py install
+cd ~
+
+
+echo "Installing SquirrelSQL"
+sudo wget http://downloads.sourceforge.net/project/squirrel-sql/1-stable/3.5.0/squirrel-sql-3.5.0-install.jar?r=http%3A%2F%2Fwww.squirrelsql.org%2F&ts=1388377513&use_mirror=softlayer-ams
+sudo java -jar squirrel-sql-3.5.0-install.jar
+
+echo "Installing Camdesk"
+sudo mkdir -p /opt/local/CamDesk
+sudo cd /opt/local/CamDesk
+sudo wget http://downloads.sourceforge.net/project/camdesk/camdesk-1.0-for-linux2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fcamdesk%2F&ts=1388377614&use_mirror=softlayer-dal
+sudo tar -xvzf camdesk-1.0-for-linux2.tar.gz
+cd ~
+
+
+echo "Still need to install Crashplan"
+ # Crashplan watches a lot of inodes
+echo "fs.inotify.max_user_watches=1048576" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -w fs.inotify.max_user_watches=1048576
+
+
+
+
+
+
