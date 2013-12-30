@@ -64,7 +64,7 @@ cd ~
 
 
 echo "Installing SquirrelSQL"
-wget -O squirrelsql.jar http://downloads.sourceforge.net/project/squirrel-sql/1-stable/3.5.0/squirrel-sql-3.5.0-install.jar?r=http%3A%2F%2Fwww.squirrelsql.org%2F&ts=1388377513&use_mirror=    softlayer-ams
+wget -O squirrelsql.jar http://downloads.sourceforge.net/project/squirrel-sql/1-stable/3.5.0/squirrel-sql-3.5.0-install.jar?r=http%3A%2F%2Fwww.squirrelsql.org%2F&ts=1388377513&use_mirror=softlayer-ams
 wait
 sudo java -jar squirrelsql.jar
 rm squirrelsql.jar
@@ -72,7 +72,7 @@ rm squirrelsql.jar
 echo "Installing Camdesk"
 sudo mkdir -p /opt/local/CamDesk
 cd /opt/local/CamDesk
-sudo wget -O camdesk.tar.gz http://downloads.sourceforge.net/project/camdesk/camdesk-1.0-for-linux2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fcamdesk%2F&ts=1388377614&use_mirror=softl    ayer-dal
+sudo wget -O camdesk.tar.gz http://downloads.sourceforge.net/project/camdesk/camdesk-1.0-for-linux2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fcamdesk%2F&ts=1388377614&use_mirror=softlayer-dal
 wait
 sudo tar -xvzf camdesk.tar.gz
 sudo rm camdesk.tar.gz
