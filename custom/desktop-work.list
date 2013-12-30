@@ -56,8 +56,6 @@ i   exim4-base                      - support files for all Exim MTA (v4) packag
 i   exim4-config                    - configuration for the Exim MTA (v4)       
 i   exim4-daemon-light              - lightweight Exim MTA (v4) daemon          
 i   ffmpeg                          - Multimedia player, server, encoder and tra
-i   fglrx-control                   - control panel for the non-free ATI/AMD Rad
-i   fglrx-driver                    - non-free ATI/AMD RadeonHD display driver  
 i   file                            - Determines file type using "magic" numbers
 i   filezilla                       - Full-featured graphical FTP/FTPS/SFTP clie
 i   findutils                       - utilities for finding files--find, xargs  
