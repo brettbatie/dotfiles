@@ -7,13 +7,14 @@
 	"command": "enscript",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
-	"font_size": 9,
+	"font_size": 8,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Sublimerge Pro",
+		"Run",
 		"Vintage",
-		"Run"
+		"Markdown",
+		"Sublimerge Pro"
 	],
 	"indent_guide_options":
 	[

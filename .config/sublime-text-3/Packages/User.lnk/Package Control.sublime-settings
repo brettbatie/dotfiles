@@ -2,10 +2,13 @@
 	"installed_packages":
 	[
 		"ApacheConf.tmLanguage",
+		"EncodingHelper",
 		"FileDiffs",
 		"INI",
 		"Local History",
 		"Markdown Extended",
+		"Markdown Preview",
+		"MarkdownEditing",
 		"Monokai Extended",
 		"My Snippets",
 		"PlainTasks",
@@ -15,7 +18,8 @@
 		"Sublimerge Pro",
 		"Superlime",
 		"Terminal",
-		"toggle-readonly",
-		"VCS Gutter"
+		"VCS Gutter",
+		"View In Browser",
+		"View In Browser.sublime-package"
 	]
 }

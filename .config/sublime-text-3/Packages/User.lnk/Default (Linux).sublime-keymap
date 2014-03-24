@@ -2,5 +2,6 @@
 	{"keys": ["ctrl+shift+c"], "command": "shell_prompt"},
 	{"keys": ["ctrl+shift+b"], "command": "preview"},
 	{ "keys": ["ctrl+shift+d"], "command": "file_diff_menu" },
-	{ "keys": ["ctrl+shift+h"], "command": "goto_documentation" }
+	{ "keys": ["ctrl+shift+h"], "command": "goto_documentation" },
+    { "keys": [ "ctrl+shift+b" ], "command": "view_in_browser" }
 ]

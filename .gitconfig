@@ -20,3 +20,13 @@
 	untracked = cyan
 [core]
 	excludesfile = /home/brett/.gitignore_global
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 1920x1027+1920+0
+	show-graph = true
+	file-view-vpane-position = 518
+	file-view-hpane-position = 533
+	history-view-vpane-position = 871
+	main-window-view = FileView
+[gui]
+	editor = subl

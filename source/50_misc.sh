@@ -5,3 +5,7 @@ done
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
+
+if [ -n "$DISPLAY" ]; then
+    xset b off
+fi
