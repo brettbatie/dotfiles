@@ -11,10 +11,11 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Run",
-		"Vintage",
 		"Markdown",
-		"Sublimerge Pro"
+		"Sublimerge Pro",
+		"FileDiffs",
+		"Vintage",
+		"Run"
 	],
 	"indent_guide_options":
 	[
