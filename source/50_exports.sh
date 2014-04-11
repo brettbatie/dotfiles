@@ -25,13 +25,3 @@ export PATH=$M3:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
 #export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/play-2.2.1
-
-# Settings for Play
-export SMARTSHEET_AUTHORIZE_URL="https://brett.lab.smartsheet.com/dev2/authorize"
-export SMARTSHEET_CLIENT_ID="av4dkuuo6vwdrd2j7v"
-export SMARTSHEET_CLIENT_SECRET="16rn4oelmw5qspij74f"
-export SMARTSHEET_REDIRECT_URL="http://brett.play.smartsheet.com:9000/target"
-export SMARTSHEET_API_URL="https://brett.lab.smartsheet.com/dev2/rest/1.1/"
-export DB_TOKEN_ENCRYPTION_KEY="asdfasdfol"
-export CONFIG_FILE="brett.conf"
-
