@@ -18,3 +18,10 @@ alias lsd="ls -ld .*/"
 alias sudo="sudo -E "
 
 alias psql="sudo -u postgres psql"
+
+alias chromium_domain="chromium --auth-server-whitelist='*.smartsheet.com'"
+
+alias herokuSqlDev="heroku pg:psql --app smartsheet-labs-dev"
+alias xclip="xclip -selection c"
+
+alias gitgrep="git rev-list --all | xargs git grep"

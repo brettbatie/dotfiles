@@ -25,3 +25,6 @@ export PATH=$M3:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
 #export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/play-2.2.1
+
+#Used for google drive - http://xmodulo.com/2013/10/mount-google-drive-linux.html
+export PATH=$PATH:~/.opam/system/bin
