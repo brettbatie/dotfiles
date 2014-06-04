@@ -11,10 +11,11 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Markdown",
+		"ApacheConf.tmLanguage",
 		"Sublimerge Pro",
-		"FileDiffs",
+		"Markdown",
 		"Vintage",
+		"FileDiffs",
 		"Run"
 	],
 	"indent_guide_options":
