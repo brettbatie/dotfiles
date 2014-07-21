@@ -28,3 +28,7 @@ export PATH=$PATH:/opt/play-2.2.1
 
 #Used for google drive - http://xmodulo.com/2013/10/mount-google-drive-linux.html
 export PATH=$PATH:~/.opam/system/bin
+
+# Go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/.go

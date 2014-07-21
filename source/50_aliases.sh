@@ -25,3 +25,4 @@ alias herokuSqlDev="heroku pg:psql --app smartsheet-labs-dev"
 alias xclip="xclip -selection c"
 
 alias gitgrep="git rev-list --all | xargs git grep"
+alias sf="force"

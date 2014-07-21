@@ -9,3 +9,7 @@ shopt -s nocaseglob
 if [ -n "$DISPLAY" ]; then
     xset b off
 fi
+
+#unlimited history
+export HISTFILESIZE=
+export HISTSIZE=
