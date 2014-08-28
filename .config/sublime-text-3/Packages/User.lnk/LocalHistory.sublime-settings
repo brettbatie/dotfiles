@@ -1,5 +1,6 @@
 {
       "file_size_limit": 10485760, // 10 MB
-      "history_retention": 30, // in days
-      "history_on_close": true // store history only on close
+      "history_retention": 180, // in days
+      "history_on_close": true, // store history only on close
+      "history_path": "~/.backup/sublime"
 }
