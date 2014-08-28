@@ -65,7 +65,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_check_for_updates" : true,
 
 	//possible values: CRITICAL, ERROR, WARNING, DEBUG, INFO
-	"mm_log_level" : "INFO",
+	"mm_log_level" : "DEBUG",
 
 	//location where mm debug log should be placed (must be existing path)
 	//windows users: please set like so: C:\\path\\to\\your\\logs
@@ -111,7 +111,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_log_anonymous_apex" : true,
 
 	//set to true to play notification sounds
-	"mm_play_sounds" : true,
+	"mm_play_sounds" : false,
 
 	//local server port
 	"mm_server_port" : 7777,
