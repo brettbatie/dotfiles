@@ -10,6 +10,7 @@ if v:progname =~? "evim"
   finish
 endif
 
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -17,12 +18,18 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-  set backupdir=~/tmp
+if isdirectory($HOME . '/.backup/vim') == 0
+      :silent !mkdir -p ~/.backup/vim >/dev/null 2>&1
 endif
+if isdirectory($HOME.'/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo >/dev/null 2>&1
+endif
+set backup
+set backupdir=~/.backup/vim//,.
+set directory=~/.backup/vim//,.
+set undodir=~/.vim/undo
+set undofile
+"endif
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
@@ -157,7 +164,7 @@ winpos 0 0
 " allows a edited buffer to go in the background (out of the current window).
 " This is beneficial for editing lots of files at a time while only using one
 " window.
-set hidden
+"set hidden
 
 " Make it easier to determine the current mode
 set showmode
