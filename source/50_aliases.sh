@@ -26,3 +26,6 @@ alias xclip="xclip -selection c"
 
 alias gitgrep="git rev-list --all | xargs git grep"
 alias sf="force"
+alias android_emulator="~/android-sdks/tools/./android avd"
+alias battery="acpi -bi"
+

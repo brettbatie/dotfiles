@@ -19,7 +19,7 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 
-export M3_HOME=/opt/apache-maven-3.1.1/
+export M3_HOME=/opt/apache-maven-3.2.3/
 export M3=$M3_HOME/bin
 export PATH=$M3:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
@@ -32,3 +32,9 @@ export PATH=$PATH:~/.opam/system/bin
 # Go
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/.go
+
+# HACK for mavins mate
+# export PYTHONWARNINGS="ignore"
+
+# User bin
+export PATH=$PATH:~/bin
