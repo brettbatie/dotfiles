@@ -1,0 +1,35 @@
+{
+    "patterns": {
+        "TODO": "TODO[\\s]*?:[\\s]*(?P<todo>.*)$",
+        "NOTE": "NOTE[\\s]*?:[\\s]*(?P<note>.*)$",
+        "FIXME": "FIX ?ME[\\s]*?:[\\s]*(?P<fixme>.*)$",
+        "QUESTION": "QUESTION[\\s]*?:[\\s]*(?P<question>.*)$",
+        "BUG": "BUG[\\s]*?:[\\s]*(?P<bug>.*)$",
+        "FEATURE": "FEATURE[\\s]*?:[\\s]*(?P<feature>.*)$"
+    },
+    "patterns_weight": {
+        "BUG" : 0,
+        "FIXME" : 1,
+        "QUESTION" : 2,
+        "TODO" : 3,
+        "FEATURE" : 4,
+        "NOTE" : 5
+    },
+    "exclude_folders": [
+        "*.git*",
+        "*.svn"
+    ],
+    "exclude_files": [
+        "*.sublime-workspace",
+        "*.sublime-project",
+        "*.sublime-settings"
+    ],
+    "case_sensitive": false,
+    "render_include_folder": true,
+    "render_folder_depth": 1,
+    "render_maxspaces": 50,
+    "render_header_format": "%d - %c files in %t secs",
+    "render_header_date": "%A %m/%d/%y at %I:%M%p",
+    "navigation_forward_skip" : 10,
+    "navigation_backward_skip" : 10
+}

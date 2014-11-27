@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+var person = (function () {
+    var fullName = "Jason Shapiro";
+    var reg = new RegExp(/\d+/);
+
+    return {
+        "setFullName" : function (newValue) {
+            if( reg.test(newValue) ) {
+                alert("Invalid Name");
+            } else {
+                fullName = newValue;
+            }
+        },
+        "getFullName" : function () {
+            return fullName;
+        }
+    };
+}());
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>obj</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

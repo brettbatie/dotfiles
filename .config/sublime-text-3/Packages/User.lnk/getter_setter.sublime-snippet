@@ -1,0 +1,14 @@
+<snippet>
+<content>
+<![CDATA[
+public ${1:returnType} get${2:Property}(){
+	return ${3:property};
+}
+
+public void set${2:Property}(${1:returnType} ${3:property}){
+	this.${3:property} = ${3:property};
+}
+]]>
+</content>
+	<tabTrigger>gs</tabTrigger>
+</snippet>
