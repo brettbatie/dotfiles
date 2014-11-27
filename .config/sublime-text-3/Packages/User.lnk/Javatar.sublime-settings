@@ -1,0 +1,46 @@
+{
+	"javatar_gp": 0,
+	"jdk_version":
+	{
+		"use": ""
+	},
+	"message_id": 18,
+	"project_data":
+	{
+		"2":
+		{
+			"folders":
+			[
+				{
+					"folder_exclude_patterns":
+					[
+						"config/.symbols"
+					],
+					"path": "."
+				}
+			],
+			"settings":
+			{
+				"auto_complete_triggers":
+				[
+					{
+						"characters": ".",
+						"selector": "source - comment"
+					},
+					{
+						"characters": ":",
+						"selector": "text.html - comment"
+					},
+					{
+						"characters": "<",
+						"selector": "text.html - comment"
+					},
+					{
+						"characters": " ",
+						"selector": "text.html - comment"
+					}
+				]
+			}
+		}
+	}
+}
