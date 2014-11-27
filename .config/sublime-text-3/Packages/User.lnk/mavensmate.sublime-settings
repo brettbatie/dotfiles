@@ -35,7 +35,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_https_proxy" : "",
 
 	//set to desired Salesforce.com API version (tooling api functionality requires 27.0+)
-	"mm_api_version" : "28.0",
+	"mm_api_version" : "32.0",
 
 	//if true, MavensMate will automatically hide the debug panel upon a successful operation
 	"mm_hide_panel_on_success" : true,
@@ -47,7 +47,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_compile_on_save" : true,
 
 	//if true, MavensMate will check for server conflicts and present a server diff when it finds a conflict
-	"mm_compile_check_conflicts": true,
+	"mm_compile_check_conflicts": false,
 
 	//if true, MavensMate will present local/server diff view when conflict is found for the purposes of merging changes (beta)
 	"mm_diff_server_conflicts": true,
@@ -62,17 +62,17 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_autocomplete" : true,
 
 	//if true, MavensMate will check for updates when Sublime Text starts
-	"mm_check_for_updates" : true,
+	"mm_check_for_updates" : false,
 
 	//possible values: CRITICAL, ERROR, WARNING, DEBUG, INFO
-	"mm_log_level" : "DEBUG",
+	"mm_log_level" : "INFO",
 
 	//location where mm debug log should be placed (must be existing path)
 	//windows users: please set like so: C:\\path\\to\\your\\logs
 	"mm_log_location" : "/home/brett/git/salesforce/logs",
 
 	//if true, mavensmate will send usage statistics (NEVER sensitive information like usernames/passwords/etc) for development, reporting, & debugging purposes (see util.py for source of the call)
-	"mm_send_usage_statistics" : false,
+	"mm_send_usage_statistics" : true,
 
 	//OSX only: the location of MavensMate.app
 	"mm_app_location" : "/Applications/MavensMate.app",
@@ -105,7 +105,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_osx_plugin_client_app_name" : "Sublime Text 3.app",
 
 	//set to true to use the tooling api to compile apex metadata (if you're experiencing any compile issues, set this to false to use the metadata api)
-	"mm_compile_with_tooling_api" : true,
+	"mm_compile_with_tooling_api" : false,
 
 	//set to true if you want a history of your executed apex scripts in project/apex-scripts
 	"mm_log_anonymous_apex" : true,
@@ -160,7 +160,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	],
 
 	//template location, e.g. "remote" or "local" ("remote" refers to templates located on github)
-	"mm_template_location": "remote",
+	"mm_template_location": "local",
 
 	//template location 
 	//if "mm_template_location" is set to "local", set to absolute location of the directory where you've forked the MavensMate-Templates project
@@ -168,7 +168,8 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	//if "mm_template_location" is set to "remote", set to github location)
 		//example: "mm_template_source" : "username/reponame/branchname"
 	//project directory/repository must be in the format found here: https://github.com/joeferraro/MavensMate-Templates
-	"mm_template_source": "joeferraro/MavensMate-Templates/master",
+	"mm_template_source": "/home/brett/.config/mavensmate/MavensMate-Templates",
+
 	
 	//if true, MavensMate.app will start when Sublime Text starts
 	"mm_start_app_on_st_startup" : true,
@@ -215,5 +216,9 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_download_logs_during_run_all_tests" : false,
 
 	//timeout (in seconds) for calls to the Salesforce.com servers
-	"mm_timeout" : 10
+	"mm_timeout" : 10,
+
+	//"mm_path" : "default",
+	//"mm_use_keyring" : false
+	"mm_path" : "/usr/local/bin/mm"
 }

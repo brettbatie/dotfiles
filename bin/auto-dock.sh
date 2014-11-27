@@ -6,7 +6,7 @@
 #work in progress: I should cleanup the below commands to only work with one monitor at a time. Check for HDMI2 if present enable only HDMI2, etc
 # http://unix.stackexchange.com/questions/4489/a-tool-for-automatically-applying-randr-configuration-when-external-display-is-p
 echo "running" >> /home/brett/log.txt
-output=$(cat /sys/class/drm/card0-HDMI-A-2/status)
+output=$(cat /sys/class/drm/card0-HDMI-A-3/status)
 export DISPLAY=:0.0
 export XAUTHORITY=/home/brett/.Xauthority
 
@@ -20,9 +20,7 @@ if [ $output = disconnected ]; then
                     --output LVDS1 --primary --mode 1360x768 --pos 0x0 --rotate normal \
                     --output VGA1 --off
 elif [ $output = connected ]; then
-    xrandr --output HDMI2 --off
-    xrandr --output HDMI3 --off
-xrandr --output HDMI3 --mode 1920x1080 --pos 0x0 --rotate normal
-xrandr --output HDMI2 --primary --mode 1920x1080 --left-of HDMI3 --rotate normal
-xrandr --output LVDS1 --pos 3840x312 --mode 1360x768 --rotate normal
+    #xrandr --output DP1 --off --output DP2 --mode 2560x1440 --pos 0x0 --rotate normal --output DP3 --mode 2560x1440 --pos 2560x0 --rotate normal --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output LVDS1 --off --output VGA1 --off
+    #xrandr --output DP3 --mode 2048x1152 --pos 2048x0 --rotate normal --output DP2 --mode 2048x1152 --pos 0x0 --rotate normal --output DP1 --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output LVDS1 --off --output VGA1 --off
+    ~/dotfiles/bin/./desktop.sh
 fi
