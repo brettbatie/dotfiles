@@ -5,5 +5,10 @@
 	{ "keys": ["ctrl+shift+h"], "command": "goto_documentation" },
     { "keys": [ "ctrl+shift+b" ], "command": "view_in_browser" },
     { "keys": ["ctrl+j"], "command": "find_next_in_file" },
-    { "keys": ["ctrl+k"], "command": "find_prev_in_file" }
+    { "keys": ["ctrl+k"], "command": "find_prev_in_file" },
+    // This is defined in default keybinding but is being overridden by something
+    // in the default keybinding. This adds it back since I use it a lot.
+    { "keys": ["shift+enter"], "command": "find_prev", "context":
+        [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+    }
 ]
