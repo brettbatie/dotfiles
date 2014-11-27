@@ -3,14 +3,18 @@ i   acpi                            - displays information on ACPI devices
 i   acpi-support-base               - scripts for handling base ACPI events such
 i   acpid                           - Advanced Configuration and Power Interface
 i   adduser                         - add and remove users and groups           
+i   aisleriot                       - GNOME solitaire card game collection      
+i   alacarte                        - easy GNOME menu editing tool              
 i   alien                           - convert and install rpm and other packages
 i   apt                             - commandline package manager               
 i   apt-listchanges                 - package change history notification tool  
+i   apt-transport-https             - https download transport for APT          
 i   apt-utils                       - package management related utility program
 i   aptitude                        - terminal-based package manager            
 i   aptitude-common                 - architecture independent files for the apt
 i   arandr                          - Simple visual front end for XRandR        
 i   at                              - Delayed job execution and batch processing
+i   atom                            - A hackable text editor for the 21st Centur
 i   autossh                         - Automatically restart SSH sessions and tun
 i   baobab                          - GNOME disk usage analyzer                 
 i   base-files                      - Debian base system miscellaneous files    
@@ -19,14 +23,20 @@ i   bash                            - GNU Bourne Again SHell
 i   bash-completion                 - programmable completion for the bash shell
 i   bc                              - GNU bc arbitrary precision calculator lang
 i   bind9-host                      - Version of 'host' bundled with BIND 9.X   
+i   brasero                         - CD/DVD burning application for GNOME      
 i   bsd-mailx                       - simple mail user agent                    
 i   bsdmainutils                    - collection of more utilities from FreeBSD 
-i   bsdutils                        - Basic utilities from 4.4BSD-Lite          
+i   bsdutils                        - basic utilities from 4.4BSD-Lite          
+i   build-essential                 - Informational list of build-essential pack
 i   busybox                         - Tiny utilities for small and embedded syst
 i   bzip2                           - high-quality block-sorting file compressor
 i   camlp4-extra                    - Pre Processor Pretty Printer for OCaml - e
+i   caribou                         - Configurable on screen keyboard with scann
+i   caribou-antler                  - Configurable on screen keyboard with scann
+i   checkgmail                      - alternative Gmail Notifier for Linux via A
 i   checkinstall                    - installation tracker                      
-i   chromium                        - Chromium web browser                      
+i   cheese                          - tool to take pictures and videos from your
+i   chromium                        - web browser                               
 i   clusterssh                      - administer multiple ssh or rsh shells simu
 i   console-setup                   - console font and keymap setup program     
 i   coreutils                       - GNU core utilities                        
@@ -37,41 +47,52 @@ i   curl                            - command line tool for transferring data wi
 i   dash                            - POSIX-compliant shell                     
 i   db5.1-util                      - Berkeley v5.1 Database Utilities          
 i   dc                              - GNU dc arbitrary precision reverse-polish 
+i   dconf-cli                       - simple configuration storage system - util
+i   dconf-editor                    - simple configuration storage system - util
+i   dconf-tools                     - transitional dummy package                
 i   debconf                         - Debian configuration management system    
 i   debconf-i18n                    - full internationalization support for debc
 i   debian-archive-keyring          - GnuPG archive keys of the Debian archive  
 i   debianutils                     - Miscellaneous utilities specific to Debian
 i   diffuse                         - graphical tool for merging and comparing t
 i   diffutils                       - File comparison utilities                 
+i   digikam                         - digital photo management application for K
 i   discover                        - hardware identification system            
 i   disper                          - display switcher for attaching/detaching d
 i   dmidecode                       - SMBIOS/DMI table decoder                  
 i   dmsetup                         - Linux Kernel Device Mapper userspace libra
 i   dnsutils                        - Clients provided with BIND                
 i   doc-debian                      - Debian Project documentation and other doc
+i   dos2unix                        - convert text file line endings between CRL
 i   dpkg                            - Debian package management system          
 i   e2fslibs                        - ext2/ext3/ext4 file system libraries      
 i   e2fsprogs                       - ext2/ext3/ext4 file system utilities      
 i   eject                           - ejects CDs and operates CD-Changers under 
+i   empathy                         - GNOME multi-protocol chat and call client 
 i   enscript                        - converts text to Postscript, HTML or RTF w
 i   eog                             - Eye of GNOME graphics viewer program      
 i   etckeeper                       - store /etc in git, mercurial, bzr or darcs
+i   evince                          - Document (PostScript, PDF) viewer         
+i   evolution                       - groupware suite with mail client and organ
 i   exim4                           - metapackage to ease Exim MTA (v4) installa
 i   exim4-base                      - support files for all Exim MTA (v4) packag
 i   exim4-config                    - configuration for the Exim MTA (v4)       
 i   exim4-daemon-light              - lightweight Exim MTA (v4) daemon          
 i   file                            - Determines file type using "magic" numbers
+i   file-roller                     - archive manager for GNOME                 
 i   filezilla                       - Full-featured graphical FTP/FTPS/SFTP clie
 i   findutils                       - utilities for finding files--find, xargs  
 i   firmware-iwlwifi                - Binary firmware for Intel Wireless cards  
 i   firmware-linux-free             - Binary firmware for various drivers in the
 i   flashplugin-nonfree             - Adobe Flash Player - browser plugin       
 i   font-manager                    - font management application for the GNOME 
+i   fonts-cantarell                 - sans serif font family designed for on-scr
 i   fonts-dejavu                    - metapackage to pull in fonts-dejavu-core a
 i   fonts-inconsolata               - monospace font for pretty code listings an
 i   fonts-liberation                - Fonts with the same metrics as Times, Aria
 i   fonts-sil-gentium-basic         - smart Unicode font families (Basic and Boo
-i   freerdp-x11                     - RDP client for Windows Terminal Services  
+i   fop                             - XML formatter driven by XSL Formatting Obj
+i   freerdp-x11                     - RDP client for Windows Terminal Services (
 i   ftp                             - classical file transfer client            
 i   gcalctool                       - GNOME desktop calculator (transitional pac
 i   gcc                             - GNU C compiler                            
@@ -81,17 +102,46 @@ i   gcc-4.9-base                    - GCC, the GNU Compiler Collection (base pac
 i   gcolor2                         - Simple GTK2 color selector and picker     
 i   gconf2                          - GNOME configuration database system (suppo
 i   gdb                             - GNU Debugger                              
+i   gdebi                           - simple tool to view and install deb files 
+i   gdm3                            - GNOME Display Manager                     
+i   gedit                           - official text editor of the GNOME desktop 
+i   gedit-plugins                   - set of plugins for gedit                  
 i   gettext-base                    - GNU Internationalization utilities for the
 i   gftp-gtk                        - X/GTK+ FTP client                         
 i   giggle                          - GTK+ frontend for the git directory tracke
 i   gigolo                          - frontend to manage connections to remote f
 i   git                             - fast, scalable, distributed revision contr
 i   git-cola                        - highly caffeinated git GUI                
+i   gitg                            - git repository viewer                     
 i   gitk                            - fast, scalable, distributed revision contr
-i   gksu                            - graphical frontend to su                  
+i   gksu                            - graphical front-end to su and sudo        
+i   gnome-backgrounds               - Set of backgrounds packaged with the GNOME
 i   gnome-calculator                - GNOME desktop calculator                  
+i   gnome-color-manager             - Color management integration for the GNOME
+i   gnome-dictionary                - GNOME dictionary application              
+i   gnome-disk-utility              - manage and configure disk drives and media
+i   gnome-documents                 - Document manager for GNOME                
+i   gnome-font-viewer               - font viewer for GNOME                     
+i   gnome-games                     - games for the GNOME desktop               
+i   gnome-gmail                     - support for Gmail as the preferred email a
+i   gnome-icon-theme-extras         - GNOME Desktop icon theme (additional icons
+i   gnome-logs                      - viewer for the systemd journal.           
+i   gnome-maps                      - map application for GNOME                 
+i   gnome-media                     - GNOME media utilities                     
 i   gnome-mime-data                 - base MIME and Application database for GNO
+i   gnome-music                     - Music is the new GNOME music playing appli
+i   gnome-nettool                   - network information tool for GNOME        
+i   gnome-orca                      - Scriptable screen reader                  
+i   gnome-photos                    - application to access, organize and share 
+i   gnome-screenshot                - screenshot application for GNOME          
 i   gnome-search-tool               - GNOME tool to search files                
+i   gnome-session                   - GNOME Session Manager - GNOME 3 session   
+i   gnome-shell-extensions          - Extensions to extend functionality of GNOM
+i   gnome-sound-recorder            - simple and modern sound recorder for GNOME
+i   gnome-system-log                - system log viewer for GNOME               
+i   gnome-system-monitor            - Process viewer and system resource monitor
+i   gnome-terminal                  - GNOME terminal emulator application       
+i   gnome-tweak-tool                - tool to adjust advanced configuration sett
 i   gnupg                           - GNU privacy guard - a free PGP replacement
 i   google-chrome-stable            - The web browser from Google               
 i   gparted                         - GNOME partition editor                    
@@ -104,12 +154,17 @@ i   grub-pc                         - GRand Unified Bootloader, version 2 (PC/BI
 i   gthumb                          - image viewer and browser                  
 i   gtimer                          - GTK-based X11 task timer                  
 i   gtk-recordmydesktop             - Graphical frontend for recordMyDesktop scr
+i   gtk2-engines                    - theme engines for GTK+ 2.x                
+i   gtrayicon                       - Generic tray icon for GNOME               
 i   gucharmap                       - Unicode character picker and font browser 
 i   gufw                            - graphical user interface for ufw          
 i   gvfs-fuse                       - userspace virtual filesystem - fuse server
 i   gzip                            - GNU compression utilities                 
+i   hamster-applet                  - time tracking applet for GNOME            
 i   hardinfo                        - Displays system information               
 i   hh                              - Suggest box like shell history completion 
+i   hibernate                       - smartly puts your computer to sleep (suspe
+i   hitori                          - logic puzzle game similar to sudoku       
 i   host                            - Transitional package                      
 i   hostname                        - utility to set/show the host name or domai
 i   htop                            - interactive processes viewer              
@@ -124,6 +179,7 @@ i   init                            - System-V-like init utilities - metapackage
 i   init-system-helpers             - helper tools for all init systems         
 i   initramfs-tools                 - generic modular initramfs generator       
 i   initscripts                     - scripts for initializing and shutting down
+i   inkscape                        - vector-based drawing program              
 i   insserv                         - boot sequence organizer using LSB init.d s
 i   install-info                    - Manage installed documentation in info for
 i   installation-report             - system installation report                
@@ -131,10 +187,12 @@ i   iotop                           - simple top-like I/O monitor
 i   iproute2                        - networking and traffic control tools      
 i   iptables                        - administration tools for packet filtering 
 i   iputils-ping                    - Tools to test the reachability of network 
-i   isc-dhcp-client                 - ISC DHCP client                           
+i   isc-dhcp-client                 - DHCP client for automatically obtaining an
 i   isc-dhcp-common                 - common files used by all of the isc-dhcp p
 i   jigdo-file                      - Download Debian CD images from any Debian 
+i   junit4                          - JUnit regression test framework for Java  
 i   keyboard-configuration          - system-wide keyboard preferences          
+i   keychain                        - key manager for OpenSSH                   
 i   kmod                            - tools for managing Linux kernel modules   
 i   krb5-admin-server               - MIT Kerberos master server (kadmind)      
 i   krb5-kdc                        - MIT Kerberos key server (KDC)             
@@ -150,11 +208,16 @@ i   libacl1                         - Access control list shared library
 i   libappindicator1                - allow applications to export a menu into t
 i   libapt-inst1.5                  - deb package format runtime library        
 i   libapt-pkg4.12                  - package management runtime library        
+i   libasm3-java                    - Java bytecode manipulation framework      
+i   libasm4-java                    - Java bytecode manipulation framework      
+i   libatinject-jsr330-api-java     - Java API for JSR-330 Dependency Injection 
+i   libatk-adaptor                  - AT-SPI 2 toolkit bridge                   
 i   libattr1                        - Extended attribute shared library         
 i   libaudit-common                 - Dynamic library for security auditing - co
 i   libaudit1                       - Dynamic library for security auditing     
 i   libav-tools                     - Multimedia player, encoder and transcoder 
 i   libavahi-glib1                  - Avahi GLib integration library            
+i   libbatik-java                   - xml.apache.org SVG Library                
 i   libblkid1                       - block device id library                   
 i   libbonobo2-0                    - Bonobo CORBA interfaces library           
 i   libboost-iostreams1.54.0        - Boost.Iostreams Library                   
@@ -162,10 +225,25 @@ i   libboost-iostreams1.55.0        - Boost.Iostreams Library
 i   libbz2-1.0                      - high-quality block-sorting file compressor
 i   libc-bin                        - GNU C Library: Binaries                   
 i   libc6                           - GNU C Library: Shared libraries           
+i   libcanberra-pulse               - PulseAudio backend for libcanberra        
 i   libcap2                         - POSIX 1003.1e capabilities (library)      
 i   libcap2-bin                     - POSIX 1003.1e capabilities (utilities)    
+i   libcaribou-gtk-module           - Configurable on screen keyboard with scann
+i   libcaribou-gtk3-module          - Configurable on screen keyboard with scann
+i   libcglib3-java                  - code generation library for Java          
 i   libclass-isa-perl               - report the search path for a class's ISA t
+i   libclassworlds-java             - framework for container developers requiri
 i   libcomerr2                      - common error description library          
+i   libcommons-beanutils-java       - Apache Commons BeanUtils - Utility for man
+i   libcommons-cli-java             - API for working with the command line argu
+i   libcommons-collections3-java    - Apache Commons Collections - Extended Coll
+i   libcommons-digester-java        - Rule based XML Java object mapping tool   
+i   libcommons-io-java              - Common useful IO related classes          
+i   libcommons-jexl2-java           - Apache Commons JEXL - Java Expression Lang
+i   libcommons-jxpath-java          - Apache Commons JXPath - XPath expressions 
+i   libcommons-lang-java            - Commons Lang - an extension of the java.la
+i   libcommons-net2-java            - internet protocol suite Java library      
+i   libcommons-validator-java       - ease and speed development and maintenance
 i   libcrypt-blowfish-perl          - Blowfish cryptography for Perl            
 i   libcrypt-cbc-perl               - implementation of cipher block chaining (C
 i   libcrypt-rijndael-perl          - Perl module implementing the Rijndael algo
@@ -175,16 +253,20 @@ i   libcwidget3                     - high-level terminal interface library for
 i   libdb5.3                        - Berkeley v5.3 Database Libraries [runtime]
 i   libdbus-1-3                     - simple interprocess messaging system (libr
 i   libdevmapper1.02.1              - Linux Kernel Device Mapper userspace libra
+i   libeasymock-java                - Java library to generate Mock Objects for 
 i   libestr0                        - Helper functions for handling strings (lib
 i   libexpect-perl                  - Expect.pm - Perl Expect interface         
 i   libfam0                         - Client library to control the FAM daemon  
 i   libffi6                         - Foreign Function Interface library runtime
+i   libfop-java                     - XML formatter driven by XSL Formatting Obj
 i   libfuse-dev                     - Filesystem in Userspace (development)     
+i   libganymed-ssh2-java            - pure Java implementation of the SSH-2 prot
 i   libgcc1                         - GCC support library                       
 i   libgcrypt11                     - LGPL Crypto library - runtime library     
 i   libgdbm3                        - GNU dbm database routines (runtime version
 i   libgmp10                        - Multiprecision arithmetic library         
 i   libgnome-2-0                    - The GNOME library - runtime files         
+i   libgnome-keyring1.0-cil         - CLI library to access the GNOME Keyring da
 i   libgnome2-bin                   - The GNOME library - binary files          
 i   libgnome2-common                - The GNOME library - common files          
 i   libgnome2-gconf-perl            - Perl interface to the GNOME GConf library 
@@ -197,26 +279,37 @@ i   libgpg-error0                   - library for common error values and messag
 i   libgtk2-ex-simple-list-perl     - simple interface to Gtk2's complex MVC lis
 i   libgtk2-gladexml-perl           - Perl interface to use user interfaces crea
 i   libgtk2-sourceview2-perl        - enhanced source code editor widget        
+i   libguava-java                   - suite of Google Common Libraries for Java 
+i   libhamcrest-java                - library of matchers for building test expr
 i   libhogweed2                     - low level cryptographic library (public-ke
 i   libidn11                        - GNU Libidn library, implementation of IETF
+i   libitext1-java                  - Java Library to generate PDF on the Fly   
+i   libjdependency-java             - Java library analyzing class level depende
+id  libjpeg8                        - Independent JPEG Group's JPEG runtime libr
 i   libjson-c2                      - JSON manipulation library - shared library
+i   libjsoup-java                   - Java HTML parser that makes sense of real-
+i   libjsr305-java                  - Java library that provides annotations for
+i   libjtidy-java                   - JTidy                                     
 i   libkmod2                        - libkmod shared library                    
 i   liblocale-gettext-perl          - module using libc functions for internatio
 i   liblockfile-bin                 - support binaries for and cli utilities bas
 i   liblogging-stdlog0              - easy to use and lightweight logging librar
 i   liblognorm1                     - Log normalizing library                   
+i   liblqr-1-0                      - converts plain array images into multi-siz
 i   liblzma5                        - XZ-format compression library             
 i   libmnl0                         - minimalistic Netlink communication library
-i   libmount1                       - block device id library                   
+i   libmount1                       - device mounting library                   
 i   libncurses5                     - shared libraries for terminal handling    
 i   libncursesw5                    - shared libraries for terminal handling (wi
 i   libnet-arp-perl                 - module to create ARP packets and lookup fo
 i   libnet-daemon-perl              - Perl module for building portable Perl dae
 i   libnet-proxy-perl               - Framework for proxying network connections
+i   libnetbeans-cvsclient-java      - NetBeans CVS Client library               
 i   libnetfilter-acct1              - Netfilter acct library                    
 i   libnettle4                      - low level cryptographic library (symmetric
 i   libnewt0.52                     - Not Erik's Windowing Toolkit - text mode w
 i   libnfnetlink0                   - Netfilter netlink library                 
+i   libobjenesis-java               - Java library to instantiate a new object o
 i   libossp-uuid-perl               - perl OSSP::UUID - OSSP uuid Perl Binding  
 i   libp11-kit0                     - Library for loading and coordinating acces
 i   libpam-krb5                     - PAM module for MIT Kerberos               
@@ -228,8 +321,24 @@ i   libpangox-1.0-0                 - pango library X backend
 i   libpangoxft-1.0-0               - Layout and rendering of internationalized 
 i   libpcre3                        - Perl 5 Compatible Regular Expression Libra
 i   libpipeline1                    - pipeline manipulation library             
+i   libplexus-ant-factory-java      - Plexus Ant Factory                        
+i   libplexus-archiver-java         - Archiver plugin for the Plexus compiler sy
+i   libplexus-bsh-factory-java      - Plexus Beanshell Factory                  
+i   libplexus-build-api-java        - Incremental build API for Plexus component
+i   libplexus-cipher-java           - Plexus Cipher Component used by Maven     
+i   libplexus-classworlds-java      - Class loading utilities for the Plexus fra
+i   libplexus-container-default-jav - utilities for the Plexus framework        
+i   libplexus-containers-java       - utilities for the Plexus framework        
+i   libplexus-digest-java           - Digest utilities for the Plexus system    
+i   libplexus-i18n-java             - a component to support internationalizatio
+i   libplexus-interactivity-api-jav - interactivity API for the Plexus framework
+i   libplexus-interpolation-java    - Plexus Interpolation API                  
+i   libplexus-io-java               - Plexus IO Components                      
+i   libplexus-sec-dispatcher-java   - Plexus Security Dispatcher Component used 
+i   libplexus-utils-java            - utilities for the Plexus framework        
 i   libpopt0                        - lib for parsing cmdline parameters        
 i   libprocps3                      - library for accessing process information 
+i   libqdox-java                    - Quickly parses declarations and Javadoc fr
 i   libqt4-dbus                     - Qt 4 D-Bus module                         
 i   libqt4-designer                 - Qt 4 designer module                      
 i   libqt4-network                  - Qt 4 network module                       
@@ -239,9 +348,11 @@ i   libreadline6                    - GNU readline and history libraries, run-ti
 i   libreoffice-base                - office productivity suite -- database     
 i   libreoffice-calc                - office productivity suite -- spreadsheet  
 i   libreoffice-draw                - office productivity suite -- drawing      
+i   libreoffice-gnome               - office productivity suite -- GNOME integra
 i   libreoffice-impress             - office productivity suite -- presentation 
 i   libreoffice-report-builder-bin  - LibreOffice component for building databas
 i   librpcsecgss3                   - allows secure rpc communication using the 
+i   libsaxon-java                   - Saxon XSLT Processor                      
 i   libselinux1                     - SELinux runtime shared libraries          
 i   libsemanage-common              - Common files for SELinux policy management
 i   libsemanage1                    - SELinux policy management library         
@@ -249,6 +360,7 @@ i   libsepol1                       - SELinux library for manipulating binary se
 i   libservlet2.5-java              - Servlet 2.5 and JSP 2.1 Java API classes  
 i   libsigc++-2.0-0c2a              - type-safe Signal Framework for C++ - runti
 i   libslang2                       - S-Lang programming library - runtime versi
+i   libslf4j-java                   - Simple Logging Facade for Java            
 i   libsocket6-perl                 - Perl extensions for IPv6                  
 i   libsqlite3-0                    - SQLite 3 shared library                   
 i   libsqlite3-dev                  - SQLite 3 development files                
@@ -256,9 +368,9 @@ i   libss2                          - command-line interface parsing library
 i   libssl1.0.0                     - Secure Sockets Layer toolkit - shared libr
 i   libstdc++6                      - GNU Standard C++ Library v3               
 i   libswitch-perl                  - switch statement for Perl                 
-i   libsystemd-daemon0              - systemd utility library                   
-i   libsystemd-journal0             - systemd journal utility library           
-i   libsystemd-login0               - systemd login utility library             
+i   libsystemd-daemon0              - systemd utility library (deprecated)      
+i   libsystemd-journal0             - systemd journal utility library (deprecate
+i   libsystemd-login0               - systemd login utility library (deprecated)
 i   libtasn1-6                      - Manage ASN.1 structures (runtime)         
 i   libtext-charwidth-perl          - get display widths of characters on the te
 i   libtext-iconv-perl              - converts between character sets in Perl   
@@ -271,6 +383,8 @@ i   libustr-1.0-1                   - Micro string library: shared library
 i   libuuid1                        - Universally Unique ID library             
 i   libwrap0                        - Wietse Venema's TCP wrappers library      
 i   libxapian22                     - Search engine library                     
+i   libxbean-java                   - plugin based Java application server      
+i   libxmlgraphics-commons-java     - Reusable components used by Batik and FOP 
 i   libxtables10                    - netfilter xtables library                 
 i   libyaml-perl                    - YAML Ain't Markup Language                
 i   linux-headers-amd64             - Header files for Linux amd64 configuration
@@ -291,6 +405,7 @@ i   lsof                            - Utility to list open files
 i   lvm2                            - Linux Logical Volume Manager              
 i   lynx                            - Text-mode WWW Browser (transitional packag
 i   m4                              - macro processing language                 
+i   mail-notification               - mail notification in system tray          
 i   make-guile                      - utility for directing compilation with gui
 i   makepasswd                      - Generate and encrypt passwords            
 i   man-db                          - on-line manual pager                      
@@ -298,10 +413,12 @@ i   manpages                        - Manual pages about using a GNU/Linux syste
 i   mawk                            - a pattern scanning and text processing lan
 i   meld                            - graphical tool to diff and merge files    
 i   mercurial                       - easy-to-use, scalable distributed version 
+i   metacity                        - lightweight GTK+ window manager           
 i   mime-support                    - MIME files 'mime.types' & 'mailcap', and s
 i   mlocate                         - quickly find files on the filesystem based
 i   mount                           - Tools for mounting and manipulating filesy
 i   mountpy                         - script for quick mounting of removable dev
+i   mplayer2                        - next generation movie player for Unix-like
 i   mtp-tools                       - Media Transfer Protocol (MTP) library tool
 i   mtr                             - Full screen ncurses and X11 traceroute too
 i   multiarch-support               - Transitional package to ensure multiarch c
@@ -327,7 +444,9 @@ i   open-vm-tools                   - Open VMware Tools for virtual machines hos
 i   openjdk-7-jdk                   - OpenJDK Development Kit (JDK)             
 i   openssh-client                  - secure shell (SSH) client, for secure acce
 i   passwd                          - change and administer password and group d
+i   pastebinit                      - command-line pastebin client              
 i   patch                           - Apply a diff file to an original          
+i   pavucontrol                     - PulseAudio Volume Control                 
 i   pciutils                        - Linux PCI Utilities                       
 i   pcregrep                        - grep utility that uses perl 5 compatible r
 i   pdfgrep                         - search in pdf files for strings matching a
@@ -344,6 +463,7 @@ i   php5-mysql                      - MySQL module for php5
 i   pidgin                          - graphical multi-protocol instant messaging
 i   pinta                           - Simple drawing/painting program           
 i   playonlinux                     - front-end for Wine                        
+i   polari                          - Internet Relay Chat (IRC) client          
 i   procmail                        - Versatile e-mail processor                
 i   procps                          - /proc file system utilities               
 i   pv                              - Shell pipeline element to meter data passi
@@ -367,23 +487,33 @@ i   qdbus                           - Qt 4 D-Bus tool
 i   qgit                            - Qt application for viewing GIT trees      
 i   rdesktop                        - RDP client for Windows NT/2000 Terminal Se
 i   readline-common                 - GNU readline and history libraries, common
-i   realpath                        - Return the canonicalized absolute pathname
+i   realpath                        - coreutils realpath transitional package   
 i   recordmydesktop                 - Captures audio-video data of a Linux deskt
 i   regexxer                        - visual search and replace tool            
 i   remmina                         - remote desktop client for GNOME desktop en
 i   reportbug                       - reports bugs in the Debian distribution   
 i   retext                          - Simple text editor for Markdown and reStru
+i   rhythmbox                       - music player and organizer for GNOME      
+i   rhythmbox-plugin-cdrecorder     - burning plugin for rhythmbox music player 
 i   rpcbind                         - converts RPC program numbers into universa
 i   rsyslog                         - reliable system and kernel logging daemon 
 i   ruby-gettext                    - gettext for Ruby                          
+i   rygel-playbin                   - GNOME UPnP/DLNA services - GStreamer Media
+i   rygel-preferences               - GNOME UPnP/DLNA services - preferences too
 i   screen                          - terminal multiplexer with VT100/ANSI termi
 i   screenruler                     - measure objects on screen with a variety o
+i   seahorse                        - GNOME front end for GnuPG                 
 i   searchmonkey                    - search files using regular expressions aim
 i   sed                             - The GNU sed stream editor                 
 i   sensible-utils                  - Utilities for sensible alternative selecti
 i   shotwell                        - digital photo organizer                   
 i   shutter                         - feature-rich screenshot program           
+i   simple-scan                     - Simple Scanning Utility                   
+i   solaar                          - Logitech Unifying Receiver peripherals man
+i   solaar-gnome3                   - GNOME Shell/Unity integration for Solaar  
+i   sound-juicer                    - GNOME CD Ripper                           
 i   spotify-client                  - Spotify desktop client                    
+i   spotify-client-qt               - Transitional package for spotify-client   
 i   sshfs                           - filesystem client based on SSH File Transf
 i   startpar                        - run processes in parallel and multiplex th
 i   stopwatch                       - Virtual stopwatch and timer               
@@ -396,30 +526,37 @@ i   sysv-rc                         - System-V-like runlevel change mechanism
 i   sysvinit                        - System-V-like init utilities - transitiona
 i   sysvinit-utils                  - System-V-like utilities                   
 i   tar                             - GNU version of the tar archiving utility  
-i   task-database-server            - SQL database                              
 i   task-desktop                    - Debian desktop environment                
 i   task-english                    - General English environment               
+i   task-gnome-desktop              - GNOME                                     
 i   task-laptop                     - laptop                                    
 i   task-print-server               - print server                              
 i   task-ssh-server                 - SSH server                                
 i   task-web-server                 - web server                                
-i   task-xfce-desktop               - Xfce desktop environment                  
+i   task-xfce-desktop               - Xfce                                      
 i   tasksel                         - tool for selecting tasks for installation 
 i   tasksel-data                    - official tasks used for installation of De
 i   tcpdump                         - command-line network traffic analyzer     
 i   tcpflow                         - TCP flow recorder                         
+i   teamviewer9:i386                - TeamViewer (Remote Control Application)   
+i   telepathy-idle                  - IRC connection manager for Telepathy      
+i   telepathy-rakia                 - SIP connection manager for the Telepathy f
 i   telnet                          - The telnet client                         
 i   texinfo                         - Documentation system for on-line informati
 i   tightvnc-java                   - TightVNC java applet and command line prog
 i   time                            - GNU time program for measuring CPU resourc
 i   tinyproxy                       - A lightweight, non-caching, optionally ano
 i   tofrodos                        - Converts DOS <-> Unix text files, alias to
+i   tomboy                          - desktop note taking program using Wiki sty
 i   tomcat7-admin                   - Servlet and JSP engine -- admin web applic
 i   tomcat7-docs                    - Servlet and JSP engine -- documentation   
 i   tomcat7-examples                - Servlet and JSP engine -- example web appl
+i   totem                           - Simple media player for the GNOME desktop 
 i   traceroute                      - Traces the route taken by packets over an 
+i   transmission-gtk                - lightweight BitTorrent client (GTK+ interf
 i   transmission-qt                 - lightweight BitTorrent client (Qt interfac
 i   trickle                         - user-space bandwidth shaper               
+i   ttf-mscorefonts-installer       - Installer for Microsoft TrueType core font
 i   tzdata                          - time zone and daylight-saving time data   
 i   ucf                             - Update Configuration File(s): preserve use
 i   udev                            - /dev/ and hotplug management daemon       
@@ -434,6 +571,7 @@ i   vim                             - Vi IMproved - enhanced vi editor
 i   vim-common                      - Vi IMproved - Common files                
 i   vim-tiny                        - Vi IMproved - enhanced vi editor - compact
 i   vinagre                         - remote desktop client for the GNOME Deskto
+i   vino                            - VNC server for GNOME                      
 i   virtualbox                      - x86 virtualization solution - base binarie
 i   virtualbox-guest-dkms           - x86 virtualization solution - guest additi
 i   virtualbox-guest-utils          - x86 virtualization solution - non-X11 gues
@@ -444,6 +582,7 @@ i   wget                            - retrieves files from the web
 i   whiptail                        - Displays user-friendly dialog boxes from s
 i   whois                           - intelligent WHOIS client                  
 i   wicd-cli                        - wired and wireless network manager - scrip
+i   winetricks                      - package manager for WINE to install softwa
 i   winff                           - graphical video and audio batch converter 
 i   winff-doc                       - winff documentation                       
 i   wireshark                       - network traffic analyzer - GTK+ version   
@@ -452,7 +591,8 @@ i   x11vnc                          - VNC server to allow remote access to an ex
 i   x2goclient                      - X2Go Client application (Qt4)             
 i   xchat                           - IRC client for X similar to AmIRC         
 i   xclip                           - command line interface to X selections    
-i   xdotool                         - simulate X11 keyboard/mouse input         
+i   xdg-user-dirs-gtk               - tool to manage well known user directories
+i   xdotool                         - simulate (generate) X11 keyboard/mouse inp
 i   xtightvncviewer                 - virtual network computing client software 
 i   xz-utils                        - XZ-format compression utilities           
 i   xzoom                           - magnify part of X display, with real-time 
