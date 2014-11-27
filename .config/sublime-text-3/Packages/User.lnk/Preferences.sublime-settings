@@ -5,18 +5,22 @@
 	"cache_printer_names": false,
 	"color_scheme": "Packages/User/Color Scheme/Bespin.tmTheme",
 	"command": "enscript",
+	"copy_with_empty_selection": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
-	"font_size": 8,
+	"font_size": 10,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"FileDiffs",
-		"Markdown",
-		"Run",
+		"PlainTasks",
 		"Sublimerge Pro",
-		"ApacheConf.tmLanguage",
-		"Vintage"
+		"Markdown",
+		"FileDiffs",
+		"Javatar",
+		"Vintage",
+		"VCS Gutter",
+		"Run",
+		"ApacheConf.tmLanguage"
 	],
 	"indent_guide_options":
 	[

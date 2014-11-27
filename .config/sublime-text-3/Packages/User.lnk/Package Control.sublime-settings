@@ -5,6 +5,7 @@
 		"EncodingHelper",
 		"FileDiffs",
 		"INI",
+		"Javatar",
 		"Local History",
 		"Markdown Extended",
 		"Markdown Preview",
@@ -13,13 +14,20 @@
 		"My Snippets",
 		"PlainTasks",
 		"Run",
+		"Shell Turtlestein",
 		"Simple Print Function",
 		"sublimelint",
 		"Sublimerge Pro",
 		"Superlime",
 		"Terminal",
 		"Text Pastry",
+		"TodoReview",
 		"VCS Gutter",
 		"View In Browser"
+	],
+	"repositories":
+	[
+		"https://github.com/joeferraro/MavensMate",
+		"https://github.com/joeferraro/MavensMate"
 	]
 }
