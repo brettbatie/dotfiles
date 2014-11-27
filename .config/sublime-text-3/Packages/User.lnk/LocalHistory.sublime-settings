@@ -1,6 +1,8 @@
 {
       "file_size_limit": 10485760, // 10 MB
       "history_retention": 180, // in days
-      "history_on_close": true, // store history only on close
-      "history_path": "~/.backup/sublime"
+      // NOTE: brett, leave below as false. I set it to true and the app doesn't work.
+      "history_on_close": false, // store history only on close
+      "history_path": "/home/brett/.backup/sublime",
+      "history_retention": 120 // days to keep history
 }
