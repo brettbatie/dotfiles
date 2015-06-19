@@ -1,3 +1,4 @@
+test
 #Dot File Manager
 This dot file manager is a tool to keep track of all or some of the dot files stored in a users home directory or sub directories. This is accomplished by putting all files that need to be tracked in a specific version controlled directory (~/dotfiles by default). Then symlinks are created in the users home directory to point to all of the files in the specified dot directory. For more information about this approach I suggest reading [Using Git to Manage Your Dotfiles](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/) which gives a basic overview of the approach used here.
 
