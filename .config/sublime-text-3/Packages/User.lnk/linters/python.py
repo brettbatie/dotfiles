@@ -2,12 +2,12 @@ import sublime
 import sys
 
 from lint import Linter
-from lint.util import which
+from sublimelint.lint.util import which
 
 class Python(Linter):
     language = 'python'
     cmd = 'pyflakes'
-    regex = r'^.+:(?P<line>\d+):\s*(?P<error>.+)'
+    regex = r'^.+?:(?P<line>\d+):((?P<col>\d+):)?\s*(?P<error>.+)'
 
     def run(self, cmd, code):
         python3 = False

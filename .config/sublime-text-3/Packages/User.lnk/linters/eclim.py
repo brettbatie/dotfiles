@@ -3,7 +3,7 @@ import os
 import tempfile
 
 from lint import Linter
-from lint.util import find
+from sublimelint.lint.util import find
 
 class Eclim(Linter):
     language = 'java'

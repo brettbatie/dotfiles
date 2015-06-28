@@ -2,8 +2,9 @@
 
 align_ignore_endofline False
 display_font "Inconsolata Medium 10"
-display_ignore_whitespace True
 display_right_margin 120
 display_show_whitespace True
 display_tab_width 4
+editor_expand_tabs True
+editor_soft_tab_width 4
 encoding_default_codec "utf_8"

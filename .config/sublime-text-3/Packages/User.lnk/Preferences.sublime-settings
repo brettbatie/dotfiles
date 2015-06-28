@@ -3,24 +3,47 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_with_fields": false,
 	"cache_printer_names": false,
-	"color_scheme": "Packages/User/Color Scheme/Bespin.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Bespin (SL).tmTheme",
 	"command": "enscript",
 	"copy_with_empty_selection": false,
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
-	"font_size": 10,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"font_size": 11,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"PlainTasks",
 		"Sublimerge Pro",
 		"Markdown",
-		"FileDiffs",
-		"Javatar",
+		"ApacheConf.tmLanguage",
 		"Vintage",
 		"VCS Gutter",
-		"Run",
-		"ApacheConf.tmLanguage"
+		"FileDiffs",
+		"PlainTasks",
+		"Javatar",
+		"Run"
 	],
 	"indent_guide_options":
 	[
@@ -41,6 +64,7 @@
 		80,
 		120
 	],
+	"show_encoding": true,
 	"spell_check": true,
 	"title_option": "title",
 	"translate_tabs_to_spaces": true,

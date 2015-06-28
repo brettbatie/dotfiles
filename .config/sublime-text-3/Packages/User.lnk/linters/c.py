@@ -1,12 +1,15 @@
 import os
 
 from lint import Linter
-from lint.util import find
+from sublimelint.lint.util import find
 
 def find_includes(filename):
     includes = []
     if filename:
         parent = os.path.dirname(filename)
+        if not parent:
+            return includes
+
         includes.append('-I' + parent)
         inc = find(parent, 'include')
         if inc:
