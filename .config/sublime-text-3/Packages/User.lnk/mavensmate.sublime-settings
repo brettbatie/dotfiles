@@ -38,7 +38,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_api_version" : "32.0",
 
 	//if true, MavensMate will automatically hide the debug panel upon a successful operation
-	"mm_hide_panel_on_success" : true,
+	"mm_hide_panel_on_success" : false,
 
 	//the amount of time (in seconds) before MavensMate hides the debug panel upon a successful operation
 	"mm_hide_panel_time" : 0,
@@ -65,7 +65,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_check_for_updates" : false,
 
 	//possible values: CRITICAL, ERROR, WARNING, DEBUG, INFO
-	"mm_log_level" : "INFO",
+	"mm_log_level" : "DEBUG",
 
 	//location where mm debug log should be placed (must be existing path)
 	//windows users: please set like so: C:\\path\\to\\your\\logs
@@ -199,7 +199,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_archive_deployments" : true,
 	
 	//if true, mavensmate will set the purgeOnDelete to true during metadata deletes (a hard delete)
-	"mm_purge_on_delete" : false,
+	"mm_purge_on_delete" : true,
 
 	"mm_verbose" : false,
 
@@ -216,7 +216,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_download_logs_during_run_all_tests" : false,
 
 	//timeout (in seconds) for calls to the Salesforce.com servers
-	"mm_timeout" : 10,
+	"mm_timeout" : 15,
 
 	//"mm_path" : "default",
 	//"mm_use_keyring" : false

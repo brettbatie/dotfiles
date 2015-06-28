@@ -32,9 +32,10 @@
 	main-window-view = FileView
 [gui]
 	editor = subl
+	recentrepo = /home/brett/git/salesforce/release-1.7
 [diff]
-    tool = diffuse
+	tool = meld
 [difftool]
 	prompt = false
 [push]
-	default = simple
+	default = upstream

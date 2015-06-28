@@ -28,3 +28,85 @@ urldecode() {
 
   echo "${REPLY}"  #+or echo the result (EASIER)... or both... :p
 }
+
+# Function to help send quick requests to Smartsheet
+GETSS(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -m GET -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/1.1/$1 | pp
+}
+POSTSS(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -c application/json -m POST -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/1.1/$1 | pp
+}
+PUTSS(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -c application/json -m PUT -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/1.1/$1 | pp
+}
+DELETESS(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -c application/json -m DELETE -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/1.1/$1 | pp
+}
+GETSSV2(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -m GET -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/2.0/$1 | pp
+}
+POSTSSV2(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -c application/json -m POST -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/2.0/$1 | pp
+}
+PUTSSV2(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -c application/json -m PUT -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/2.0/$1 | pp
+}
+DELETESSV2(){
+    if [ "$#" -gt 1 ]; then
+        echo 'Usage: GETSS URL_ENDPOINT TOKEN'
+        return 1;
+    fi
+    if [ "$sstoken" == "" ]; then
+        sstoken="$2";
+    fi
+    lwp-request -c application/json -m DELETE -H "Authorization: Bearer $sstoken" https://api.smartsheet.com/2.0/$1 | pp
+}

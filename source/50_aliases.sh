@@ -22,6 +22,7 @@ alias psql="sudo -u postgres psql"
 alias chromium_domain="chromium --auth-server-whitelist='*.smartsheet.com'"
 
 alias herokuSqlDev="heroku pg:psql --app smartsheet-labs-dev"
+alias herokuSqlProd="heroku pg:psql --app smartsheet-labs-prod"
 alias xclip="xclip -selection c"
 
 alias gitgrep="git rev-list --all | xargs git grep"
@@ -29,3 +30,12 @@ alias sf="force"
 alias android_emulator="~/android-sdks/tools/./android avd"
 alias battery="acpi -bi"
 
+alias ss-start="(cd ~/git/core/dev2 && vagrant up)"
+alias ss-stop="(cd ~/git/core/dev2 && vagrant halt)"
+alias labs-start="screen -dmS labs bash -c \"(cd ~/git/platform-labs && play '~run -Dhttp.port=9001'); exec bash\""
+alias labs-stop="pkill -f /opt/play-2.2.1/play;  screen -X -S labs"
+alias herokuDevPush="git push heroku-dev-2 release-1.3:master"
+alias herokuProdPush="git push heroku-prod release-1.3:master"
+alias pp="python -mjson.tool"
+alias ssLogin='kinit -p bbatie@apollo.smartsheet.com;klist'
+alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
