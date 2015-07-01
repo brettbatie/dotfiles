@@ -39,3 +39,4 @@ alias herokuProdPush="git push heroku-prod release-1.3:master"
 alias pp="python -mjson.tool"
 alias ssLogin='kinit -p bbatie@apollo.smartsheet.com;klist'
 alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
+alias gcal='gcalcli'
