@@ -16,8 +16,8 @@ export VISUAL=$EDITOR
 
 # History  settings
 export HISTTIMEFORMAT="[%F %T] "
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000
 
 export M3_HOME=/opt/apache-maven-3.2.3/
 export M3=$M3_HOME/bin
@@ -38,3 +38,6 @@ export GOPATH=~/.go
 
 # User bin
 export PATH=$PATH:~/bin
+
+# Activator
+export PATH=$PATH:/opt/activator

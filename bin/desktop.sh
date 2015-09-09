@@ -25,4 +25,7 @@ xrandr --output LVDS1 --off
 echo 'positions'
 #xrandr --output DP1 --off --output DP2 --mode 2560x1440 --pos 0x0 --rotate normal --output DP3 --mode 2560x1440 --pos 2560x0 --rotate normal --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output LVDS1 --off --output VGA1 --off
 #xrandr --output DP3 --mode 2048x1152 --pos 2048x0 --rotate normal --output DP2 --mode 2048x1152 --pos 0x0 --rotate normal --output DP1 --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output LVDS1 --off --output VGA1 --off
-xrandr --output DP3 --mode 2560x1440 --pos 2560x0 --rotate normal --output DP2 --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output LVDS1 --off --output VGA1 --off
+xrandr --output DP3 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output DP2 --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --off --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output LVDS1 --off --output VGA1 --off
+
+#potential fix for window buttons on panels not showing on the correct screen
+bash -c 'killall xfce4-panel && xfce4-panel &'

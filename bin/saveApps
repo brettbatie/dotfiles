@@ -30,6 +30,7 @@ saveApps() {
     
     if [[ $REPLY =~ ^[Yy]$ ]] || [ "$REPLY" == "" ]; then
         aptitude search '~i!~M' > $appList
+        pip freeze > $appList.pip
         echo -e "\n\nFinished creating list of installed application at $appList."
     fi
 }

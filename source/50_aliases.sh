@@ -37,6 +37,7 @@ alias labs-stop="pkill -f /opt/play-2.2.1/play;  screen -X -S labs"
 alias herokuDevPush="git push heroku-dev-2 release-1.3:master"
 alias herokuProdPush="git push heroku-prod release-1.3:master"
 alias pp="python -mjson.tool"
-alias ssLogin='kinit -p bbatie@apollo.smartsheet.com;klist'
+alias ssLogin='kinit -p bbatie@APOLLO.SMARTSHEET.COM;klist'
 alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
 alias gcal='gcalcli'
+alias google-chrome='google-chrome --disable-new-avatar-menu'
