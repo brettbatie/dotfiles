@@ -105,6 +105,10 @@ deleteSSTest(){
 getJira(){
   curl -s -X GET -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/api/2/$1" | pp
 }
+putJira(){
+  curl -S -X PUT -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" -d @- "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/api/2/$1" 
+}
+
 getJiraWebhook(){
   curl -s -X GET -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/api/webhooks/1.0/webhook/$1" | pp
 }
