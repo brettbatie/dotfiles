@@ -1,7 +1,7 @@
 [brett]
 	batie = brett@batie.com
 [user]
-	name = Brett Batie
+	name = Brett Batie\n
 	email = brett@batie.com
 [color]
 	ui = auto
@@ -34,7 +34,13 @@
 	editor = subl
 	recentrepo = /home/brett/git/salesforce/release-1.7
 [diff]
-	tool = meld
+	tool = diffuse
+[difftool "diffuse"]
+    cmd ="/usr/bin/diffuse -m"
+[merge]
+    tool = diffuse 
+[mergetool "diffuse"]
+    cmd = "/usr/bin/diffuse -m"
 [difftool]
 	prompt = false
 [push]
