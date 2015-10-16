@@ -41,3 +41,6 @@ export PATH=$PATH:~/bin
 
 # Activator
 export PATH=$PATH:/opt/activator
+
+#IntelliJ
+export PATH=$PATH:/opt/idea/bin
