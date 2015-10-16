@@ -20,7 +20,7 @@ if(!file_exists($argv[2])){
 }
 
 // Loops over an fdupes file (fdupes -r -A . > dupes.txt) and determines the 
-// duplicate file to detelet by the images that have the fewest tags. 
+// duplicate file to delete by the images that have the fewest tags. 
 // It will not delete the two images if they have the same amount of tags.
 $handle = fopen($argv[2], "r");
 $allFiles = $found = array();
