@@ -75,7 +75,7 @@ foreach (new RecursiveIteratorIterator($di) as $filename => $fileInfo) {
     // copy the file to the new location
     echo 'copying: '.$filename.' --> '.$currentDestinationFile."\n";
     exec('cp -a -n '.escapeshellarg($filename).' '.escapeshellarg($currentDestinationFile),$output,$result);
-    if(!$result){
+    if($result != 0){
         echo 'ERROR: Could not copy to destination.';
         continue;
     }
