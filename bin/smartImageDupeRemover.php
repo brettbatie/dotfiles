@@ -77,7 +77,7 @@ if ($handle) {
             $found = array();
         }else{
             // Get the keyword/subject tags
-            $output = shell_exec("/usr/bin/exiftool -R --common /home/share/Pictures/".escapeshellarg($line)." | /bin/grep -iE '^(Keywords)|(Subject)\s+:(.*)'");
+            $output = shell_exec("/usr/bin/exiftool -R --common ".escapeshellarg($line)." | /bin/grep -iE '^(Keywords)|(Subject)\s+:(.*)'");
             $allFiles[] = $line;
             // if the keyword/subject is not empty
             if(preg_match('#.+?:(.+)#',$output, $matches)){
