@@ -69,12 +69,13 @@ foreach (new RecursiveIteratorIterator($di) as $filename => $fileInfo) {
     // if the file already exists in this location increment the name of the file
     $counter = 0;
     while(file_exists($currentDestinationFile)){
-        $currentDestinationFile = $currentDestinationDirectory.'/'.pathinfo($fileInfo->getFilename(), PATHINFO_FILENAME).'_'.(++$counter).pathinfo($fileInfo->getFilename(), PATHINFO_EXTENSION);
+        $currentDestinationFile = $currentDestinationDirectory.'/'.pathinfo($fileInfo->getFilename(), PATHINFO_FILENAME).'_'.(++$counter).'.'.pathinfo($fileInfo->getFilename(), PATHINFO_EXTENSION);
     }
     
     // copy the file to the new location
     echo 'copying: '.$filename.' --> '.$currentDestinationFile."\n";
-    if(!copy($filename, $currentDestinationFile)){
+    exec('cp -a -n '.escapeshellarg($filename).' '.escapeshellarg($currentDestinationFile),$output,$result);
+    if($result != 0){
         echo 'ERROR: Could not copy to destination.';
         continue;
     }
