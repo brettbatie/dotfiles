@@ -113,3 +113,16 @@ getJiraWebhook(){
   curl -s -X GET -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/api/webhooks/1.0/webhook/$1" | pp
 }
 
+function exifStrip(){
+    if [ "$#" -ne 1 ]; then
+        printf "Usage: $FUNCNAME fileOrDirectory\nWill delete all exif data from the given file or recursively in the entire directory.\n";
+        return 1;
+    fi
+
+    read -p "Are you sure you want to remove all the exif data from the specified file or directory? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+	    exiftool -all= $1
+	fi
+}
