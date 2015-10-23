@@ -40,5 +40,5 @@ alias pp="python -mjson.tool"
 alias ssLogin='kinit -p bbatie@APOLLO.SMARTSHEET.COM;klist'
 alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
 alias gcal='gcalcli'
-alias google-chrome='google-chrome --disable-new-avatar-menu'
+#alias google-chrome='google-chrome --disable-new-avatar-menu'
 alias menu-shortcut='exo-desktop-item-edit --create-new ~/.local/share/applications'
