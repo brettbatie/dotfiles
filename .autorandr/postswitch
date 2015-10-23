@@ -1,0 +1,2 @@
+#!/bin/bash
+bash -c 'killall xfce4-panel && xfce4-panel &'
