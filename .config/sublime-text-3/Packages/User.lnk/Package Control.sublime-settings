@@ -1,48 +1,10 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
-		"ApacheConf.tmLanguage",
-		"EncodingHelper",
-		"FileDiffs",
-		"INI",
-		"JavaScriptNext - ES6 Syntax",
-		"Javatar",
-		"Local History",
-		"Markdown Extended",
-		"Markdown Preview",
-		"MarkdownEditing",
-		"Monokai Extended",
-		"Monokai JSON+",
-		"My Snippets",
-		"Package Control",
-		"PlainTasks",
-		"Run",
-		"Shell Turtlestein",
-		"Simple Print Function",
-		"SublimeLinter",
-		"SublimeLinter-annotations",
-		"SublimeLinter-csslint",
-		"SublimeLinter-html-tidy",
-		"SublimeLinter-javac",
-		"SublimeLinter-jshint",
-		"SublimeLinter-json",
-		"SublimeLinter-php",
-		"Sublimerge Pro",
-		"Super Ant",
-		"Superlime",
-		"SuperNavigator",
-		"Terminal",
-		"Text Pastry",
-		"TodoReview",
-		"VCS Gutter",
-		"View In Browser"
-	],
-	"repositories":
-	[
-		"https://github.com/joeferraro/MavensMate",
-		"https://github.com/joeferraro/MavensMate"
+		"JavaScriptNext - ES6 Syntax"
 	]
 }
