@@ -63,28 +63,28 @@ function apiRequest(){
 }
 
 # Function to help send quick requests to Smartsheet
-getSS(){
+getSS1(){
     apiRequest GET https://api.smartsheet.com/1.1 $@
 }
-postSS(){
+postSS1(){
     apiRequest POST https://api.smartsheet.com/1.1 $@
 }
-putSS(){
+putSS1(){
     apiRequest PUT https://api.smartsheet.com/1.1 $@
 }
-deleteSS(){
+deleteSS1(){
     apiRequest DELETE https://api.smartsheet.com/1.1 $@
 }
-getSSV2(){
+getSS(){
     apiRequest GET https://api.smartsheet.com/2.0 $@
 }
-postSSV2(){
+postSS(){
     apiRequest POST https://api.smartsheet.com/2.0 $@
 }
-putSSV2(){
+putSS(){
     apiRequest PUT https://api.smartsheet.com/2.0 $@
 }
-deleteSSV2(){
+deleteSS(){
     apiRequest DELETE https://api.smartsheet.com/2.0 $@
 }
 getSSTest(){
@@ -114,11 +114,30 @@ postJira(){
 }
 
 postJiraWebhook(){
-   curl -S -X POST -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" -d @- "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/webhooks/1.0/webhook/$1"
+   curl -S -X POST -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" -d @- "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/webhooks/1.0/webhook"
 }
 
 getJiraWebhook(){
-  curl -s -X GET -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/webhooks/1.0/webhook/$1" | pp
+  curl -s -X GET -H "Authorization: Basic $jiraToken" -H "Content-Type: application/json" "http://ec2-52-88-140-61.us-west-2.compute.amazonaws.com:8080/rest/webhooks/1.0/webhook" | pp
+}
+
+getJira7(){
+  curl -s -X GET -H "Authorization: Basic $jiraToken7" -H "Content-Type: application/json" "https://smartsheet-platform.atlassian.net/rest/api/2/$1" | pp
+}
+putJira7(){
+  curl -S -X PUT -H "Authorization: Basic $jiraToken7" -H "Content-Type: application/json" -d @- "https://smartsheet-platform.atlassian.net/rest/api/2/$1" 
+}
+
+postJira7(){
+   curl -S -X POST -H "Authorization: Basic $jiraToken7" -H "Content-Type: application/json" -d @- "https://smartsheet-platform.atlassian.net/rest/api/2/$1"·
+}
+
+postJiraWebhook7(){
+   curl -S -X POST -H "Authorization: Basic $jiraToken7" -H "Content-Type: application/json" -d @- "https://smartsheet-platform.atlassian.net/rest/webhooks/1.0/webhook"
+}
+
+getJiraWebhook7(){
+  curl -s -X GET -H "Authorization: Basic $jiraToken7" -H "Content-Type: application/json" "https://smartsheet-platform.atlassian.net/rest/webhooks/1.0/webhook" | pp
 }
 
 function exifStrip(){
