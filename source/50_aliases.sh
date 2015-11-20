@@ -42,3 +42,10 @@ alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorn
 alias gcal='gcalcli'
 #alias google-chrome='google-chrome --disable-new-avatar-menu'
 alias menu-shortcut='exo-desktop-item-edit --create-new ~/.local/share/applications'
+
+#docker
+alias docker-jiralog='docker logs --tail 100 -f jiraplay'
+alias docker-jiraplay='docker exec -it jiraplay bash'
+alias docker-jiramysql='docker exec -it jiramysql bash'
+alias docker-jiramq='docker exec -it jiramq bash'
+alias jiramysql='mysql -h 127.0.0.1 -uroot -p1011 -P3308'
