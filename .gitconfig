@@ -35,13 +35,15 @@
 	recentrepo = /home/brett/git/salesforce/release-1.7
 [diff]
 	tool = diffuse
-[difftool "diffuse"]
-    cmd ="/usr/bin/diffuse -m"
+#[difftool "diffuse"]
+#    cmd ="/usr/bin/diffuse -m"
 [merge]
     tool = diffuse 
-[mergetool "diffuse"]
-    cmd = "/usr/bin/diffuse -m"
+#[mergetool "diffuse"]
+#    cmd = "/usr/bin/diffuse -m"
 [difftool]
 	prompt = false
 [push]
 	default = upstream
+[fetch]
+	prune = true
