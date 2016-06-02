@@ -1,3 +1,3 @@
 #!/bin/bash
 sleep 2
-bash -c 'killall xfce4-panel && xfce4-panel &'
+bash -c 'killall xfce4-panel;  /usr/bin/xfce4-panel &'
