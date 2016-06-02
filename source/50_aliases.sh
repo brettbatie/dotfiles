@@ -37,7 +37,6 @@ alias labs-stop="pkill -f /opt/play-2.2.1/play;  screen -X -S labs"
 alias herokuDevPush="git push heroku-dev-2 release-1.3:master"
 alias herokuProdPush="git push heroku-prod release-1.3:master"
 alias pp="python -mjson.tool"
-alias ssLogin='kinit -p bbatie@APOLLO.SMARTSHEET.COM;klist'
 alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
 alias gcal='gcalcli'
 #alias google-chrome='google-chrome --disable-new-avatar-menu'
@@ -45,7 +44,11 @@ alias menu-shortcut='exo-desktop-item-edit --create-new ~/.local/share/applicati
 
 #docker
 alias docker-jiralog='docker logs --tail 100 -f jiraplay'
-alias docker-jiraplay='docker exec -it jiraplay bash'
+alias docker-jiraplayweb='docker exec -it jiraplayweb bash'
 alias docker-jiramysql='docker exec -it jiramysql bash'
 alias docker-jiramq='docker exec -it jiramq bash'
 alias jiramysql='mysql -h 127.0.0.1 -uroot -p1011 -P3308'
+alias docker-jiraplaybackground='docker exec -it jiraplaybackground bash'
+
+#GIT
+alias git-branch="git branch -avv"
