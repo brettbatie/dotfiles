@@ -13,15 +13,6 @@ fi
 
 export VISUAL=$EDITOR
 
-
-# History  settings
-export HISTTIMEFORMAT="[%F %T] "
-export HH_CONFIG=hicolor         # get more colors
-shopt -s histappend              # append new history items to .bash_history
-export HISTCONTROL=ignorespace   # leading space hides commands from history
-export HISTFILESIZE=10000        # increase history file size (default is 500)
-export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
-export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
@@ -50,3 +41,6 @@ export PATH=$PATH:/opt/activator
 
 #IntelliJ
 export PATH=$PATH:/opt/idea/bin
+
+# NODE
+export PATH=$PATH:/opt/node/bin
