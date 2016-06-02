@@ -153,3 +153,35 @@ function exifStrip(){
 	    exiftool -all= $1
 	fi
 }
+
+
+function confirm () {
+    # call with a prompt string or use a default
+    read -r -p "${1:-Are you sure? [y/N]} " response
+    case $response in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
+
+function git-delete-merged-branches () {
+  echo && \
+  echo "Branches that are already merged into $(git rev-parse --abbrev-ref HEAD) and will be deleted from both local and remote:" && \
+  echo && \
+  git branch --merged | grep feature && \
+  echo && \
+  confirm && git branch --merged | grep feature | xargs -n1 -I '{}' sh -c "git push origin --delete '{}'; git branch -d '{}';"  
+}
+
+function git-delete-branch () {
+  if [ "$#" -ne 1 ]; then
+      printf "Usage: $FUNCNAME branchName\nWill delete the specified branch from both the local repository and remote\n";
+      return 1;
+  fi
+  echo "Delete the branch '$1' from your local repository?" && confirm && git branch -d $1;
+  echo "Delete the branch '$1' from the remote repository?" && confirm && git push origin --delete $1;
+}
