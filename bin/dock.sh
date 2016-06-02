@@ -1,13 +1,12 @@
 #!/bin/sh
-touch /home/brett/docked
-sleep 5
-su - brett -c "/opt/autorandr/./autorandr.py --change"
-su - brett -c "/opt/autorandr/./autorandr.py --load work"
-touch /home/brett/docked2
-
 # #Note: this script runs on boot to help the login manager to use the appropriate monitors. 
 # # I modified the file /etc/lightdm/lightdm.conf and added the following line to the [SeatDefaults] section:
 # # display-setup-script = /home/brett/dotfiles/bin/dock.sh
+#sleep 5
+# su - brett -c "/opt/autorandr/./autorandr.py --change"
+# su - brett -c "/opt/autorandr/./autorandr.py --load work"
+/opt/autorandr/./autorandr.py --change
+/opt/autorandr/./autorandr.py --load work
 
 # #/usr/bin/xrandr |/bin/grep "HDMI3 connected"
 # output=$(cat /sys/class/drm/card0-DP-2/status)
