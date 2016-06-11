@@ -1,0 +1,31 @@
+
+# 01_screenlock: lock screen at suspend with i3lock
+# based on http://bbs.archlinux.org/viewtopic.php?id=68158 by mokkurkalve
+#
+
+IS_ACTIVE="$( pidof i3lock )"
+
+lock_screen() {
+  # skip if i3lock is allready running
+  if [ ! "$IS_ACTIVE" ]; then
+       su - the_login_of_the_user_that_suspends -c "/bin/sh -c 'DISPLAY=:0.0 /usr/bin/i3lock'" &
+  fi
+}
+
+case $1 in
+   hibernate)
+       lock_screen
+       ;;
+   suspend)
+       lock_screen
+       ;;
+   thaw)
+       # not required.
+       ;;
+   resume)
+       # not required.
+       ;;
+   *) exit $NA
+       ;;
+esac
+
