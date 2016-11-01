@@ -8,6 +8,7 @@ alias .....="cd ../../../.."
 # IP info
 alias wanip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias myip="wanip"
+alias netstat-port="netstat -tulpne"
 
 # List Directories
 alias lsd="ls -ld .*/"
@@ -44,11 +45,15 @@ alias menu-shortcut='exo-desktop-item-edit --create-new ~/.local/share/applicati
 
 #docker
 alias docker-jiralog='docker logs --tail 100 -f jiraplay'
-alias docker-jiraplayweb='docker exec -it jiraplayweb bash'
 alias docker-jiramysql='docker exec -it jiramysql bash'
 alias docker-jiramq='docker exec -it jiramq bash'
 alias jiramysql='mysql -h 127.0.0.1 -uroot -p1011 -P3308'
 alias docker-jiraplaybackground='docker exec -it jiraplaybackground bash'
-
+alias dockerKillAll='echo "About to stop all docker instances." && confirm && docker kill $(docker ps -q)'
+alias dockerStopAll='echo "About to stop all docker instances." && confirm && docker stop $(docker ps -q)'
+alias dockerRemoveAll='echo "About to remove all docker containers." && confirm && docker rm -f $(docker ps -a -q);  echo "About to remove all docker images" && confirm && docker rmi -f $(docker images -q) '
+alias dockerClean='docker rmi $(docker images -f "dangling=true" -q)'
+alias dockerStats='docker stats $(docker ps --format={{.Names}})'
+alias dockerUpdate=dockerUpdate
 #GIT
 alias git-branch="git branch -avv"
