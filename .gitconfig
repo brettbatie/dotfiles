@@ -1,8 +1,8 @@
 [brett]
-	batie = brett@batie.com
+	batie = brett.batie@smartsheet.com
 [user]
 	name = Brett Batie\n
-	email = brett@batie.com
+	email = brett.batie@smartsheet.com
 [color]
 	ui = auto
 [color "branch"]
@@ -47,3 +47,7 @@
 	default = upstream
 [fetch]
 	prune = true
+[alias]
+    upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+    out = log --pretty=oneline --abbrev-commit --graph @{u}..
+    in = !git fetch && git log --pretty=oneline --abbrev-commit --graph ..@{u}
