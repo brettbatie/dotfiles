@@ -3,7 +3,6 @@
 	{"keys": ["ctrl+shift+b"], "command": "preview"},
 	{ "keys": ["ctrl+shift+d"], "command": "file_diff_menu" },
 	{ "keys": ["ctrl+shift+h"], "command": "goto_documentation" },
-    { "keys": [ "ctrl+shift+b" ], "command": "view_in_browser" },
     { "keys": ["ctrl+j"], "command": "find_next_in_file" },
     { "keys": ["ctrl+shift+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
     { "keys": ["ctrl+shift+k"], "command": "find_prev_in_file" },
@@ -11,5 +10,12 @@
     // in the default keybinding. This adds it back since I use it a lot.
     { "keys": ["shift+enter"], "command": "find_prev", "context":
         [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
-    }
+    },
+
+    { "keys": [ "ctrl+alt+v" ], "command": "view_in_browser" },
+    { "keys": [ "ctrl+alt+b" ], "command": "view_in_browser", "args": { "browser": "chrome" } },
+    { "keys": [ "ctrl+alt+f" ], "command": "view_in_browser", "args": { "browser": "firefox" } },
+    { "keys": [ "ctrl+alt+c" ], "command": "view_in_browser", "args": { "browser": "chrome" } },
+    { "keys": [ "ctrl+alt+i" ], "command": "view_in_browser", "args": { "browser": "iexplore" } },
+    { "keys": [ "ctrl+alt+s" ], "command": "view_in_browser", "args": { "browser": "safari" } }
 ]

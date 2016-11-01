@@ -13,19 +13,6 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 */
 
 {	
-	
-	// BRETT's custom settings to get this working on LINUX. I also had to "pip install mm" and 
-	// sudo ln -s ~/.config/sublime-text-3/Packages/User/MavensMate/mm/lib/templates /usr/local/lib/python2.7/dist-packages/mm/templates
-	"mm_api_version" : "33.0",
-   	"mm_compile_with_tooling_api" : false,
-	"mm_path" : "/usr/local/bin/mm",
-	"mm_workspace" : "/home/brett/git/salesforce",
-	"mm_template_location": "local",
-	"mm_template_source": "/home/brett/.config/sublime-text-3/Packages/User/MavensMate/mm/lib/templates/github-local",
-	"mm_log_level":"DEBUG",
-	"mm_log_location":"/tmp/mm/logs",
-
-
 	//if true, MavensMate will automatically hide the debug panel upon a successful operation
 	"mm_hide_panel_on_success" : true,
 
@@ -44,7 +31,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	//location where MavensMate for Sublime Text debug logs should be placed (must be existing path)
 	//log file will be named mmst.log
 	//windows users: please set like so: C:\\path\\to\\your\\logs
-	"mm_plugin_logs_location" : "/tmp/mm/logs",
+	"mm_plugin_logs_location" : "",
 
 	// set to true to diff Salesforce.com server conflicts in Sublime Text
 	"mm_diff_server_conflicts" : true,
@@ -59,7 +46,7 @@ To override default MavensMate settings, modify user-specific settings (MavensMa
 	"mm_mavensmate_app_location" : {
 		"osx": "/Applications/MavensMate.app",
 		"windows": "C:\\Program Files\\MavensMate.exe",
-		"linux": "mavensmate"
+		"linux": ""
 	},
 
 	// set to full path of your Sublime Text executable (this setting is used by the "open project" command)

@@ -2,5 +2,18 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+	],
+	"install_prereleases":
+	[
+		"MavensMate"
+	],
+	"installed_packages":
+	[
+		"ApacheConf.tmLanguage",
+		"Browser Integration",
+		"Browser Refresh",
+		"MavensMate",
+		"Package Control",
+		"View In Browser"
 	]
 }
