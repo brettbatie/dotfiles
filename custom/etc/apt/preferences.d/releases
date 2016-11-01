@@ -1,0 +1,19 @@
+# higher numbers == more important
+#
+# testing > stable > unstable
+#
+# in this config, packages from unstable are available, but
+# will not upgrade to the unstable version without operator
+# intervention.
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 750
+
+Package: *
+Pin: release a=stable
+Pin-Priority: 700
+
+Package: *
+Pin: release a=unstable
+Pin-Priority: 600
