@@ -1,0 +1,1 @@
+KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/brett/.Xauthority", RUN+="/home/brett/dotfiles/custom/hotplug_monitor.sh"

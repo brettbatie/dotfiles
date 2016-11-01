@@ -1,0 +1,8 @@
+#!/bin/sh
+case "$1" in
+    suspend|hibernate)
+         modprobe -r psmouse ;;
+    resume|thaw)
+        modprobe psmouse ;;
+        synclient TouchpadOff=0 ;;
+esac

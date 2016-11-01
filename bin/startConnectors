@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Make sure core is up and running
+~/dotfiles/bin/./startSS
+
+
+connectorsComposeFile=/home/brett/git/ss/app-connectors/docker-compose.yml
+
+
+# Starting connectors
+echo ""
+echo "Checking for new images for connectors"
+echo "--------------------------------------"
+docker-compose -f$connectorsComposeFile pull
+
+
+
+echo ""
+echo "Starting up connectors"
+echo "----------------------"
+docker-compose -f$connectorsComposeFile up -d;

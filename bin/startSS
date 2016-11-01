@@ -1,0 +1,31 @@
+#!/bin/bash
+# 
+# Vagrant provisioning script which is executed to startup the Docker environment in our Vagrant VMs.
+
+# Remove old images
+echo ""
+echo "Removing old/unused images"
+echo "--------------------------"
+docker rmi $(docker images -f "dangling=true" -q)
+
+# Make sure we have the latest images pulled - will update any changes since the Vagrant VM was built.
+echo ""
+echo "Updating Docker Containers to latest from registry.lab.smartsheet.com"
+echo "---------------------------------------------------------------------"
+docker-compose pull
+
+# Startup our Docker containers via the compose file.
+echo ""
+echo "Starting up local dev Docker Containers defined in docker-compose.yml"
+echo "---------------------------------------------------------------------"
+docker-compose up -d --remove-orphans
+
+# Once all of the containers are running trigger Nginx to reload the landing page.
+echo ""
+echo -n "Refreshing Nginx ..."
+echo    "--------------------"
+curl -s http://$(docker inspect -f '{{.NetworkSettings.IPAddress}}' nginx):9900
+
+echo ""
+echo "Docker compose startup complete."
+
