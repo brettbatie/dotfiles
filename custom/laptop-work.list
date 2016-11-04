@@ -18,7 +18,6 @@ i  aptitude - terminal-based package manager
 i  aptitude-common - architecture independent files for the aptitude package manager
 i  arandr - Simple visual front end for XRandR
 i  at - Delayed job execution and batch processing
-i  atom - A hackable text editor for the 21st Century.
 i  autoconf - automatic configure script builder
 i  automake - Tool for generating GNU Standards-compliant Makefiles
 i  autossh - Automatically restart SSH sessions and tunnels
@@ -37,7 +36,6 @@ i  byobu - text window manager, shell multiplexer, integrated DevOps environment
 i  bzip2 - high-quality block-sorting file compressor - utilities
 i  ca-certificates - Common CA certificates
 i  catdoc - Convert Word, Excel, and PowerPoint files to plain text
-i  charles-proxy-beta - proxy for web debugging
 i  checkgmail - alternative Gmail Notifier for Linux via Atom feeds
 i  checkinstall - installation tracker
 i  cheese - tool to take pictures and videos from your webcam
@@ -161,36 +159,6 @@ i  gftp-gtk - X/GTK+ FTP client
 i  giggle - GTK+ frontend for the git directory tracker
 i  gigolo - frontend to manage connections to remote filesystems using GIO/GVfs
 i  gimp - GNU Image Manipulation Program
-i  gir1.2-appindicator3-0.1 - Typelib files for libappindicator3-1
-i  gir1.2-caribou-1.0 - GObject introspection for the Caribou library
-i  gir1.2-champlain-0.12 - C library providing ClutterActor to display maps (GObject introspection)
-i  gir1.2-clutter-1.0 - GObject introspection data for the Clutter 1.0 library
-i  gir1.2-clutter-gst-2.0 - Gobject introspection data for Clutter GStreamer elements
-i  gir1.2-evince-3.0 - GObject introspection data for the evince libraries
-i  gir1.2-gcr-3 - GObject introspection data for the GCR library
-i  gir1.2-gdata-0.0 - GObject introspection data for the GData webservices library
-i  gir1.2-geocodeglib-1.0 - introspection data for geocode-glib library
-i  gir1.2-gfbgraph-0.2 - GObject library for Facebook Graph API - GObject introspection
-i  gir1.2-gkbd-3.0 - GObject introspection data for the GnomeKbd library
-i  gir1.2-gnomebluetooth-1.0 - Introspection data for GnomeBluetooth
-i  gir1.2-gnomedesktop-3.0 - Introspection data for GnomeDesktop
-i  gir1.2-grilo-0.2 - Framework for discovering and browsing media - GObject introspection data
-i  gir1.2-gtkchamplain-0.12 - Gtk+ widget to display maps (GObject introspection)
-i  gir1.2-gtkclutter-1.0 - GObject introspection data for the GTK+ Clutter library
-i  gir1.2-gucharmap-2.90 - GObject introspection data for the Unicode browser widget library
-i  gir1.2-gweather-3.0 - GObject introspection data for the GWeather library
-i  gir1.2-mutter-3.0 - GObject introspection data for Mutter
-i  gir1.2-nmgtk-1.0 - GObject introspection data for libnm-gtk
-i  gir1.2-peas-1.0 - Application plugin library (introspection files)
-i  gir1.2-rb-3.0 - GObject introspection data for the rhythmbox music player
-i  gir1.2-rest-0.7 - REST service access library (introspection files)
-i  gir1.2-soup-2.4 - GObject introspection data for the libsoup HTTP library
-i  gir1.2-totem-1.0 - GObject introspection data for Totem media player
-i  gir1.2-totem-plparser-1.0 - GObject introspection data for the Totem Playlist Parser library
-i  gir1.2-vte-2.91 - GObject introspection data for the VTE library
-i  gir1.2-webkit-3.0 - Web content engine library for GTK+ - GObject introspection data
-i  gir1.2-webkit2-4.0 - Web content engine library for GTK+ - GObject introspection data
-i  gir1.2-zpj-0.0 - GObject introspection data for the libzapojit library
 i  git - fast, scalable, distributed revision control system
 i  git-cola - highly caffeinated git GUI
 i  git-gui - fast, scalable, distributed revision control system (GUI)
@@ -225,7 +193,6 @@ i  gvfs-backends - userspace virtual filesystem - backends
 i  gvfs-fuse - userspace virtual filesystem - fuse server
 i  gzip - GNU compression utilities
 i  hardinfo - Displays system information
-i  heroku-toolbelt - A metapackage for working with the Heroku platform.
 i  hexchat - IRC client for X based on X-Chat 2
 i  hfsplus - Tools to access HFS+ formatted volumes
 i  hfsprogs - mkfs and fsck for HFS and HFS+ file systems
@@ -329,7 +296,6 @@ i  openjdk-8-jdk-headless - OpenJDK Development Kit (JDK) (headless)
 i  openjdk-8-jre - OpenJDK Java runtime, using Hotspot JIT
 i  openssh-client - secure shell (SSH) client, for secure access to remote machines
 i  openssh-server - secure shell (SSH) server, for secure access from remote machines
-i  oracle-java8-installer - Oracle Java(TM) Development Kit (JDK) 8
 i  parcimonie - privacy-friendly helper to refresh a GnuPG keyring
 i  passwd - change and administer password and group data
 i  pastebinit - command-line pastebin client
@@ -396,8 +362,6 @@ i  remmina-plugin-rdp - RDP plugin for remmina remote desktop client
 i  remmina-plugin-vnc - VNC plugin for remmina remote desktop client
 i  reportbug - reports bugs in the Debian distribution
 i  retext - Simple text editor for Markdown and reStructuredText
-i  sbt - sbt, the interactive build tool
-i  scenebuilder - JavaFX Scene Builder 1.1
 i  screen - terminal multiplexer with VT100/ANSI terminal emulation
 i  screenruler - measure objects on screen with a variety of metrics
 i  searchmonkey - search files using regular expressions aiming to replace find/grep tools
@@ -415,7 +379,6 @@ i  sshfs - filesystem client based on SSH File Transfer Protocol
 i  startpar - run processes in parallel and multiplex their output
 i  stopwatch - Virtual stopwatch and timer
 i  stunnel4 - Universal SSL tunnel for network daemons
-i  sublime-text - Sublime Text is a sophisticated text editor for code, markup and prose
 i  subversion - Advanced version control system
 i  system-config-lvm - utility for graphically configuring Logical Volumes
 i  tar - GNU version of the tar archiving utility

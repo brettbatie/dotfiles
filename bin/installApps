@@ -27,7 +27,6 @@ installApps() {
     echo -e "Apps Not Installed On This System\n================================="
     apps=$(diff -y --left-column --suppress-common-lines <(cat $appList | sed -r 's/i[A-Za-z]*\s+([^ ]+).*/\1/g') <(aptitude search '~i!~M' | sed -r 's/i[A-Za-z]*\s+([^ ]+).*/\1/g') | grep -vE '^\s+>.*$' | sed -r 's/<//g' | sed -r 's/\|.*//g')
     echo $apps | sed -r 's/ /\n/g' 
-cd 
     echo -e "\n"
     read -p "Install the above applications [y/n]?" -n 1 -r
     # if not yes, then skip it

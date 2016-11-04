@@ -17,6 +17,7 @@ alias lsd="ls -ld .*/"
 # Space at end allows alias expansion after sudo (ex sudo ll)
 
 alias sudo="sudo -E "
+alias aptInstalled="aptitude search '~i!~M'"
 
 alias psql="sudo -u postgres psql"
 
