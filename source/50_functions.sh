@@ -1,5 +1,5 @@
 #From: http://stackoverflow.com/a/10660730/1608110
-urlencode() {
+urlEncode_() {
   local string="${1}"
   local strlen=${#string}
   local encoded=""
@@ -18,7 +18,7 @@ urlencode() {
 
 
 #From: http://stackoverflow.com/a/10660730/1608110
-urldecode() {
+urlDecode_() {
 
   # This is perhaps a risky gambit, but since all escape characters must be
   # encoded, we can replace %NN with \xNN and pass the lot to printf -b, which
@@ -30,7 +30,7 @@ urldecode() {
 }
 
 
-function apiRequest(){
+function apiRequest_(){
     if [ "$#" -ne 3 -a "$#" -ne 4 ]; then
         printf "Usage: GETSS URL_ENDPOINT [TOKEN]\nUses the environment variables ssToken and ssTokenTest if they are set.\n";
         return 1;
@@ -39,6 +39,8 @@ function apiRequest(){
     if [[ ${FUNCNAME[1]} =~ Test$ ]]; then
         # If calling *Test function and ssTokenTest environment variable is set it will use that.
         ssTokenTmp=$ssTokenTest;
+    elif [[ ${FUNCNAME[1]} =~ Local$ ]]; then
+        ssTokenTmp=$ssTokenLocal;
     else
         ssTokenTmp=$ssToken;
     fi
@@ -50,57 +52,58 @@ function apiRequest(){
 
     contentType="";
     if [ "$1" == "PUT" -o "$1" == "POST" ]; then
-        curl -s -X $1 -H "Authorization: Bearer $ssTokenTmp" -H "Content-Type: application/json" -d @- ${2%"/"}/${3#"/"} | pp
+        curl -s -X $1 -H "Authorization: Bearer $ssTokenTmp" -H "Content-Type: application/json" -d @- ${2%"/"}/${3#"/"} | jq '.'
     else
-        curl -s -X $1 -H "Authorization: Bearer $ssTokenTmp" ${2%"/"}/${3#"/"} | pp
+        curl -s -X $1 -H "Authorization: Bearer $ssTokenTmp" ${2%"/"}/${3#"/"} | jq '.'
     fi
     
-    echo "Requesting ${2%"/"}/${3#"/"}";
-    #lwp-request $contentType -m $1 -H "Authorization: Bearer $ssTokenTmp" ${2%"/"}/${3#"/"} | pp
+    echo "Requesting ${2%"/"}/${3#"/"}" 1>&2;
+    #lwp-request $contentType -m $1 -H "Authorization: Bearer $ssTokenTmp" ${2%"/"}/${3#"/"} | jq
     
     
 }
 
 # Function to help send quick requests to Smartsheet
-
-getSS1(){
-    apiRequest GET https://api.smartsheet.com/1.1 $@
-}
-postSS1(){
-    apiRequest POST https://api.smartsheet.com/1.1 $@
-}
-putSS1(){
-    apiRequest PUT https://api.smartsheet.com/1.1 $@
-}
-deleteSS1(){
-    apiRequest DELETE https://api.smartsheet.com/1.1 $@
-}
-getSS(){
+getSS_(){
     apiRequest GET https://api.smartsheet.com/2.0 $@
 }
-postSS(){
+postSS_(){
     apiRequest POST https://api.smartsheet.com/2.0 $@
 }
-putSS(){
+putSS_(){
     apiRequest PUT https://api.smartsheet.com/2.0 $@
 }
-deleteSS(){
+deleteSS_(){
     apiRequest DELETE https://api.smartsheet.com/2.0 $@
 }
-getSSTest(){
+getSSTest_(){
     apiRequest GET https://api.test.smartsheet.com/2.0 $@
 }
-postSSTest(){
+postSSTest_(){
     apiRequest POST https://api.test.smartsheet.com/2.0 $@
 }
-putSSTest(){
+putSSTest_(){
     apiRequest PUT https://api.test.smartsheet.com/2.0 $@
 }
-deleteSSTest(){
-    apiRequest DELETE https://api.test.smartsheet.com/2.0 $@
+deleteSSTest_(){
+    apiRequest DELETE https://brett.lab.smartsheet.com/2.0 $@
 }
+getSSLocal_(){
+    apiRequest GET https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+}
+postSSLocal_(){
+    apiRequest POST https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+}
+putSSLocal_(){
+    apiRequest PUT https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+}
+deleteSSLocal_(){
+  apiRequest DELETE https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+}
+   
 
-function exifStrip(){
+
+function exifStrip_(){
     if [ "$#" -ne 1 ]; then
         printf "Usage: $FUNCNAME fileOrDirectory\nWill delete all exif data from the given file or recursively in the entire directory.\n";
         return 1;
@@ -115,7 +118,7 @@ function exifStrip(){
 }
 
 
-function confirm () {
+function confirm_() {
     # call with a prompt string or use a default
     read -r -p "${1:-Are you sure? [y/N]} " response
     case $response in
@@ -128,25 +131,42 @@ function confirm () {
     esac
 }
 
-function git-delete-merged-branches () {
+function gitDeleteMergedBranches_ () {
   echo && \
   echo "Branches that are already merged into $(git rev-parse --abbrev-ref HEAD) and will be deleted from both local and remote:" && \
   echo && \
   git branch --merged | grep personal/brettb/ && \
   echo && \
-  confirm && git branch --merged | grep personal/brettb | xargs -n1 -I '{}' sh -c "git push origin --delete '{}'; git branch -d '{}';"  
+  confirm_ && git branch --merged | grep personal/brettb | xargs -n1 -I '{}' sh -c "git push origin --delete '{}'; git branch -d '{}';"  
 }
 
-function git-delete-branch () {
+function gitDeleteBranch_ () {
   if [ "$#" -ne 1 ]; then
       printf "Usage: $FUNCNAME branchName\nWill delete the specified branch from both the local repository and remote\n";
       return 1;
   fi
-  echo "Delete the branch '$1' from your local repository?" && confirm && git branch -d $1;
-  echo "Delete the branch '$1' from the remote repository?" && confirm && git push origin --delete $1;
+  echo "Delete the branch '$1' from your local repository?" && confirm_ && git branch -d $1;
+  echo "Delete the branch '$1' from the remote repository?" && confirm_ && git push origin --delete $1;
 }
 
 
-function dockerUpdate () {
+function dockerUpdate_ () {
    docker images | awk '(NR>1) && ($2!~/none/) {print $1":"$2}' | xargs -L1 docker pull
+}
+
+function dockerConnect_ () {
+  if [ -z "$1" ]; then
+    echo "Please specify a container name to connect to - i.e. $0 appcoretomcat"
+  else
+    docker exec -it $1 bash
+  fi 
+}
+
+function kcurl_() {
+    curl --negotiate -u : -b ~/cookiejar.txt -c ~/cookiejar.txt -k $1
+}
+
+
+function pGrep_() {
+  ps -ef | { head -1; grep $@; }
 }
