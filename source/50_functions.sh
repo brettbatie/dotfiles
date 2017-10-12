@@ -144,7 +144,8 @@ gitMerge() {
     fi
     inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
     if [ "$inside_git_repo" ]; then
-      git checkout ${branchB} && git pull && git checkout ${branchA} && git merge ${branchB}
+      git checkout ${branchB} && git pull
+      git checkout ${branchA} && git merge ${branchB}
     else
       printf "not in git repo"
     fi
