@@ -30,16 +30,16 @@ urlDecode_() {
 }
 
 
-function apiRequest_(){
+function apiRequest(){
     if [ "$#" -ne 3 -a "$#" -ne 4 ]; then
-        printf "Usage: GETSS URL_ENDPOINT [TOKEN]\nUses the environment variables ssToken and ssTokenTest if they are set.\n";
+        printf "Usage: GETSS GET|POST|PUT|DELETE URL_ENDPOINT [TOKEN]\nUses the environment variables ssToken and ssTokenTest if they are set.\n";
         return 1;
     fi
     
-    if [[ ${FUNCNAME[1]} =~ Test$ ]]; then
+    if [[ ${FUNCNAME[1]} =~ Test_$ ]]; then
         # If calling *Test function and ssTokenTest environment variable is set it will use that.
         ssTokenTmp=$ssTokenTest;
-    elif [[ ${FUNCNAME[1]} =~ Local$ ]]; then
+    elif [[ ${FUNCNAME[1]} =~ Local_$ ]]; then
         ssTokenTmp=$ssTokenLocal;
     else
         ssTokenTmp=$ssToken;
@@ -131,6 +131,25 @@ function confirm_() {
     esac
 }
 
+gitMerge() {
+    branchA="$(git branch | grep '*' | sed 's/* //g')"
+    if [ "$#" -ne 1 ]; then
+        printf "Usage: $FUNCNAME branchToMerge\nWill checkout the specified branch, pull it and come back to $branchA and then merge.\n";
+        return 1;
+    fi
+    branchB=$1
+    if [ "$branchB" == "$branchA" ]; then
+        printf "The specified branch name is the same as the current branch."
+        return 1;
+    fi
+    inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+    if [ "$inside_git_repo" ]; then
+      git checkout ${branchB} && git pull && git checkout ${branchA} && git merge ${branchB}
+    else
+      printf "not in git repo"
+    fi
+}
+
 function gitDeleteMergedBranches_ () {
   echo && \
   echo "Branches that are already merged into $(git rev-parse --abbrev-ref HEAD) and will be deleted from both local and remote:" && \
@@ -169,4 +188,13 @@ function kcurl_() {
 
 function pGrep_() {
   ps -ef | { head -1; grep $@; }
+}
+
+function bootFreeSpace() {
+  echo 'Going to remove the following unused kernels:'
+  echo ''
+  kernelver=$(uname -r | sed -r 's/-[a-z]+//')
+  dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve $kernelver
+
+  confirm_ && sudo apt-get purge $(dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve "$(uname -r | sed -r 's/-[a-z]+//')")
 }

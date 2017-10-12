@@ -42,12 +42,16 @@ alias gCal_='gcalcli'
 alias menuShortcut_='exo-desktop-item-edit --create-new ~/.local/share/applications'
 
 #docker
-alias dockerStopAll_='echo "About to stop all docker instances." && confirm && docker stop $(docker ps -q)'
-alias dockerKillAll_='echo "About to stop all docker instances." && confirm && docker kill $(docker ps -q)'
-alias dockerRemoveAll_='echo "About to remove all docker containers." && confirm && docker rm -f $(docker ps -a -q);  echo "About to remove all docker images" && confirm && docker rmi -f $(docker images -q) '
+alias dockerStopAll_='echo "About to stop all docker instances." && confirm_&& docker stop $(docker ps -q)'
+alias dockerKillAll_='echo "About to stop all docker instances." && confirm_ && docker kill $(docker ps -q)'
+alias dockerRemoveAll_='echo "About to remove all docker containers." && confirm_ && docker rm -f $(docker ps -a -q);  echo "About to remove all docker images" && confirm_ && docker rmi -f $(docker images -q) '
 alias dockerStats_='docker stats $(docker ps --format={{.Names}})'
 alias dockerPS_='docker ps --format "table {{.Names}}\t{{.ID}}\t{{.Status}}\t{{.CreatedAt}}"'
 
 #GIT
 alias gitBranch_="git branch -avv"
 alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
+
+# Start Web Server
+alias startWebServer='php -S localhost:8888 -t .'
+alias ssRemote='docker exec -it vmmgr sh -c "ssh root@vpnremote"'
