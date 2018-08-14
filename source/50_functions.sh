@@ -52,9 +52,9 @@ function apiRequest(){
 
     contentType="";
     if [ "$1" == "PUT" -o "$1" == "POST" ]; then
-        curl -s -X $1 -H "Authorization: Bearer $ssTokenTmp" -H "Content-Type: application/json" -d @- ${2%"/"}/${3#"/"} | jq '.'
+        curl -v -s -X $1 -H "Authorization: Bearer $ssTokenTmp" -H "Content-Type: application/json" -d @- ${2%"/"}/${3#"/"} | jq '.'
     else
-        curl -s -X $1 -H "Authorization: Bearer $ssTokenTmp" ${2%"/"}/${3#"/"} | jq '.'
+        curl -v -s -X $1 -H "Authorization: Bearer $ssTokenTmp" ${2%"/"}/${3#"/"} | jq '.'
     fi
     
     echo "Requesting ${2%"/"}/${3#"/"}" 1>&2;
@@ -86,19 +86,33 @@ putSSTest_(){
     apiRequest PUT https://api.test.smartsheet.com/2.0 $@
 }
 deleteSSTest_(){
-    apiRequest DELETE https://brett.lab.smartsheet.com/2.0 $@
+    apiRequest DELETE https://api.test.smartsheet.com/2.0 $@
 }
+
+getSSMars_(){
+    apiRequest GET https://mars.lab.smartsheet.com/develop/rest/2.0/ $@
+}
+postSSMars_(){
+    apiRequest POST https://mars.lab.smartsheet.com/develop/rest/2.0/ $@
+}
+putSSMars_(){
+    apiRequest PUT https://mars.lab.smartsheet.com/develop/rest/2.0/ $@
+}
+deleteSSMars_(){
+    apiRequest DELETE https://mars.lab.smartsheet.com/develop/rest/2.0/ $@
+}
+
 getSSLocal_(){
-    apiRequest GET https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+    apiRequest GET https://bbatie.lab.smartsheet.com/develop/rest/2.0 $@
 }
 postSSLocal_(){
-    apiRequest POST https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+    apiRequest POST https://bbatie.lab.smartsheet.com/develop/rest/2.0 $@
 }
 putSSLocal_(){
-    apiRequest PUT https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+    apiRequest PUT https://bbatie.lab.smartsheet.com/develop/rest/2.0 $@
 }
 deleteSSLocal_(){
-  apiRequest DELETE https://brett.lab.smartsheet.com/develop/rest/2.0 $@
+  apiRequest DELETE https://bbatie.lab.smartsheet.com/develop/rest/2.0 $@
 }
    
 
