@@ -9,10 +9,17 @@
 	],
 	"installed_packages":
 	[
-		"ApacheConf.tmLanguage",
+		"ApacheConf",
+		"Babel",
 		"Browser Integration",
 		"Browser Refresh",
+		"HTML-CSS-JS Prettify",
+		"i3 wm",
+		"Increment Selection",
+		"Incrementor",
+		"LinkOpener",
 		"MavensMate",
+		"Open URL",
 		"Package Control",
 		"View In Browser"
 	]
