@@ -14,6 +14,17 @@ function src() {
   fi
 }
 
+function src() {
+  local file
+  if [[ "$1" ]]; then
+    source "$HOME/dotfiles-private/source/$1.sh"
+  else
+    for file in ~/dotfiles*/source/*; do
+      source "$file"
+    done
+  fi
+}
+
 src
 
 # add this configuration to ~/.bashrc
