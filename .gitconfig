@@ -51,3 +51,5 @@
     upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
     out = log --pretty=oneline --abbrev-commit --graph @{u}..
     in = !git fetch && git log --pretty=oneline --abbrev-commit --graph ..@{u}
+[cola]
+	spellcheck = true
