@@ -55,3 +55,6 @@ alias gitBranchAuthor='git for-each-ref --format="%(committerdate) %09 %(authorn
 # Start Web Server
 alias startWebServer='php -S localhost:8888 -t .'
 alias ssRemote='docker exec -it vmmgr sh -c "ssh root@vpnremote"'
+
+# Top
+alias top="top -c"

@@ -34,15 +34,17 @@
 	editor = subl
 	recentrepo = /home/brett/git/salesforce/release-1.7
 [diff]
-	tool = diffuse
-#[difftool "diffuse"]
-#    cmd ="/usr/bin/diffuse -m"
+	tool = intellij
+[difftool "intellij"]
+    cmd = /opt/idea/bin/idea.sh diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+[difftool "diffuse"]
+    cmd ="/usr/bin/diffuse -m"
 [merge]
-    tool = diffuse 
-#[mergetool "diffuse"]
-#    cmd = "/usr/bin/diffuse -m"
-[difftool]
-	prompt = false
+    tool = intellij 
+[mergetool "diffuse"]
+    cmd = "/usr/bin/diffuse -m"
+[mergetool "intellij"]
+    cmd = /opt/idea/bin/idea.sh merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
 [push]
 	default = upstream
 [fetch]

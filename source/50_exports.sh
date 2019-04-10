@@ -50,4 +50,5 @@ export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
 export PATH=$PY_USER_BIN:$PATH
 
 # RUBY
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export NVM_DIR="/home/brett/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && "$NVM_DIR/nvm.sh" # This loads nvm
