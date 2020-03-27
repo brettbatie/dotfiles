@@ -13,7 +13,7 @@ alias xevBetter_="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycod
 
 # IP info
 alias wanIP_="dig +short myip.opendns.com @resolver1.opendns.com"
-alias myIP_="wanip"
+alias myIP_="curl ifconfig.me/ip"
 alias netstatPort_="netstat -tulpne"
 
 # List Directories

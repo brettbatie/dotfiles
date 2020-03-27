@@ -31,7 +31,7 @@
 	history-view-vpane-position = 871
 	main-window-view = FileView
 [gui]
-	editor = subl
+	editor = code
 	recentrepo = /home/brett/git/salesforce/release-1.7
 [diff]
 	tool = intellij
