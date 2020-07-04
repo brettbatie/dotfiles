@@ -26,8 +26,6 @@ alias sudo="sudo -E "
 alias aptInstalled_="aptitude search '~i!~M'"
 alias psql_="sudo -u postgres psql"
 
-alias herokuSqlDev_="heroku pg:psql --app smartsheet-labs-dev"
-alias herokuSqlProd_="heroku pg:psql --app smartsheet-labs-prod"
 alias xclip="xclip -selection c"
 
 # Search git history for a line that changed with a specific word
@@ -58,3 +56,7 @@ alias ssRemote='docker exec -it vmmgr sh -c "ssh root@vpnremote"'
 
 # Top
 alias top="top -c"
+
+# Remove laptop webcam which causes apps to switch to plugged in webcam. Only lasts until reboot
+alias webcamSwitch="sudo rm /dev/video0"
+alias screencast="guvcview; kazam"

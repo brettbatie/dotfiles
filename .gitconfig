@@ -1,8 +1,6 @@
-[brett]
-	batie = brett.batie@smartsheet.com
 [user]
 	name = Brett Batie\n
-	email = brett.batie@smartsheet.com
+	email = brett@batie.com
 [color]
 	ui = auto
 [color "branch"]

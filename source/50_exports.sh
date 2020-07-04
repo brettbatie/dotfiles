@@ -52,3 +52,6 @@ export PATH=$PY_USER_BIN:$PATH
 # RUBY
 export NVM_DIR="/home/brett/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && "$NVM_DIR/nvm.sh" # This loads nvm
+
+# YARN
+export PATH=/home/brett/.yarn/bin:$PATH

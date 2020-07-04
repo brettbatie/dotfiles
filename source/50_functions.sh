@@ -196,6 +196,14 @@ function dockerConnect_ () {
   fi 
 }
 
+function dockerConnectDead_ () {
+  if [ -z "$1" ]; then
+	echo "Please specify a container name to connect to."
+  else
+	 docker run -it $1 bash
+  fi
+}
+
 function kcurl_() {
     curl --negotiate -u : -b ~/cookiejar.txt -c ~/cookiejar.txt -k $1
 }
@@ -212,4 +220,9 @@ function bootFreeSpace() {
   dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve $kernelver
 
   confirm_ && sudo apt-get purge $(dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve "$(uname -r | sed -r 's/-[a-z]+//')")
+}
+
+function base64Image() {
+    echo -n "data:image/jpeg;base64,$(base64 -w 0 $1)" | xclip
+    echo "copied to clipboard"
 }
