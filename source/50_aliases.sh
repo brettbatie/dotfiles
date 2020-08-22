@@ -60,3 +60,6 @@ alias top="top -c"
 # Remove laptop webcam which causes apps to switch to plugged in webcam. Only lasts until reboot
 alias webcamSwitch="sudo rm /dev/video0"
 alias screencast="guvcview; kazam"
+
+alias ec2Info="aws ec2 describe-instances | jq '.Reservations[].Instances[] | [.PublicIpAddress, .State, .Placement, .PublicDnsName]'"
+alias ec2FirstIP="aws ec2 describe-instances | jq '.Reservations[].Instances[] | .PublicIpAddress'"

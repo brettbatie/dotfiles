@@ -16,12 +16,12 @@ export VISUAL=$EDITOR
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
-export M3_HOME=/opt/apache-maven-3.2.3/
-export M3=$M3_HOME/bin
-export PATH=$M3:$PATH
+#export M3_HOME=/opt/apache-maven-3.2.3/
+#export M3=$M3_HOME/bin
+#export PATH=$M3:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
 #export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:/opt/play-2.2.1
+#export PATH=$PATH:/opt/play-2.2.1
 
 #Used for google drive - http://xmodulo.com/2013/10/mount-google-drive-linux.html
 export PATH=$PATH:/home/brett/.opam/system/bin
@@ -50,8 +50,11 @@ export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
 export PATH=$PY_USER_BIN:$PATH
 
 # RUBY
-export NVM_DIR="/home/brett/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && "$NVM_DIR/nvm.sh" # This loads nvm
+#export NVM_DIR="/home/brett/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && "$NVM_DIR/nvm.sh" # This loads nvm
 
 # YARN
 export PATH=/home/brett/.yarn/bin:$PATH
+
+# ADB
+export PATH=/home/brett/Android/Sdk/platform-tools/:$PATH
