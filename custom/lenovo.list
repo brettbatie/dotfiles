@@ -1,0 +1,124 @@
+i  apache2 - Apache HTTP Server
+i  aspell - GNU Aspell spell-checker
+i  aspell-en - English dictionary for GNU Aspell
+i  baobab - GNOME disk usage analyzer
+i  bc - GNU bc arbitrary precision calculator language
+i  bzip2 - high-quality block-sorting file compressor - utilities
+i  ca-certificates - Common CA certificates
+i  calibre - powerful and easy to use e-book manager
+i  cheese - tool to take pictures and videos from your webcam
+i  cheese-common - Common files for the Cheese tool to take pictures and videos
+i  composer - dependency manager for PHP
+i  console-setup - console font and keymap setup program
+i  console-setup-linux - Linux specific part of console-setup
+i  copyq - Advanced clipboard manager with editing and scripting features
+i  cpio - GNU cpio -- a program to manage archives of files
+i  curl - command line tool for transferring data with URL syntax
+i  darktable - virtual lighttable and darkroom for photographers
+i  diffstat - produces graph of changes introduced by a diff file
+i  diffutils - File comparison utilities
+i  dosfstools - utilities for making and checking MS-DOS FAT filesystems
+i  e2fsprogs - ext2/ext3/ext4 file system utilities
+i  eog - Eye of GNOME graphics viewer program
+i  evince - Document (PostScript, PDF) viewer
+i  evince-common - Document (PostScript, PDF) viewer - common files
+i  file - Recognize the type of data in a file using "magic" numbers
+i  filezilla - Full-featured graphical FTP/FTPS/SFTP client
+i  firefox - Safe and easy web browser from Mozilla
+i  firefox-locale-en - English language pack for Firefox
+i  ftp - classical file transfer client
+i  gedit - official text editor of the GNOME desktop environment
+i  gedit-common - official text editor of the GNOME desktop environment (support files)
+i  geeqie - image viewer using GTK+
+i  genisoimage - Creates ISO-9660 CD-ROM filesystem images
+i  ghostscript - interpreter for the PostScript language and for PDF
+i  ghostscript-x - interpreter for the PostScript language and for PDF - X11 support
+i  gimp - GNU Image Manipulation Program
+i  git - fast, scalable, distributed revision control system
+i  git-cola - highly caffeinated git GUI
+i  gnupg - GNU privacy guard - a free PGP replacement
+i  gnupg-agent - GNU privacy guard - cryptographic agent (dummy transitional package)
+i  gnupg-l10n - GNU privacy guard - localization files
+i  gnupg-utils - GNU privacy guard - utility programs
+i  gnupg1 - GNU privacy guard - a PGP implementation (deprecated "classic" version)
+i  gpg - GNU Privacy Guard -- minimalist public key operations
+i  gpg-agent - GNU privacy guard - cryptographic agent
+i  gpg-wks-client - GNU privacy guard - Web Key Service client
+i  gpg-wks-server - GNU privacy guard - Web Key Service server
+i  gpgconf - GNU privacy guard - core configuration utilities
+i  gpgsm - GNU privacy guard - S/MIME version
+i  gpgv - GNU privacy guard - signature verification tool
+i  graphicsmagick - collection of image processing tools
+i  grep - GNU grep, egrep and fgrep
+i  gtk-update-icon-cache - icon theme caching utility
+i  gzip - GNU compression utilities
+i  hardinfo - Displays system information
+i  hdparm - tune hard disk parameters for high performance
+i  hostname - utility to set/show the host name or domain name
+i  htop - interactive processes viewer
+i  ifupdown - high level tools to configure network interfaces
+i  imagemagick - image manipulation programs -- binaries
+i  imagemagick-6-common - image manipulation programs -- infrastructure
+i  imagemagick-6.q16 - image manipulation programs -- quantum depth Q16
+i  iotop - simple top-like I/O monitor
+i  iputils-ping - Tools to test the reachability of network hosts
+i  iputils-tracepath - Tools to trace the network path to a remote host
+i  jq - lightweight and flexible command-line JSON processor
+i  kazam - Easy to use screencast and screenshot application.
+i  less - pager program similar to more
+i  lshw - information about hardware configuration
+i  lsof - Utility to list open files
+i  meld - graphical tool to diff and merge files
+i  mlocate - quickly find files on the filesystem based on their name
+i  mupdf - lightweight PDF viewer
+i  mysql-server - MySQL Server meta package depending on latest version
+i  nano - small, friendly text editor inspired by Pico
+i  openssh-client - secure shell (SSH) client, for secure access to remote machines
+i  openssl - Secure Sockets Layer toolkit - cryptographic utility
+i  openvpn - virtual private network daemon
+i  parted - disk partition manipulator
+i  pdfshuffler - merge, split and re-arrange pages from PDF documents
+i  peek - Simple screen recorder with an easy to use interface
+i  php - server-side, HTML-embedded scripting language (default)
+i  php-bcmath - Bcmath module for PHP [default]
+i  php-bz2 - bzip2 module for PHP [default]
+i  php-gd - GD module for PHP [default]
+i  php-intl - Internationalisation module for PHP [default]
+i  php-mbstring - MBSTRING module for PHP [default]
+i  php-mysql - MySQL module for PHP [default]
+i  php-zip - Zip module for PHP [default]
+i  poppler-data - encoding data for the poppler PDF rendering library
+i  poppler-utils - PDF utilities (based on Poppler)
+i  python3 - interactive high-level object-oriented language (default python3 version)
+i  qpdf - tools for transforming and inspecting PDF files
+i  qpdfview - tabbed document viewer
+i  recordmydesktop - Captures audio-video data of a Linux desktop session
+i  remmina - GTK+ Remote Desktop Client
+i  remmina-common - Common files for Remmina
+i  remmina-plugin-rdp - RDP plugin for Remmina
+i  remmina-plugin-secret - Secret plugin for Remmina
+i  remmina-plugin-vnc - VNC plugin for Remmina
+i  rsync - fast, versatile, remote (and local) file-copying tool
+i  screenruler - measure objects on screen with a variety of metrics
+i  shotwell - digital photo organizer
+i  solaar-gnome3 - GNOME Shell/Unity integration for Solaar
+i  speedcrunch - High precision calculator
+i  tar - GNU version of the tar archiving utility
+i  thunderbird - Email, RSS and newsgroup client with integrated spam filter
+i  thunderbird-gnome-support - Email, RSS and newsgroup client - GNOME support
+i  thunderbird-locale-en - English language pack for Thunderbird
+i  thunderbird-locale-en-us - Transitional English language pack for Thunderbird
+i  time - GNU time program for measuring CPU resource usage
+i  units - converts between different systems of units
+i  unzip - De-archiver for .zip files
+i  vim - Vi IMproved - enhanced vi editor
+i  vim-common - Vi IMproved - Common files
+i  vim-tiny - Vi IMproved - enhanced vi editor - compact version
+i  vokoscreen - easy to use screencast creator
+i  wamerican - American English dictionary words for /usr/share/dict
+i  webhttrack - Copy websites to your computer, httrack with a Web interface
+i  wget - retrieves files from the web
+i  whiptail - Displays user-friendly dialog boxes from shell scripts
+i  xchat - IRC client for X similar to AmIRC
+i  xz-utils - XZ-format compression utilities
+i  zip - Archiver for .zip files
