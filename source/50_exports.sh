@@ -46,8 +46,8 @@ export PATH=$PATH:/opt/idea/bin
 #export PATH=$PATH:/opt/node/bin
 
 # PIP
-export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
-export PATH=$PY_USER_BIN:$PATH
+#export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
+#export PATH=$PY_USER_BIN:$PATH
 
 # RUBY
 #export NVM_DIR="/home/brett/.nvm"
