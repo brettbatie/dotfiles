@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "async": "^1.5.0",
-    "aws-sdk": "^2.2.26",
+    "aws-sdk": "^2.1354.0",
     "commander": "^2.9.0",
     "fs-extra": "^0.26.3",
     "ip": "^1.1.0",
